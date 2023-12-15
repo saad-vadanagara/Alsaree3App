@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		929E60F42B2C79FE00FD038A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E60F32B2C79FE00FD038A /* TabBarController.swift */; };
+		929E60FA2B2C876800FD038A /* ActiveOrderHomeTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E60F82B2C876800FD038A /* ActiveOrderHomeTabCell.swift */; };
+		929E60FB2B2C876800FD038A /* ActiveOrderHomeTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 929E60F92B2C876800FD038A /* ActiveOrderHomeTabCell.xib */; };
 		92A66D462B2C185500CB8EF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A66D452B2C185500CB8EF5 /* AppDelegate.swift */; };
 		92A66D482B2C185500CB8EF5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A66D472B2C185500CB8EF5 /* SceneDelegate.swift */; };
-		92A66D4A2B2C185500CB8EF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A66D492B2C185500CB8EF5 /* ViewController.swift */; };
 		92A66D4D2B2C185500CB8EF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92A66D4B2B2C185500CB8EF5 /* Main.storyboard */; };
 		92A66D502B2C185500CB8EF5 /* Alsaree3App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 92A66D4E2B2C185500CB8EF5 /* Alsaree3App.xcdatamodeld */; };
 		92A66D522B2C185700CB8EF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92A66D512B2C185700CB8EF5 /* Assets.xcassets */; };
@@ -17,6 +19,17 @@
 		92A66D602B2C185800CB8EF5 /* Alsaree3AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A66D5F2B2C185800CB8EF5 /* Alsaree3AppTests.swift */; };
 		92A66D6A2B2C185800CB8EF5 /* Alsaree3AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A66D692B2C185800CB8EF5 /* Alsaree3AppUITests.swift */; };
 		92A66D6C2B2C185800CB8EF5 /* Alsaree3AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A66D6B2B2C185800CB8EF5 /* Alsaree3AppUITestsLaunchTests.swift */; };
+		92A66D892B2C20D700CB8EF5 /* HomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A66D882B2C20D700CB8EF5 /* HomeTabViewController.swift */; };
+		92A66D962B2C2ECA00CB8EF5 /* Cairo-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92A66D8E2B2C2EC900CB8EF5 /* Cairo-ExtraLight.ttf */; };
+		92A66D972B2C2ECA00CB8EF5 /* Cairo-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92A66D8F2B2C2EC900CB8EF5 /* Cairo-Light.ttf */; };
+		92A66D982B2C2ECA00CB8EF5 /* Cairo-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92A66D902B2C2EC900CB8EF5 /* Cairo-ExtraBold.ttf */; };
+		92A66D992B2C2ECA00CB8EF5 /* Cairo-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92A66D912B2C2EC900CB8EF5 /* Cairo-SemiBold.ttf */; };
+		92A66D9A2B2C2ECA00CB8EF5 /* Cairo-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92A66D922B2C2EC900CB8EF5 /* Cairo-Black.ttf */; };
+		92A66D9B2B2C2ECA00CB8EF5 /* Cairo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92A66D932B2C2ECA00CB8EF5 /* Cairo-Bold.ttf */; };
+		92A66D9C2B2C2ECA00CB8EF5 /* Cairo-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92A66D942B2C2ECA00CB8EF5 /* Cairo-Medium.ttf */; };
+		92A66D9D2B2C2ECA00CB8EF5 /* Cairo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92A66D952B2C2ECA00CB8EF5 /* Cairo-Regular.ttf */; };
+		92A66DA12B2C2FE100CB8EF5 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A66DA02B2C2FE100CB8EF5 /* Constant.swift */; };
+		92A66DA32B2C30A500CB8EF5 /* UIView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A66DA22B2C30A500CB8EF5 /* UIView+Extention.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,10 +50,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		929E60F32B2C79FE00FD038A /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		929E60F82B2C876800FD038A /* ActiveOrderHomeTabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveOrderHomeTabCell.swift; sourceTree = "<group>"; };
+		929E60F92B2C876800FD038A /* ActiveOrderHomeTabCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActiveOrderHomeTabCell.xib; sourceTree = "<group>"; };
 		92A66D422B2C185500CB8EF5 /* Alsaree3App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alsaree3App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92A66D452B2C185500CB8EF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92A66D472B2C185500CB8EF5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		92A66D492B2C185500CB8EF5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		92A66D4C2B2C185500CB8EF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		92A66D4F2B2C185500CB8EF5 /* Alsaree3App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Alsaree3App.xcdatamodel; sourceTree = "<group>"; };
 		92A66D512B2C185700CB8EF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +66,17 @@
 		92A66D652B2C185800CB8EF5 /* Alsaree3AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Alsaree3AppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92A66D692B2C185800CB8EF5 /* Alsaree3AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alsaree3AppUITests.swift; sourceTree = "<group>"; };
 		92A66D6B2B2C185800CB8EF5 /* Alsaree3AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alsaree3AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		92A66D882B2C20D700CB8EF5 /* HomeTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabViewController.swift; sourceTree = "<group>"; };
+		92A66D8E2B2C2EC900CB8EF5 /* Cairo-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-ExtraLight.ttf"; sourceTree = "<group>"; };
+		92A66D8F2B2C2EC900CB8EF5 /* Cairo-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Light.ttf"; sourceTree = "<group>"; };
+		92A66D902B2C2EC900CB8EF5 /* Cairo-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-ExtraBold.ttf"; sourceTree = "<group>"; };
+		92A66D912B2C2EC900CB8EF5 /* Cairo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-SemiBold.ttf"; sourceTree = "<group>"; };
+		92A66D922B2C2EC900CB8EF5 /* Cairo-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Black.ttf"; sourceTree = "<group>"; };
+		92A66D932B2C2ECA00CB8EF5 /* Cairo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Bold.ttf"; sourceTree = "<group>"; };
+		92A66D942B2C2ECA00CB8EF5 /* Cairo-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Medium.ttf"; sourceTree = "<group>"; };
+		92A66D952B2C2ECA00CB8EF5 /* Cairo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Regular.ttf"; sourceTree = "<group>"; };
+		92A66DA02B2C2FE100CB8EF5 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		92A66DA22B2C30A500CB8EF5 /* UIView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extention.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +104,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		929E60F52B2C7F9200FD038A /* TabBarItems */ = {
+			isa = PBXGroup;
+			children = (
+				92A66D872B2C209E00CB8EF5 /* Basket */,
+				92A66D862B2C207A00CB8EF5 /* Profile */,
+				92A66D832B2C205900CB8EF5 /* Search */,
+				92A66D822B2C203900CB8EF5 /* Home */,
+			);
+			path = TabBarItems;
+			sourceTree = "<group>";
+		};
+		929E60F62B2C7FA400FD038A /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				929E60F32B2C79FE00FD038A /* TabBarController.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		929E60F72B2C871D00FD038A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				929E60FD2B2C90A400FD038A /* BannerCell */,
+				929E60FC2B2C908B00FD038A /* ActiveOrderCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		929E60FC2B2C908B00FD038A /* ActiveOrderCell */ = {
+			isa = PBXGroup;
+			children = (
+				929E60F82B2C876800FD038A /* ActiveOrderHomeTabCell.swift */,
+				929E60F92B2C876800FD038A /* ActiveOrderHomeTabCell.xib */,
+			);
+			path = ActiveOrderCell;
+			sourceTree = "<group>";
+		};
+		929E60FD2B2C90A400FD038A /* BannerCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BannerCell;
+			sourceTree = "<group>";
+		};
 		92A66D392B2C185500CB8EF5 = {
 			isa = PBXGroup;
 			children = (
@@ -101,12 +171,12 @@
 		92A66D442B2C185500CB8EF5 /* Alsaree3App */ = {
 			isa = PBXGroup;
 			children = (
-				92A66D452B2C185500CB8EF5 /* AppDelegate.swift */,
-				92A66D472B2C185500CB8EF5 /* SceneDelegate.swift */,
-				92A66D492B2C185500CB8EF5 /* ViewController.swift */,
-				92A66D4B2B2C185500CB8EF5 /* Main.storyboard */,
-				92A66D512B2C185700CB8EF5 /* Assets.xcassets */,
-				92A66D532B2C185700CB8EF5 /* LaunchScreen.storyboard */,
+				92A66D782B2C189400CB8EF5 /* Application */,
+				92A66D7B2B2C1A0400CB8EF5 /* LaunchScreen */,
+				92A66D7C2B2C1A2700CB8EF5 /* MainStoryboard */,
+				92A66D792B2C18A200CB8EF5 /* SupportingFiles */,
+				92A66D7A2B2C18B700CB8EF5 /* Module */,
+				92A66D7D2B2C1A4E00CB8EF5 /* Assets */,
 				92A66D562B2C185700CB8EF5 /* Info.plist */,
 				92A66D4E2B2C185500CB8EF5 /* Alsaree3App.xcdatamodeld */,
 			);
@@ -128,6 +198,127 @@
 				92A66D6B2B2C185800CB8EF5 /* Alsaree3AppUITestsLaunchTests.swift */,
 			);
 			path = Alsaree3AppUITests;
+			sourceTree = "<group>";
+		};
+		92A66D782B2C189400CB8EF5 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				92A66D452B2C185500CB8EF5 /* AppDelegate.swift */,
+				92A66D472B2C185500CB8EF5 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		92A66D792B2C18A200CB8EF5 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				92A66D9F2B2C2FC600CB8EF5 /* Extention */,
+				92A66D9E2B2C2FB600CB8EF5 /* Constants */,
+				92A66D8D2B2C2E2500CB8EF5 /* Fonts */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		92A66D7A2B2C18B700CB8EF5 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				92A66D852B2C207000CB8EF5 /* TabView */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		92A66D7B2B2C1A0400CB8EF5 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				92A66D532B2C185700CB8EF5 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		92A66D7C2B2C1A2700CB8EF5 /* MainStoryboard */ = {
+			isa = PBXGroup;
+			children = (
+				92A66D4B2B2C185500CB8EF5 /* Main.storyboard */,
+			);
+			path = MainStoryboard;
+			sourceTree = "<group>";
+		};
+		92A66D7D2B2C1A4E00CB8EF5 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				92A66D512B2C185700CB8EF5 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		92A66D822B2C203900CB8EF5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				929E60F72B2C871D00FD038A /* Cells */,
+				92A66D882B2C20D700CB8EF5 /* HomeTabViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		92A66D832B2C205900CB8EF5 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		92A66D852B2C207000CB8EF5 /* TabView */ = {
+			isa = PBXGroup;
+			children = (
+				929E60F62B2C7FA400FD038A /* TabBarController */,
+				929E60F52B2C7F9200FD038A /* TabBarItems */,
+			);
+			path = TabView;
+			sourceTree = "<group>";
+		};
+		92A66D862B2C207A00CB8EF5 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		92A66D872B2C209E00CB8EF5 /* Basket */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Basket;
+			sourceTree = "<group>";
+		};
+		92A66D8D2B2C2E2500CB8EF5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				92A66D922B2C2EC900CB8EF5 /* Cairo-Black.ttf */,
+				92A66D932B2C2ECA00CB8EF5 /* Cairo-Bold.ttf */,
+				92A66D902B2C2EC900CB8EF5 /* Cairo-ExtraBold.ttf */,
+				92A66D8E2B2C2EC900CB8EF5 /* Cairo-ExtraLight.ttf */,
+				92A66D8F2B2C2EC900CB8EF5 /* Cairo-Light.ttf */,
+				92A66D942B2C2ECA00CB8EF5 /* Cairo-Medium.ttf */,
+				92A66D952B2C2ECA00CB8EF5 /* Cairo-Regular.ttf */,
+				92A66D912B2C2EC900CB8EF5 /* Cairo-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		92A66D9E2B2C2FB600CB8EF5 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				92A66DA02B2C2FE100CB8EF5 /* Constant.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		92A66D9F2B2C2FC600CB8EF5 /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+				92A66DA22B2C30A500CB8EF5 /* UIView+Extention.swift */,
+			);
+			path = Extention;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,9 +425,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92A66D972B2C2ECA00CB8EF5 /* Cairo-Light.ttf in Resources */,
 				92A66D552B2C185700CB8EF5 /* LaunchScreen.storyboard in Resources */,
 				92A66D522B2C185700CB8EF5 /* Assets.xcassets in Resources */,
+				929E60FB2B2C876800FD038A /* ActiveOrderHomeTabCell.xib in Resources */,
+				92A66D9A2B2C2ECA00CB8EF5 /* Cairo-Black.ttf in Resources */,
+				92A66D9C2B2C2ECA00CB8EF5 /* Cairo-Medium.ttf in Resources */,
+				92A66D982B2C2ECA00CB8EF5 /* Cairo-ExtraBold.ttf in Resources */,
+				92A66D9D2B2C2ECA00CB8EF5 /* Cairo-Regular.ttf in Resources */,
 				92A66D4D2B2C185500CB8EF5 /* Main.storyboard in Resources */,
+				92A66D962B2C2ECA00CB8EF5 /* Cairo-ExtraLight.ttf in Resources */,
+				92A66D9B2B2C2ECA00CB8EF5 /* Cairo-Bold.ttf in Resources */,
+				92A66D992B2C2ECA00CB8EF5 /* Cairo-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,10 +461,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92A66D4A2B2C185500CB8EF5 /* ViewController.swift in Sources */,
 				92A66D502B2C185500CB8EF5 /* Alsaree3App.xcdatamodeld in Sources */,
 				92A66D462B2C185500CB8EF5 /* AppDelegate.swift in Sources */,
+				92A66DA32B2C30A500CB8EF5 /* UIView+Extention.swift in Sources */,
 				92A66D482B2C185500CB8EF5 /* SceneDelegate.swift in Sources */,
+				929E60F42B2C79FE00FD038A /* TabBarController.swift in Sources */,
+				92A66D892B2C20D700CB8EF5 /* HomeTabViewController.swift in Sources */,
+				92A66DA12B2C2FE100CB8EF5 /* Constant.swift in Sources */,
+				929E60FA2B2C876800FD038A /* ActiveOrderHomeTabCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
