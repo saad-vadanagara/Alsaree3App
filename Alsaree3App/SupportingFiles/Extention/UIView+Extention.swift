@@ -81,6 +81,18 @@ extension UIView{
     }
     
     
+    func setImageOnButton(button : UIButton , image : String , isSystemImage : Bool = false , isAspectFill : Bool = false){
+        if isSystemImage {
+            button.setImage(UIImage(systemName: image), for: .normal)
+        } else {
+            button.setImage(UIImage(named: image), for: .normal)
+        }
+        
+        if isAspectFill {
+            button.imageView?.contentMode = .scaleAspectFill
+            button.clipsToBounds = true
+        }
+    }
     
     
 }

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SingleCategoryCollectionViewCell" customModule="Alsaree3App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="142" height="144"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="142" height="144"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nSd-pN-n0h">
+                        <rect key="frame" x="0.0" y="0.0" width="142" height="144"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="foodDish" translatesAutoresizingMaskIntoConstraints="NO" id="7iR-Rs-fzb">
+                                <rect key="frame" x="35.666666666666657" y="5" width="71" height="64.666666666666671"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V85-hG-cx1">
+                                <rect key="frame" x="28.333333333333336" y="69.666666666666686" width="85.333333333333314" height="69.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="V85-hG-cx1" firstAttribute="width" secondItem="nSd-pN-n0h" secondAttribute="width" multiplier="0.6" id="9or-Ph-FuI"/>
+                            <constraint firstItem="7iR-Rs-fzb" firstAttribute="top" secondItem="nSd-pN-n0h" secondAttribute="top" constant="5" id="AbG-YR-aKk"/>
+                            <constraint firstItem="7iR-Rs-fzb" firstAttribute="centerX" secondItem="nSd-pN-n0h" secondAttribute="centerX" id="NXR-as-hZ3"/>
+                            <constraint firstItem="V85-hG-cx1" firstAttribute="centerX" secondItem="nSd-pN-n0h" secondAttribute="centerX" id="Nz1-l9-NAo"/>
+                            <constraint firstItem="V85-hG-cx1" firstAttribute="top" secondItem="7iR-Rs-fzb" secondAttribute="bottom" id="cWp-jM-EnB"/>
+                            <constraint firstItem="7iR-Rs-fzb" firstAttribute="width" secondItem="nSd-pN-n0h" secondAttribute="width" multiplier="0.5" id="egJ-RT-P2Y"/>
+                            <constraint firstAttribute="bottom" secondItem="V85-hG-cx1" secondAttribute="bottom" constant="5" id="fvg-5G-3IB"/>
+                            <constraint firstItem="7iR-Rs-fzb" firstAttribute="height" secondItem="nSd-pN-n0h" secondAttribute="height" multiplier="0.45" id="wK1-YM-TbX"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="nSd-pN-n0h" secondAttribute="trailing" id="ERS-Xp-HpP"/>
+                <constraint firstItem="nSd-pN-n0h" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="OZv-q8-XZ3"/>
+                <constraint firstItem="nSd-pN-n0h" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="hDi-hx-JB1"/>
+                <constraint firstAttribute="bottom" secondItem="nSd-pN-n0h" secondAttribute="bottom" id="pet-9n-xXH"/>
+            </constraints>
+            <size key="customSize" width="142" height="144"/>
+            <connections>
+                <outlet property="categoryImg" destination="7iR-Rs-fzb" id="qhS-qs-4d3"/>
+                <outlet property="categoryTitle" destination="V85-hG-cx1" id="Qgz-Ij-GSG"/>
+                <outlet property="parentView" destination="nSd-pN-n0h" id="UP7-TF-2aw"/>
+            </connections>
+            <point key="canvasLocation" x="85.496183206106863" y="61.267605633802823"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="foodDish" width="32" height="32"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

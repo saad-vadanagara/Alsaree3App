@@ -7,9 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		922CB7542B2E16330067805A /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CB7522B2E16330067805A /* UITableView+Extension.swift */; };
+		922CB7552B2E16330067805A /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CB7532B2E16330067805A /* UICollectionView+Extension.swift */; };
+		922CB7572B2E21CF0067805A /* SearchTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CB7562B2E21CF0067805A /* SearchTabViewController.swift */; };
+		922CB7592B2E22A10067805A /* oneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CB7582B2E22A10067805A /* oneCell.swift */; };
+		922CB75C2B2E34E00067805A /* BannerHomeTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CB75A2B2E34E00067805A /* BannerHomeTabCell.swift */; };
+		922CB75D2B2E34E00067805A /* BannerHomeTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 922CB75B2B2E34E00067805A /* BannerHomeTabCell.xib */; };
+		922CB7622B2E3E500067805A /* CircluarProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CB7612B2E3E500067805A /* CircluarProgressView.swift */; };
+		922CB7672B2E43CC0067805A /* ActiveOrderHomeTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CB7652B2E43CC0067805A /* ActiveOrderHomeTabCell.swift */; };
+		922CB7682B2E43CC0067805A /* ActiveOrderHomeTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 922CB7662B2E43CC0067805A /* ActiveOrderHomeTabCell.xib */; };
+		922CB76C2B2E46D80067805A /* CategoryHomeTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CB76A2B2E46D80067805A /* CategoryHomeTabCell.swift */; };
+		922CB76D2B2E46D80067805A /* CategoryHomeTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 922CB76B2B2E46D80067805A /* CategoryHomeTabCell.xib */; };
+		922CB7712B2E477C0067805A /* SingleCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CB76F2B2E477C0067805A /* SingleCategoryCollectionViewCell.swift */; };
+		922CB7722B2E477C0067805A /* SingleCategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 922CB7702B2E477C0067805A /* SingleCategoryCollectionViewCell.xib */; };
 		929E60F42B2C79FE00FD038A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E60F32B2C79FE00FD038A /* TabBarController.swift */; };
-		929E60FA2B2C876800FD038A /* ActiveOrderHomeTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E60F82B2C876800FD038A /* ActiveOrderHomeTabCell.swift */; };
-		929E60FB2B2C876800FD038A /* ActiveOrderHomeTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 929E60F92B2C876800FD038A /* ActiveOrderHomeTabCell.xib */; };
 		92A66D462B2C185500CB8EF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A66D452B2C185500CB8EF5 /* AppDelegate.swift */; };
 		92A66D482B2C185500CB8EF5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A66D472B2C185500CB8EF5 /* SceneDelegate.swift */; };
 		92A66D4D2B2C185500CB8EF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92A66D4B2B2C185500CB8EF5 /* Main.storyboard */; };
@@ -50,9 +61,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		922CB7522B2E16330067805A /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		922CB7532B2E16330067805A /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		922CB7562B2E21CF0067805A /* SearchTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabViewController.swift; sourceTree = "<group>"; };
+		922CB7582B2E22A10067805A /* oneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oneCell.swift; sourceTree = "<group>"; };
+		922CB75A2B2E34E00067805A /* BannerHomeTabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerHomeTabCell.swift; sourceTree = "<group>"; };
+		922CB75B2B2E34E00067805A /* BannerHomeTabCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerHomeTabCell.xib; sourceTree = "<group>"; };
+		922CB7612B2E3E500067805A /* CircluarProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircluarProgressView.swift; sourceTree = "<group>"; };
+		922CB7652B2E43CC0067805A /* ActiveOrderHomeTabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveOrderHomeTabCell.swift; sourceTree = "<group>"; };
+		922CB7662B2E43CC0067805A /* ActiveOrderHomeTabCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActiveOrderHomeTabCell.xib; sourceTree = "<group>"; };
+		922CB76A2B2E46D80067805A /* CategoryHomeTabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHomeTabCell.swift; sourceTree = "<group>"; };
+		922CB76B2B2E46D80067805A /* CategoryHomeTabCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryHomeTabCell.xib; sourceTree = "<group>"; };
+		922CB76F2B2E477C0067805A /* SingleCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		922CB7702B2E477C0067805A /* SingleCategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleCategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		929E60F32B2C79FE00FD038A /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		929E60F82B2C876800FD038A /* ActiveOrderHomeTabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveOrderHomeTabCell.swift; sourceTree = "<group>"; };
-		929E60F92B2C876800FD038A /* ActiveOrderHomeTabCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActiveOrderHomeTabCell.xib; sourceTree = "<group>"; };
 		92A66D422B2C185500CB8EF5 /* Alsaree3App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alsaree3App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92A66D452B2C185500CB8EF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92A66D472B2C185500CB8EF5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +126,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		922CB75E2B2E38B70067805A /* ExtraFile */ = {
+			isa = PBXGroup;
+			children = (
+				922CB7612B2E3E500067805A /* CircluarProgressView.swift */,
+			);
+			path = ExtraFile;
+			sourceTree = "<group>";
+		};
+		922CB7692B2E467E0067805A /* CategoryCell */ = {
+			isa = PBXGroup;
+			children = (
+				922CB76E2B2E47430067805A /* cell */,
+				922CB76A2B2E46D80067805A /* CategoryHomeTabCell.swift */,
+				922CB76B2B2E46D80067805A /* CategoryHomeTabCell.xib */,
+			);
+			path = CategoryCell;
+			sourceTree = "<group>";
+		};
+		922CB76E2B2E47430067805A /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				922CB76F2B2E477C0067805A /* SingleCategoryCollectionViewCell.swift */,
+				922CB7702B2E477C0067805A /* SingleCategoryCollectionViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
 		929E60F52B2C7F9200FD038A /* TabBarItems */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +175,7 @@
 		929E60F72B2C871D00FD038A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				922CB7692B2E467E0067805A /* CategoryCell */,
 				929E60FD2B2C90A400FD038A /* BannerCell */,
 				929E60FC2B2C908B00FD038A /* ActiveOrderCell */,
 			);
@@ -135,8 +185,8 @@
 		929E60FC2B2C908B00FD038A /* ActiveOrderCell */ = {
 			isa = PBXGroup;
 			children = (
-				929E60F82B2C876800FD038A /* ActiveOrderHomeTabCell.swift */,
-				929E60F92B2C876800FD038A /* ActiveOrderHomeTabCell.xib */,
+				922CB7652B2E43CC0067805A /* ActiveOrderHomeTabCell.swift */,
+				922CB7662B2E43CC0067805A /* ActiveOrderHomeTabCell.xib */,
 			);
 			path = ActiveOrderCell;
 			sourceTree = "<group>";
@@ -144,6 +194,8 @@
 		929E60FD2B2C90A400FD038A /* BannerCell */ = {
 			isa = PBXGroup;
 			children = (
+				922CB75A2B2E34E00067805A /* BannerHomeTabCell.swift */,
+				922CB75B2B2E34E00067805A /* BannerHomeTabCell.xib */,
 			);
 			path = BannerCell;
 			sourceTree = "<group>";
@@ -212,6 +264,7 @@
 		92A66D792B2C18A200CB8EF5 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				922CB75E2B2E38B70067805A /* ExtraFile */,
 				92A66D9F2B2C2FC600CB8EF5 /* Extention */,
 				92A66D9E2B2C2FB600CB8EF5 /* Constants */,
 				92A66D8D2B2C2E2500CB8EF5 /* Fonts */,
@@ -263,6 +316,8 @@
 		92A66D832B2C205900CB8EF5 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				922CB7562B2E21CF0067805A /* SearchTabViewController.swift */,
+				922CB7582B2E22A10067805A /* oneCell.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -317,6 +372,8 @@
 			isa = PBXGroup;
 			children = (
 				92A66DA22B2C30A500CB8EF5 /* UIView+Extention.swift */,
+				922CB7532B2E16330067805A /* UICollectionView+Extension.swift */,
+				922CB7522B2E16330067805A /* UITableView+Extension.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -427,15 +484,18 @@
 			files = (
 				92A66D972B2C2ECA00CB8EF5 /* Cairo-Light.ttf in Resources */,
 				92A66D552B2C185700CB8EF5 /* LaunchScreen.storyboard in Resources */,
+				922CB7722B2E477C0067805A /* SingleCategoryCollectionViewCell.xib in Resources */,
 				92A66D522B2C185700CB8EF5 /* Assets.xcassets in Resources */,
-				929E60FB2B2C876800FD038A /* ActiveOrderHomeTabCell.xib in Resources */,
 				92A66D9A2B2C2ECA00CB8EF5 /* Cairo-Black.ttf in Resources */,
+				922CB76D2B2E46D80067805A /* CategoryHomeTabCell.xib in Resources */,
 				92A66D9C2B2C2ECA00CB8EF5 /* Cairo-Medium.ttf in Resources */,
 				92A66D982B2C2ECA00CB8EF5 /* Cairo-ExtraBold.ttf in Resources */,
 				92A66D9D2B2C2ECA00CB8EF5 /* Cairo-Regular.ttf in Resources */,
+				922CB75D2B2E34E00067805A /* BannerHomeTabCell.xib in Resources */,
 				92A66D4D2B2C185500CB8EF5 /* Main.storyboard in Resources */,
 				92A66D962B2C2ECA00CB8EF5 /* Cairo-ExtraLight.ttf in Resources */,
 				92A66D9B2B2C2ECA00CB8EF5 /* Cairo-Bold.ttf in Resources */,
+				922CB7682B2E43CC0067805A /* ActiveOrderHomeTabCell.xib in Resources */,
 				92A66D992B2C2ECA00CB8EF5 /* Cairo-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,12 +523,20 @@
 			files = (
 				92A66D502B2C185500CB8EF5 /* Alsaree3App.xcdatamodeld in Sources */,
 				92A66D462B2C185500CB8EF5 /* AppDelegate.swift in Sources */,
+				922CB7592B2E22A10067805A /* oneCell.swift in Sources */,
+				922CB76C2B2E46D80067805A /* CategoryHomeTabCell.swift in Sources */,
+				922CB75C2B2E34E00067805A /* BannerHomeTabCell.swift in Sources */,
+				922CB7542B2E16330067805A /* UITableView+Extension.swift in Sources */,
 				92A66DA32B2C30A500CB8EF5 /* UIView+Extention.swift in Sources */,
 				92A66D482B2C185500CB8EF5 /* SceneDelegate.swift in Sources */,
+				922CB7712B2E477C0067805A /* SingleCategoryCollectionViewCell.swift in Sources */,
 				929E60F42B2C79FE00FD038A /* TabBarController.swift in Sources */,
+				922CB7552B2E16330067805A /* UICollectionView+Extension.swift in Sources */,
 				92A66D892B2C20D700CB8EF5 /* HomeTabViewController.swift in Sources */,
+				922CB7622B2E3E500067805A /* CircluarProgressView.swift in Sources */,
 				92A66DA12B2C2FE100CB8EF5 /* Constant.swift in Sources */,
-				929E60FA2B2C876800FD038A /* ActiveOrderHomeTabCell.swift in Sources */,
+				922CB7672B2E43CC0067805A /* ActiveOrderHomeTabCell.swift in Sources */,
+				922CB7572B2E21CF0067805A /* SearchTabViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

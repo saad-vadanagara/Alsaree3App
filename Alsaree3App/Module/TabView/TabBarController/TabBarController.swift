@@ -17,7 +17,7 @@ class TabBarController: UITabBarController {
         ]
         
         let selectedTextAttributes: [NSAttributedString.Key: Any] = [
-            .foregroundColor: ColorConstant.primeryColor,
+            .foregroundColor: ColorConstant.primaryYellowColor,
             .font: UIFont(name: FontConstant.bold.rawValue, size: 10) ?? UIFont.systemFont(ofSize: 10)
         ]
         
@@ -27,7 +27,7 @@ class TabBarController: UITabBarController {
         
         // Set the selected text color and image color
         UITabBarItem.appearance().setTitleTextAttributes(selectedTextAttributes, for: .selected)
-        UITabBar.appearance().tintColor = ColorConstant.primeryColor
+        UITabBar.appearance().tintColor = ColorConstant.primaryYellowColor
         
         // Customize individual tab bar items (replace with your own images and titles)
         if let items = tabBar.items {
