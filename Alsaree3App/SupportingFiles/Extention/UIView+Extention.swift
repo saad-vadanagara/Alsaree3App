@@ -23,6 +23,26 @@ extension UIView{
             button.setAttributedTitle(attributedText, for: .normal)
         }
     
+    func setButtonText(button: UIButton, label: String, color: UIColor = ColorConstant.blackcolor, size: Int, font_Family: String = FontConstant.regular.rawValue, isBold: Bool = false, isUnderline: Bool = false, borderColor: UIColor = UIColor.clear) {
+        
+        var attributes: [NSAttributedString.Key: Any] = [
+            .foregroundColor: color
+        ]
+        
+        attributes[.font] = isBold ? UIFont(name: FontConstant.bold.rawValue, size: CGFloat(size)) : UIFont(name: font_Family, size: CGFloat(size))
+        
+        if isUnderline {
+            // Add underline attribute
+            let underlineAttribute = [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue]
+            attributes.merge(underlineAttribute) { $1 }
+        }
+        
+        let attributedText = NSAttributedString(string: label, attributes: attributes)
+        
+        button.layer.borderColor = borderColor.cgColor
+        button.setAttributedTitle(attributedText, for: .normal)
+    }
+    
     func setLabelText(lblrefrence: UILabel,lbltext:String,fontSize:Int,font_Family:String = FontConstant.regular.rawValue,isBold:Bool = false ,color:UIColor = UIColor.black , alignmentleft : Bool = false ){
         lblrefrence.text = lbltext
         lblrefrence.font = isBold ? UIFont.boldSystemFont(ofSize: CGFloat(fontSize)) : UIFont(name: font_Family, size: CGFloat(fontSize))
@@ -95,14 +115,26 @@ extension UIView{
     }
     
     
+    func addBottomBorderWithColor(color: UIColor, width: CGFloat) {
+        let border = CALayer()
+        border.backgroundColor = color.cgColor
+        border.frame = CGRect(x: 0, y: self.frame.size.height - width, width: UIScreen.main.bounds.width, height: width)
+        self.layer.addSublayer(border)
+    }
+    
+    func addTopBorderWithColor(color: UIColor, width: CGFloat) {
+        let border = CALayer()
+        border.backgroundColor = color.cgColor
+        border.frame = CGRect(x: 0, y: 0, width: self.frame.size.width, height: width)
+        self.layer.addSublayer(border)
+    }
+    
+    func applyShadow(to view: UIView) {
+        
+    }
+    
+    
+    
 }
 
-extension UIImage {
-    func resizedImage(with size: CGSize) -> UIImage {
-        UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
-        defer { UIGraphicsEndImageContext() }
-        draw(in: CGRect(origin: .zero, size: size))
-        return UIGraphicsGetImageFromCurrentImageContext() ?? self
-    }
-}
 

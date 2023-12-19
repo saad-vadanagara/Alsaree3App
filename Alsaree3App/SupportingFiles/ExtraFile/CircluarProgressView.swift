@@ -82,7 +82,7 @@ class CircularProgressView: UIView {
     }
     
     func setProgress(duration: TimeInterval = 3, to newProgress: Float) -> Void{
-        let animation = CABasicAnimation(keyPath: "strokeEnd")
+        let animation = CABasicAnimation(keyPath: TextConstant.strokeEnd.rawValue)
         animation.duration = duration
         
         animation.fromValue = progressLayer.strokeEnd
@@ -90,7 +90,7 @@ class CircularProgressView: UIView {
         
         progressLayer.strokeEnd = CGFloat(newProgress)
         
-        progressLayer.add(animation, forKey: "animationProgress")
+        progressLayer.add(animation, forKey: TextConstant.animationProgress.rawValue)
         
     }
     
