@@ -1,5 +1,5 @@
 //
-//  ProfileTabViewController.swift
+//  BasketTabViewController.swift
 //  Alsaree3App
 //
 //  Created by Neosoft on 19/12/23.
@@ -7,37 +7,37 @@
 
 import UIKit
 
-class ProfileTabViewController: UIViewController {
+class BasketTabViewController: UIViewController {
 
-    @IBOutlet weak var ProfileTabTableView: UITableView!
+    @IBOutlet weak var BasketTabTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ProfileTabTableView.separatorStyle = .none
+        BasketTabTableView.separatorStyle = .none
         setupdeligate()
         registerCell()
     }
     
     func setupdeligate(){
-        ProfileTabTableView.delegate = self
-        ProfileTabTableView.dataSource = self
+        BasketTabTableView.delegate = self
+        BasketTabTableView.dataSource = self
     }
     
     func registerCell(){
-        ProfileTabTableView.registerNib(of: ErrorStateTableViewCell.self)
+        BasketTabTableView.registerNib(of: ErrorStateTableViewCell.self)
     }
    
 }
 
-extension ProfileTabViewController: UITableViewDataSource,UITableViewDelegate{
+extension BasketTabViewController: UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell =  tableView.dequeueReusableCell(withIdentifier: "ErrorStateTableViewCell", for: indexPath) as! ErrorStateTableViewCell
-        cell.isInternetError = true
+        cell.isApiError = true
         return cell
     }
     
@@ -46,5 +46,5 @@ extension ProfileTabViewController: UITableViewDataSource,UITableViewDelegate{
         return tableviewScreen
     }
     
-    
+
 }

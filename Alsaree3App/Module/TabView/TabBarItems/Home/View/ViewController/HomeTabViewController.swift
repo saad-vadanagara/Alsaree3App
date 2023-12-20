@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import ShimmerSwift
 class HomeTabViewController: UIViewController {
     
     
@@ -25,7 +25,6 @@ class HomeTabViewController: UIViewController {
         settingDelegate()
         registerTableViewCell()
         setupHeaderView()
-        
     }
     
     func settingDelegate(){
@@ -42,17 +41,20 @@ class HomeTabViewController: UIViewController {
         hometabTableView.registerNib(of: FoodCatrgoryCell.self)
         hometabTableView.registerNib(of: goldCategoryCardCellTableViewCell.self)
         hometabTableView.registerNib(of: ResturentTableViewCell.self)
+        hometabTableView.registerNib(of: ResturentDetailsTableViewCell.self)
     }
     
     func setupHeaderView(){
+        
         headerNavigationView.backgroundColor = ColorConstant.whitecolor
         headerNavigationView.addBottomBorderWithColor(color: ColorConstant.borderColorGray, width: 1)
         view.applyShadow(to: headerNavigationView)
+        
     }
     
     func setupUI(){
         
-        view.setLabelText(lblrefrence: applicationNamelbl, lbltext: TextConstant.alsaree3App.rawValue, fontSize: 16,alignmentleft: true)
+        view.setLabelText(lblrefrence: applicationNamelbl, lbltext: TextConstant.alsaree3App.rawValue, fontSize: 16,alignmentLeft: true)
         
         let imageSize = CGSize(width: 20, height: 20)
         view.setButtonTextWithImage(button: areaNavitionBtn, image: ImageConstant.downArrow.rawValue, text: ButtonTextConstant.alFurjanArea.rawValue, fontSize: 12, imageSize: imageSize)
@@ -64,10 +66,8 @@ class HomeTabViewController: UIViewController {
         hometabTableView.separatorStyle = .none
         hometabTableView.backgroundColor = ColorConstant.primaryWhiteBgcolor
         
-      
-        
-        
-        
+        hometabTableView.rowHeight = UITableView.automaticDimension
+        hometabTableView.estimatedRowHeight = hometabTableView.bounds.height*0.55
     }
     
 }
@@ -114,6 +114,21 @@ extension HomeTabViewController:UITableViewDataSource{
             cell.setupUI()
             cell.selectionStyle = .none
             return cell
+        case .featured:
+            let cell = tableView.getCell(identifier: "ResturentTableViewCell") as! ResturentTableViewCell
+            cell.featuredData = viewModel.resturentCollectionViewData[1]
+            cell.setupUI()
+            cell.selectionStyle = .none
+            return cell
+        case .offersNearby:
+            let cell = tableView.getCell(identifier: "ResturentTableViewCell") as! ResturentTableViewCell
+            cell.featuredData = viewModel.resturentCollectionViewData[2]
+            cell.setupUI()
+            cell.selectionStyle = .none
+            return cell
+        case .otherCells:
+            let cell = tableView.getCell(identifier: "ResturentDetailsTableViewCell") as! ResturentDetailsTableViewCell
+            return cell
         default :
             return UITableViewCell()
         }
@@ -126,10 +141,12 @@ extension HomeTabViewController:UITableViewDataSource{
 extension HomeTabViewController : UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
+
+
+
         // Getting the height of hole Screen
         let screenSize = UIScreen.main.bounds.height
-        
+
         switch HomeCellsList(rawValue: indexPath.row)
         {
         case .orderStatus:
@@ -141,10 +158,23 @@ extension HomeTabViewController : UITableViewDelegate{
         case .foodCategoryList:
             return screenSize*0.16
         case .orderAgain:
-            return screenSize*0.45
+            return screenSize*0.47
+        case .offersNearby:
+            return screenSize*0.47
+        case .featured:
+            return screenSize*0.47
+        case .otherCells:
+            return screenSize*0.47
+
         default:
             return UITableView.automaticDimension
         }
+
+
     }
+
+
+    
+    
     
 }

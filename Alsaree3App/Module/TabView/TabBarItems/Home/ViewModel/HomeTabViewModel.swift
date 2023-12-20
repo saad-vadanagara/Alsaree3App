@@ -17,4 +17,6 @@ class HomeTabViewModel{
         resturentCollectionViewDetails(name: "Offers Nearby", details: offerNearby)
     ]
     
+    var isApiCallDone = false
+    
 }

@@ -85,6 +85,9 @@ enum HomeCellsList : Int, CaseIterable{
     case dealsCollection
     case foodCategoryList
     case orderAgain
+    case featured
+    case offersNearby
+    case otherCells
 }
 
 enum HomeCategoryCellList : Int , CaseIterable{

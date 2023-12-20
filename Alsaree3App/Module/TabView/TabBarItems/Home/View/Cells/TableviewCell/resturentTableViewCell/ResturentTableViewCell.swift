@@ -70,7 +70,7 @@ extension ResturentTableViewCell : UICollectionViewDelegate,UICollectionViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.width * 0.9, height: collectionView.bounds.height)
+        return CGSize(width: collectionView.bounds.width * 0.75, height: collectionView.bounds.height)
     }
     
 }

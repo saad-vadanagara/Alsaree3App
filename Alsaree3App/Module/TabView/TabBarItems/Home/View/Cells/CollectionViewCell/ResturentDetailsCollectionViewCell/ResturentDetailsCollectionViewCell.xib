@@ -21,10 +21,10 @@
                         <rect key="frame" x="3" y="0.0" width="339" height="328"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p5r-JH-6q6">
-                                <rect key="frame" x="0.0" y="0.0" width="339" height="196.66666666666666"/>
+                                <rect key="frame" x="0.0" y="0.0" width="339" height="180.33333333333334"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="qD8-ue-RwF">
-                                <rect key="frame" x="10" y="227.66666666666666" width="319" height="100.33333333333334"/>
+                                <rect key="frame" x="10" y="211.33333333333334" width="319" height="116.66666666666666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZsG-Ue-Ywn">
                                     <size key="itemSize" width="128" height="128"/>
@@ -34,7 +34,7 @@
                                 </collectionViewFlowLayout>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zla-59-H0H">
-                                <rect key="frame" x="20" y="201.66666666666666" width="299" height="21"/>
+                                <rect key="frame" x="20" y="185.33333333333334" width="299" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -48,7 +48,7 @@
                             <constraint firstAttribute="trailing" secondItem="p5r-JH-6q6" secondAttribute="trailing" id="L8Q-os-6Wk"/>
                             <constraint firstItem="qD8-ue-RwF" firstAttribute="leading" secondItem="OWo-Dc-3O7" secondAttribute="leading" constant="10" id="LMq-gD-ucW"/>
                             <constraint firstItem="p5r-JH-6q6" firstAttribute="leading" secondItem="OWo-Dc-3O7" secondAttribute="leading" id="Tx0-DP-nAq"/>
-                            <constraint firstItem="p5r-JH-6q6" firstAttribute="height" secondItem="OWo-Dc-3O7" secondAttribute="height" multiplier="0.6" id="UYS-wF-xZj"/>
+                            <constraint firstItem="p5r-JH-6q6" firstAttribute="height" secondItem="OWo-Dc-3O7" secondAttribute="height" multiplier="0.55" id="UYS-wF-xZj"/>
                             <constraint firstItem="Zla-59-H0H" firstAttribute="top" secondItem="p5r-JH-6q6" secondAttribute="bottom" constant="5" id="Wua-0T-Zwc"/>
                             <constraint firstAttribute="trailing" secondItem="qD8-ue-RwF" secondAttribute="trailing" constant="10" id="fdp-Ck-BIN"/>
                             <constraint firstItem="Zla-59-H0H" firstAttribute="leading" secondItem="OWo-Dc-3O7" secondAttribute="leading" constant="20" id="mv7-8q-yCl"/>
@@ -56,10 +56,10 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tbm-sm-zRa">
-                        <rect key="frame" x="0.0" y="20.000000000000004" width="203.33333333333334" height="33.333333333333343"/>
+                        <rect key="frame" x="0.0" y="20" width="203.33333333333334" height="30.666666666666671"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdg-JF-9cw">
-                                <rect key="frame" x="10" y="0.0" width="193.33333333333334" height="33.333333333333336"/>
+                                <rect key="frame" x="10" y="0.0" width="193.33333333333334" height="30.666666666666668"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -74,10 +74,10 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j3y-1L-VjN">
-                        <rect key="frame" x="0.0" y="62.333333333333336" width="135.66666666666666" height="30.666666666666664"/>
+                        <rect key="frame" x="0.0" y="59.666666666666657" width="135.66666666666666" height="28"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WU1-4i-T7B">
-                                <rect key="frame" x="10.000000000000007" y="0.0" width="125.66666666666669" height="30.666666666666668"/>
+                                <rect key="frame" x="10.000000000000007" y="0.0" width="125.66666666666669" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

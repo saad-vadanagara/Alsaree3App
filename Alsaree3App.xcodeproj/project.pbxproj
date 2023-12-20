@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3DB14185B53306056442B37E /* Pods_Alsaree3App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95A90DC06A8AE08B3C09F00 /* Pods_Alsaree3App.framework */; };
+		7B9D7E1BDD1F12D8013ABC95 /* Pods_Alsaree3AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B683BDB30B428A9D94F98F8A /* Pods_Alsaree3AppTests.framework */; };
+		7C9E9745AED076F6DCDE13C8 /* Pods_Alsaree3App_Alsaree3AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A77A3FCDF4E06BE4CB7F9084 /* Pods_Alsaree3App_Alsaree3AppUITests.framework */; };
 		92112F572B306513005CA584 /* CollectionViewFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92112F562B306513005CA584 /* CollectionViewFiles.swift */; };
 		92112F5B2B30667F005CA584 /* FeatureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92112F592B30667F005CA584 /* FeatureCell.swift */; };
 		92112F5C2B30667F005CA584 /* FeatureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92112F5A2B30667F005CA584 /* FeatureCell.xib */; };
-		921453942B31772700F54890 /* ProfileTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921453922B31772700F54890 /* ProfileTabViewController.swift */; };
-		921453952B31772700F54890 /* ProfileTabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 921453932B31772700F54890 /* ProfileTabViewController.xib */; };
+		921453A12B317DB600F54890 /* ProfileTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921453A02B317DB600F54890 /* ProfileTabViewController.swift */; };
+		921453A52B318BF400F54890 /* ErrorStateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921453A32B318BF400F54890 /* ErrorStateTableViewCell.swift */; };
+		921453A62B318BF400F54890 /* ErrorStateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 921453A42B318BF400F54890 /* ErrorStateTableViewCell.xib */; };
+		921453A92B319A9D00F54890 /* Shimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921453A82B319A9D00F54890 /* Shimmer.swift */; };
 		922CB7542B2E16330067805A /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CB7522B2E16330067805A /* UITableView+Extension.swift */; };
 		922CB7552B2E16330067805A /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CB7532B2E16330067805A /* UICollectionView+Extension.swift */; };
 		922CB7572B2E21CF0067805A /* SearchTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CB7562B2E21CF0067805A /* SearchTabViewController.swift */; };
@@ -24,6 +29,8 @@
 		922CB76D2B2E46D80067805A /* CategoryHomeTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 922CB76B2B2E46D80067805A /* CategoryHomeTabCell.xib */; };
 		922CB7712B2E477C0067805A /* SingleCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CB76F2B2E477C0067805A /* SingleCategoryCollectionViewCell.swift */; };
 		922CB7722B2E477C0067805A /* SingleCategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 922CB7702B2E477C0067805A /* SingleCategoryCollectionViewCell.xib */; };
+		9296B3342B3317BF008A9668 /* CustomCollectionViewSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9296B3332B3317BF008A9668 /* CustomCollectionViewSize.swift */; };
+		929BB7B82B31D9CC00ADCBD4 /* BasketTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929BB7B72B31D9CC00ADCBD4 /* BasketTabViewController.swift */; };
 		929E60F42B2C79FE00FD038A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E60F32B2C79FE00FD038A /* TabBarController.swift */; };
 		929F8F942B2EF40F00536E70 /* AdvertisementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F8F922B2EF40F00536E70 /* AdvertisementCell.swift */; };
 		929F8F952B2EF40F00536E70 /* AdvertisementCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 929F8F932B2EF40F00536E70 /* AdvertisementCell.xib */; };
@@ -52,16 +59,22 @@
 		92A66D6A2B2C185800CB8EF5 /* Alsaree3AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A66D692B2C185800CB8EF5 /* Alsaree3AppUITests.swift */; };
 		92A66D6C2B2C185800CB8EF5 /* Alsaree3AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A66D6B2B2C185800CB8EF5 /* Alsaree3AppUITestsLaunchTests.swift */; };
 		92A66D892B2C20D700CB8EF5 /* HomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A66D882B2C20D700CB8EF5 /* HomeTabViewController.swift */; };
-		92A66D962B2C2ECA00CB8EF5 /* Cairo-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92A66D8E2B2C2EC900CB8EF5 /* Cairo-ExtraLight.ttf */; };
-		92A66D972B2C2ECA00CB8EF5 /* Cairo-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92A66D8F2B2C2EC900CB8EF5 /* Cairo-Light.ttf */; };
-		92A66D982B2C2ECA00CB8EF5 /* Cairo-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92A66D902B2C2EC900CB8EF5 /* Cairo-ExtraBold.ttf */; };
-		92A66D992B2C2ECA00CB8EF5 /* Cairo-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92A66D912B2C2EC900CB8EF5 /* Cairo-SemiBold.ttf */; };
-		92A66D9A2B2C2ECA00CB8EF5 /* Cairo-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92A66D922B2C2EC900CB8EF5 /* Cairo-Black.ttf */; };
-		92A66D9B2B2C2ECA00CB8EF5 /* Cairo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92A66D932B2C2ECA00CB8EF5 /* Cairo-Bold.ttf */; };
-		92A66D9C2B2C2ECA00CB8EF5 /* Cairo-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92A66D942B2C2ECA00CB8EF5 /* Cairo-Medium.ttf */; };
-		92A66D9D2B2C2ECA00CB8EF5 /* Cairo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92A66D952B2C2ECA00CB8EF5 /* Cairo-Regular.ttf */; };
 		92A66DA12B2C2FE100CB8EF5 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A66DA02B2C2FE100CB8EF5 /* Constant.swift */; };
 		92A66DA32B2C30A500CB8EF5 /* UIView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A66DA22B2C30A500CB8EF5 /* UIView+Extention.swift */; };
+		92A8B0642B32EAB80062628A /* Loaderfiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A8B0632B32EAB80062628A /* Loaderfiles.swift */; };
+		92A8B0672B32EB4E0062628A /* LoderMnager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A8B0662B32EB4E0062628A /* LoderMnager.swift */; };
+		92FA14462B31E36800148974 /* Cairo-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92FA14402B31E36600148974 /* Cairo-SemiBold.ttf */; };
+		92FA14472B31E36800148974 /* Cairo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92FA14412B31E36600148974 /* Cairo-Regular.ttf */; };
+		92FA14482B31E36800148974 /* Cairo-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92FA14422B31E36700148974 /* Cairo-Black.ttf */; };
+		92FA14492B31E36800148974 /* Cairo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92FA14432B31E36700148974 /* Cairo-Bold.ttf */; };
+		92FA144A2B31E36800148974 /* Cairo-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92FA14442B31E36700148974 /* Cairo-ExtraLight.ttf */; };
+		92FA144B2B31E36800148974 /* Cairo-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92FA14452B31E36700148974 /* Cairo-Light.ttf */; };
+		92FA144F2B321EAF00148974 /* LoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FA144D2B321EAF00148974 /* LoadingTableViewCell.swift */; };
+		92FA14502B321EAF00148974 /* LoadingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92FA144E2B321EAF00148974 /* LoadingTableViewCell.xib */; };
+		92FA14582B3221A900148974 /* ResturentDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FA14562B3221A900148974 /* ResturentDetailsTableViewCell.swift */; };
+		92FA14592B3221A900148974 /* ResturentDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92FA14572B3221A900148974 /* ResturentDetailsTableViewCell.xib */; };
+		92FA145C2B3232B500148974 /* loaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FA145B2B3232B500148974 /* loaderViewController.swift */; };
+		92FA145F2B3232DD00148974 /* LoderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FA145E2B3232DD00148974 /* LoderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,11 +95,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E1BDA9BBDC5767180A16E00 /* Pods-Alsaree3App-Alsaree3AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alsaree3App-Alsaree3AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-Alsaree3App-Alsaree3AppUITests/Pods-Alsaree3App-Alsaree3AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		223DF934F0901276240A96EB /* Pods-Alsaree3App-Alsaree3AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alsaree3App-Alsaree3AppUITests.release.xcconfig"; path = "Target Support Files/Pods-Alsaree3App-Alsaree3AppUITests/Pods-Alsaree3App-Alsaree3AppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		35E9534DFE5DF5D3EE6DABD1 /* Pods-Alsaree3AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alsaree3AppTests.debug.xcconfig"; path = "Target Support Files/Pods-Alsaree3AppTests/Pods-Alsaree3AppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4B7FBCCA8D921124C6083754 /* Pods-Alsaree3App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alsaree3App.release.xcconfig"; path = "Target Support Files/Pods-Alsaree3App/Pods-Alsaree3App.release.xcconfig"; sourceTree = "<group>"; };
+		7AD5A803A4E58EFAB9E31ACC /* Pods-Alsaree3App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alsaree3App.debug.xcconfig"; path = "Target Support Files/Pods-Alsaree3App/Pods-Alsaree3App.debug.xcconfig"; sourceTree = "<group>"; };
 		92112F562B306513005CA584 /* CollectionViewFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewFiles.swift; sourceTree = "<group>"; };
 		92112F592B30667F005CA584 /* FeatureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCell.swift; sourceTree = "<group>"; };
 		92112F5A2B30667F005CA584 /* FeatureCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeatureCell.xib; sourceTree = "<group>"; };
-		921453922B31772700F54890 /* ProfileTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabViewController.swift; sourceTree = "<group>"; };
-		921453932B31772700F54890 /* ProfileTabViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTabViewController.xib; sourceTree = "<group>"; };
+		921453A02B317DB600F54890 /* ProfileTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabViewController.swift; sourceTree = "<group>"; };
+		921453A32B318BF400F54890 /* ErrorStateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorStateTableViewCell.swift; sourceTree = "<group>"; };
+		921453A42B318BF400F54890 /* ErrorStateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorStateTableViewCell.xib; sourceTree = "<group>"; };
+		921453A82B319A9D00F54890 /* Shimmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shimmer.swift; sourceTree = "<group>"; };
 		922CB7522B2E16330067805A /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		922CB7532B2E16330067805A /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		922CB7562B2E21CF0067805A /* SearchTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +119,8 @@
 		922CB76B2B2E46D80067805A /* CategoryHomeTabCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryHomeTabCell.xib; sourceTree = "<group>"; };
 		922CB76F2B2E477C0067805A /* SingleCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		922CB7702B2E477C0067805A /* SingleCategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleCategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		9296B3332B3317BF008A9668 /* CustomCollectionViewSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewSize.swift; sourceTree = "<group>"; };
+		929BB7B72B31D9CC00ADCBD4 /* BasketTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketTabViewController.swift; sourceTree = "<group>"; };
 		929E60F32B2C79FE00FD038A /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		929F8F922B2EF40F00536E70 /* AdvertisementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisementCell.swift; sourceTree = "<group>"; };
 		929F8F932B2EF40F00536E70 /* AdvertisementCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdvertisementCell.xib; sourceTree = "<group>"; };
@@ -131,16 +153,26 @@
 		92A66D692B2C185800CB8EF5 /* Alsaree3AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alsaree3AppUITests.swift; sourceTree = "<group>"; };
 		92A66D6B2B2C185800CB8EF5 /* Alsaree3AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alsaree3AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		92A66D882B2C20D700CB8EF5 /* HomeTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabViewController.swift; sourceTree = "<group>"; };
-		92A66D8E2B2C2EC900CB8EF5 /* Cairo-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-ExtraLight.ttf"; sourceTree = "<group>"; };
-		92A66D8F2B2C2EC900CB8EF5 /* Cairo-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Light.ttf"; sourceTree = "<group>"; };
-		92A66D902B2C2EC900CB8EF5 /* Cairo-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-ExtraBold.ttf"; sourceTree = "<group>"; };
-		92A66D912B2C2EC900CB8EF5 /* Cairo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-SemiBold.ttf"; sourceTree = "<group>"; };
-		92A66D922B2C2EC900CB8EF5 /* Cairo-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Black.ttf"; sourceTree = "<group>"; };
-		92A66D932B2C2ECA00CB8EF5 /* Cairo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Bold.ttf"; sourceTree = "<group>"; };
-		92A66D942B2C2ECA00CB8EF5 /* Cairo-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Medium.ttf"; sourceTree = "<group>"; };
-		92A66D952B2C2ECA00CB8EF5 /* Cairo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Regular.ttf"; sourceTree = "<group>"; };
 		92A66DA02B2C2FE100CB8EF5 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		92A66DA22B2C30A500CB8EF5 /* UIView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extention.swift"; sourceTree = "<group>"; };
+		92A8B0632B32EAB80062628A /* Loaderfiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loaderfiles.swift; sourceTree = "<group>"; };
+		92A8B0662B32EB4E0062628A /* LoderMnager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoderMnager.swift; sourceTree = "<group>"; };
+		92FA14402B31E36600148974 /* Cairo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-SemiBold.ttf"; sourceTree = "<group>"; };
+		92FA14412B31E36600148974 /* Cairo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Regular.ttf"; sourceTree = "<group>"; };
+		92FA14422B31E36700148974 /* Cairo-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Black.ttf"; sourceTree = "<group>"; };
+		92FA14432B31E36700148974 /* Cairo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Bold.ttf"; sourceTree = "<group>"; };
+		92FA14442B31E36700148974 /* Cairo-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-ExtraLight.ttf"; sourceTree = "<group>"; };
+		92FA14452B31E36700148974 /* Cairo-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Light.ttf"; sourceTree = "<group>"; };
+		92FA144D2B321EAF00148974 /* LoadingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingTableViewCell.swift; sourceTree = "<group>"; };
+		92FA144E2B321EAF00148974 /* LoadingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingTableViewCell.xib; sourceTree = "<group>"; };
+		92FA14562B3221A900148974 /* ResturentDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturentDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		92FA14572B3221A900148974 /* ResturentDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResturentDetailsTableViewCell.xib; sourceTree = "<group>"; };
+		92FA145B2B3232B500148974 /* loaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loaderViewController.swift; sourceTree = "<group>"; };
+		92FA145E2B3232DD00148974 /* LoderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoderView.swift; sourceTree = "<group>"; };
+		9F3D2DB8D56DEF7FF42F380A /* Pods-Alsaree3AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alsaree3AppTests.release.xcconfig"; path = "Target Support Files/Pods-Alsaree3AppTests/Pods-Alsaree3AppTests.release.xcconfig"; sourceTree = "<group>"; };
+		A77A3FCDF4E06BE4CB7F9084 /* Pods_Alsaree3App_Alsaree3AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alsaree3App_Alsaree3AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B683BDB30B428A9D94F98F8A /* Pods_Alsaree3AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alsaree3AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B95A90DC06A8AE08B3C09F00 /* Pods_Alsaree3App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alsaree3App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +180,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DB14185B53306056442B37E /* Pods_Alsaree3App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +188,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B9D7E1BDD1F12D8013ABC95 /* Pods_Alsaree3AppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,12 +196,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C9E9745AED076F6DCDE13C8 /* Pods_Alsaree3App_Alsaree3AppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A9FDD2CE5B3430482692853 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B95A90DC06A8AE08B3C09F00 /* Pods_Alsaree3App.framework */,
+				A77A3FCDF4E06BE4CB7F9084 /* Pods_Alsaree3App_Alsaree3AppUITests.framework */,
+				B683BDB30B428A9D94F98F8A /* Pods_Alsaree3AppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		58D8EF6972A597825B54822A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7AD5A803A4E58EFAB9E31ACC /* Pods-Alsaree3App.debug.xcconfig */,
+				4B7FBCCA8D921124C6083754 /* Pods-Alsaree3App.release.xcconfig */,
+				0E1BDA9BBDC5767180A16E00 /* Pods-Alsaree3App-Alsaree3AppUITests.debug.xcconfig */,
+				223DF934F0901276240A96EB /* Pods-Alsaree3App-Alsaree3AppUITests.release.xcconfig */,
+				35E9534DFE5DF5D3EE6DABD1 /* Pods-Alsaree3AppTests.debug.xcconfig */,
+				9F3D2DB8D56DEF7FF42F380A /* Pods-Alsaree3AppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		92112F552B304F25005CA584 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +246,7 @@
 		921453852B315AC800F54890 /* TableviewCell */ = {
 			isa = PBXGroup;
 			children = (
+				92FA14512B32212E00148974 /* resturentDetailsTableViewCell */,
 				929FF9062B301F2900E9C34A /* resturentTableViewCell */,
 				929F8FA82B2F8C9E00536E70 /* GoldCategoryCard */,
 				929F8F9B2B2F4E9900536E70 /* FoodCategory */,
@@ -214,6 +273,7 @@
 		9214538B2B3176A300F54890 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				92FA144C2B321E8700148974 /* Cell */,
 				9214538C2B3176A800F54890 /* ViewController */,
 			);
 			path = View;
@@ -230,8 +290,7 @@
 		9214538F2B3176EA00F54890 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				921453922B31772700F54890 /* ProfileTabViewController.swift */,
-				921453932B31772700F54890 /* ProfileTabViewController.xib */,
+				921453A02B317DB600F54890 /* ProfileTabViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -239,6 +298,7 @@
 		921453902B3176F000F54890 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				921453A22B318BD400F54890 /* ErrorStateCell */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -252,11 +312,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		921453A22B318BD400F54890 /* ErrorStateCell */ = {
+			isa = PBXGroup;
+			children = (
+				921453A32B318BF400F54890 /* ErrorStateTableViewCell.swift */,
+				921453A42B318BF400F54890 /* ErrorStateTableViewCell.xib */,
+			);
+			path = ErrorStateCell;
+			sourceTree = "<group>";
+		};
 		922CB75E2B2E38B70067805A /* ExtraFile */ = {
 			isa = PBXGroup;
 			children = (
 				922CB7612B2E3E500067805A /* CircluarProgressView.swift */,
 				92112F562B306513005CA584 /* CollectionViewFiles.swift */,
+				921453A82B319A9D00F54890 /* Shimmer.swift */,
+				92FA145E2B3232DD00148974 /* LoderView.swift */,
+				9296B3332B3317BF008A9668 /* CustomCollectionViewSize.swift */,
 			);
 			path = ExtraFile;
 			sourceTree = "<group>";
@@ -277,6 +349,29 @@
 				922CB7702B2E477C0067805A /* SingleCategoryCollectionViewCell.xib */,
 			);
 			path = CategoryCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		929BB7B12B31D90400ADCBD4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				929BB7B52B31D95200ADCBD4 /* ViewController */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		929BB7B22B31D90800ADCBD4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		929BB7B52B31D95200ADCBD4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				929BB7B72B31D9CC00ADCBD4 /* BasketTabViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		929E60F52B2C7F9200FD038A /* TabBarItems */ = {
@@ -419,6 +514,8 @@
 				92A66D5E2B2C185800CB8EF5 /* Alsaree3AppTests */,
 				92A66D682B2C185800CB8EF5 /* Alsaree3AppUITests */,
 				92A66D432B2C185500CB8EF5 /* Products */,
+				58D8EF6972A597825B54822A /* Pods */,
+				3A9FDD2CE5B3430482692853 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -476,6 +573,7 @@
 		92A66D792B2C18A200CB8EF5 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				92A8B0622B32EAA70062628A /* LoaderFiles */,
 				922CB75E2B2E38B70067805A /* ExtraFile */,
 				92A66D9F2B2C2FC600CB8EF5 /* Extention */,
 				92A66D9E2B2C2FB600CB8EF5 /* Constants */,
@@ -487,6 +585,7 @@
 		92A66D7A2B2C18B700CB8EF5 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				92FA145A2B32329B00148974 /* Pages */,
 				92A66D852B2C207000CB8EF5 /* TabView */,
 			);
 			path = Module;
@@ -554,6 +653,8 @@
 		92A66D872B2C209E00CB8EF5 /* Basket */ = {
 			isa = PBXGroup;
 			children = (
+				929BB7B22B31D90800ADCBD4 /* Model */,
+				929BB7B12B31D90400ADCBD4 /* View */,
 			);
 			path = Basket;
 			sourceTree = "<group>";
@@ -561,14 +662,12 @@
 		92A66D8D2B2C2E2500CB8EF5 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				92A66D922B2C2EC900CB8EF5 /* Cairo-Black.ttf */,
-				92A66D932B2C2ECA00CB8EF5 /* Cairo-Bold.ttf */,
-				92A66D902B2C2EC900CB8EF5 /* Cairo-ExtraBold.ttf */,
-				92A66D8E2B2C2EC900CB8EF5 /* Cairo-ExtraLight.ttf */,
-				92A66D8F2B2C2EC900CB8EF5 /* Cairo-Light.ttf */,
-				92A66D942B2C2ECA00CB8EF5 /* Cairo-Medium.ttf */,
-				92A66D952B2C2ECA00CB8EF5 /* Cairo-Regular.ttf */,
-				92A66D912B2C2EC900CB8EF5 /* Cairo-SemiBold.ttf */,
+				92FA14422B31E36700148974 /* Cairo-Black.ttf */,
+				92FA14432B31E36700148974 /* Cairo-Bold.ttf */,
+				92FA14442B31E36700148974 /* Cairo-ExtraLight.ttf */,
+				92FA14452B31E36700148974 /* Cairo-Light.ttf */,
+				92FA14412B31E36600148974 /* Cairo-Regular.ttf */,
+				92FA14402B31E36600148974 /* Cairo-SemiBold.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -593,6 +692,41 @@
 			path = Extention;
 			sourceTree = "<group>";
 		};
+		92A8B0622B32EAA70062628A /* LoaderFiles */ = {
+			isa = PBXGroup;
+			children = (
+				92A8B0632B32EAB80062628A /* Loaderfiles.swift */,
+				92A8B0662B32EB4E0062628A /* LoderMnager.swift */,
+			);
+			path = LoaderFiles;
+			sourceTree = "<group>";
+		};
+		92FA144C2B321E8700148974 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				92FA144D2B321EAF00148974 /* LoadingTableViewCell.swift */,
+				92FA144E2B321EAF00148974 /* LoadingTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		92FA14512B32212E00148974 /* resturentDetailsTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				92FA14562B3221A900148974 /* ResturentDetailsTableViewCell.swift */,
+				92FA14572B3221A900148974 /* ResturentDetailsTableViewCell.xib */,
+			);
+			path = resturentDetailsTableViewCell;
+			sourceTree = "<group>";
+		};
+		92FA145A2B32329B00148974 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				92FA145B2B3232B500148974 /* loaderViewController.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -600,9 +734,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92A66D6F2B2C185800CB8EF5 /* Build configuration list for PBXNativeTarget "Alsaree3App" */;
 			buildPhases = (
+				12323937A8B76B4392F332B8 /* [CP] Check Pods Manifest.lock */,
 				92A66D3E2B2C185500CB8EF5 /* Sources */,
 				92A66D3F2B2C185500CB8EF5 /* Frameworks */,
 				92A66D402B2C185500CB8EF5 /* Resources */,
+				43AC30F0409F25C725EDB133 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -617,6 +753,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92A66D722B2C185800CB8EF5 /* Build configuration list for PBXNativeTarget "Alsaree3AppTests" */;
 			buildPhases = (
+				559777CE4B23E9037D2D9F4A /* [CP] Check Pods Manifest.lock */,
 				92A66D572B2C185800CB8EF5 /* Sources */,
 				92A66D582B2C185800CB8EF5 /* Frameworks */,
 				92A66D592B2C185800CB8EF5 /* Resources */,
@@ -635,9 +772,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92A66D752B2C185800CB8EF5 /* Build configuration list for PBXNativeTarget "Alsaree3AppUITests" */;
 			buildPhases = (
+				CE04EA29858D4E6FD822D2EA /* [CP] Check Pods Manifest.lock */,
 				92A66D612B2C185800CB8EF5 /* Sources */,
 				92A66D622B2C185800CB8EF5 /* Frameworks */,
 				92A66D632B2C185800CB8EF5 /* Resources */,
+				DEF85C760B9B29031CBAE218 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -697,29 +836,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92FA14472B31E36800148974 /* Cairo-Regular.ttf in Resources */,
 				929FF90F2B301F8C00E9C34A /* ResturentDetailsCollectionViewCell.xib in Resources */,
-				92A66D972B2C2ECA00CB8EF5 /* Cairo-Light.ttf in Resources */,
 				929F8F952B2EF40F00536E70 /* AdvertisementCell.xib in Resources */,
 				929FF90A2B301F6400E9C34A /* ResturentTableViewCell.xib in Resources */,
-				921453952B31772700F54890 /* ProfileTabViewController.xib in Resources */,
 				92A66D552B2C185700CB8EF5 /* LaunchScreen.storyboard in Resources */,
+				92FA14462B31E36800148974 /* Cairo-SemiBold.ttf in Resources */,
+				92FA144B2B31E36800148974 /* Cairo-Light.ttf in Resources */,
+				92FA14492B31E36800148974 /* Cairo-Bold.ttf in Resources */,
+				921453A62B318BF400F54890 /* ErrorStateTableViewCell.xib in Resources */,
 				922CB7722B2E477C0067805A /* SingleCategoryCollectionViewCell.xib in Resources */,
 				92A66D522B2C185700CB8EF5 /* Assets.xcassets in Resources */,
-				92A66D9A2B2C2ECA00CB8EF5 /* Cairo-Black.ttf in Resources */,
 				92112F5C2B30667F005CA584 /* FeatureCell.xib in Resources */,
 				922CB76D2B2E46D80067805A /* CategoryHomeTabCell.xib in Resources */,
-				92A66D9C2B2C2ECA00CB8EF5 /* Cairo-Medium.ttf in Resources */,
-				92A66D982B2C2ECA00CB8EF5 /* Cairo-ExtraBold.ttf in Resources */,
-				92A66D9D2B2C2ECA00CB8EF5 /* Cairo-Regular.ttf in Resources */,
 				922CB75D2B2E34E00067805A /* BannerHomeTabCell.xib in Resources */,
 				92A66D4D2B2C185500CB8EF5 /* Main.storyboard in Resources */,
 				929F8F9F2B2F653800536E70 /* FoodCatrgoryCell.xib in Resources */,
-				92A66D962B2C2ECA00CB8EF5 /* Cairo-ExtraLight.ttf in Resources */,
+				92FA14482B31E36800148974 /* Cairo-Black.ttf in Resources */,
+				92FA14502B321EAF00148974 /* LoadingTableViewCell.xib in Resources */,
 				929F8FA42B2F656700536E70 /* FoodCatCollectionViewCell.xib in Resources */,
-				92A66D9B2B2C2ECA00CB8EF5 /* Cairo-Bold.ttf in Resources */,
 				922CB7682B2E43CC0067805A /* ActiveOrderHomeTabCell.xib in Resources */,
 				929F8F992B2F138900536E70 /* AdvCollectionViewCell.xib in Resources */,
-				92A66D992B2C2ECA00CB8EF5 /* Cairo-SemiBold.ttf in Resources */,
+				92FA14592B3221A900148974 /* ResturentDetailsTableViewCell.xib in Resources */,
+				92FA144A2B31E36800148974 /* Cairo-ExtraLight.ttf in Resources */,
 				929F8FAC2B2F8CEE00536E70 /* goldCategoryCardCellTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -740,6 +879,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		12323937A8B76B4392F332B8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Alsaree3App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		43AC30F0409F25C725EDB133 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Alsaree3App/Pods-Alsaree3App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Alsaree3App/Pods-Alsaree3App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Alsaree3App/Pods-Alsaree3App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		559777CE4B23E9037D2D9F4A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Alsaree3AppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE04EA29858D4E6FD822D2EA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Alsaree3App-Alsaree3AppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEF85C760B9B29031CBAE218 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Alsaree3App-Alsaree3AppUITests/Pods-Alsaree3App-Alsaree3AppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Alsaree3App-Alsaree3AppUITests/Pods-Alsaree3App-Alsaree3AppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Alsaree3App-Alsaree3AppUITests/Pods-Alsaree3App-Alsaree3AppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		92A66D3E2B2C185500CB8EF5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -747,32 +989,42 @@
 			files = (
 				92A66D502B2C185500CB8EF5 /* Alsaree3App.xcdatamodeld in Sources */,
 				929F8FA32B2F656700536E70 /* FoodCatCollectionViewCell.swift in Sources */,
+				92FA14582B3221A900148974 /* ResturentDetailsTableViewCell.swift in Sources */,
 				92112F5B2B30667F005CA584 /* FeatureCell.swift in Sources */,
+				921453A12B317DB600F54890 /* ProfileTabViewController.swift in Sources */,
 				92A66D462B2C185500CB8EF5 /* AppDelegate.swift in Sources */,
 				929F8F982B2F138900536E70 /* AdvCollectionViewCell.swift in Sources */,
 				929FF9092B301F6400E9C34A /* ResturentTableViewCell.swift in Sources */,
+				92FA145F2B3232DD00148974 /* LoderView.swift in Sources */,
 				922CB76C2B2E46D80067805A /* CategoryHomeTabCell.swift in Sources */,
+				9296B3342B3317BF008A9668 /* CustomCollectionViewSize.swift in Sources */,
 				922CB75C2B2E34E00067805A /* BannerHomeTabCell.swift in Sources */,
-				921453942B31772700F54890 /* ProfileTabViewController.swift in Sources */,
 				922CB7542B2E16330067805A /* UITableView+Extension.swift in Sources */,
 				929FF90E2B301F8C00E9C34A /* ResturentDetailsCollectionViewCell.swift in Sources */,
+				921453A92B319A9D00F54890 /* Shimmer.swift in Sources */,
 				929F8F942B2EF40F00536E70 /* AdvertisementCell.swift in Sources */,
 				92A66DA32B2C30A500CB8EF5 /* UIView+Extention.swift in Sources */,
 				92A66D482B2C185500CB8EF5 /* SceneDelegate.swift in Sources */,
+				929BB7B82B31D9CC00ADCBD4 /* BasketTabViewController.swift in Sources */,
+				92A8B0642B32EAB80062628A /* Loaderfiles.swift in Sources */,
 				929F8F9E2B2F653800536E70 /* FoodCatrgoryCell.swift in Sources */,
 				922CB7712B2E477C0067805A /* SingleCategoryCollectionViewCell.swift in Sources */,
+				92FA145C2B3232B500148974 /* loaderViewController.swift in Sources */,
 				929E60F42B2C79FE00FD038A /* TabBarController.swift in Sources */,
 				922CB7552B2E16330067805A /* UICollectionView+Extension.swift in Sources */,
 				92A66D892B2C20D700CB8EF5 /* HomeTabViewController.swift in Sources */,
 				929F8FAB2B2F8CEE00536E70 /* goldCategoryCardCellTableViewCell.swift in Sources */,
+				92FA144F2B321EAF00148974 /* LoadingTableViewCell.swift in Sources */,
 				92112F572B306513005CA584 /* CollectionViewFiles.swift in Sources */,
 				922CB7622B2E3E500067805A /* CircluarProgressView.swift in Sources */,
 				929F8FA72B2F741400536E70 /* UIImage+Extention.swift in Sources */,
+				921453A52B318BF400F54890 /* ErrorStateTableViewCell.swift in Sources */,
 				92A66DA12B2C2FE100CB8EF5 /* Constant.swift in Sources */,
 				929FF9182B30258B00E9C34A /* ConstantData.swift in Sources */,
 				929FF9152B30231300E9C34A /* HomeTabViewModel.swift in Sources */,
 				922CB7672B2E43CC0067805A /* ActiveOrderHomeTabCell.swift in Sources */,
 				922CB7572B2E21CF0067805A /* SearchTabViewController.swift in Sources */,
+				92A8B0672B32EB4E0062628A /* LoderMnager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -834,10 +1086,12 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ANALYZER_OSOBJECT_C_STYLE_CAST = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_MODULES_AUTOLINK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -866,6 +1120,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -874,6 +1129,7 @@
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
@@ -894,10 +1150,12 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ANALYZER_OSOBJECT_C_STYLE_CAST = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_MODULES_AUTOLINK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -925,9 +1183,11 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
@@ -944,11 +1204,13 @@
 		};
 		92A66D702B2C185800CB8EF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AD5A803A4E58EFAB9E31ACC /* Pods-Alsaree3App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DV48BW2GWL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Alsaree3App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -971,11 +1233,13 @@
 		};
 		92A66D712B2C185800CB8EF5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B7FBCCA8D921124C6083754 /* Pods-Alsaree3App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DV48BW2GWL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Alsaree3App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -998,6 +1262,7 @@
 		};
 		92A66D732B2C185800CB8EF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35E9534DFE5DF5D3EE6DABD1 /* Pods-Alsaree3AppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1017,6 +1282,7 @@
 		};
 		92A66D742B2C185800CB8EF5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F3D2DB8D56DEF7FF42F380A /* Pods-Alsaree3AppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1036,6 +1302,7 @@
 		};
 		92A66D762B2C185800CB8EF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E1BDA9BBDC5767180A16E00 /* Pods-Alsaree3App-Alsaree3AppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1053,6 +1320,7 @@
 		};
 		92A66D772B2C185800CB8EF5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 223DF934F0901276240A96EB /* Pods-Alsaree3App-Alsaree3AppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
