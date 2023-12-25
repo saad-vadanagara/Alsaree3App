@@ -34,8 +34,15 @@ class ResturentDetailsCollectionViewCell: UICollectionViewCell {
         resturentDetailsView.layer.borderWidth = 1
         resturentDetailsView.layer.cornerRadius = 15
         
-        
+    
     }
+    
+//    override func systemLayoutSizeFitting(_ targetSize: CGSize, withHorizontalFittingPriority horizontalFittingPriority: UILayoutPriority, verticalFittingPriority: UILayoutPriority) -> CGSize {
+//        
+//        self.resturentFeatureCollectionView.frame = self.bounds
+//        self.resturentFeatureCollectionView.layoutIfNeeded()
+//        return self.resturentFeatureCollectionView.contentSize
+//    }
     
     func setDeligate(){
         resturentFeatureCollectionView.delegate = self
@@ -67,6 +74,7 @@ class ResturentDetailsCollectionViewCell: UICollectionViewCell {
         view.layer.cornerRadius = radius
         view.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
         }
+    
 }
 let userPreferences = [
     featureDetails(featureValue: "500+", image: "Heart"),
@@ -93,7 +101,7 @@ extension ResturentDetailsCollectionViewCell : UICollectionViewDelegate,UICollec
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: resturentFeatureCollectionView.layer.bounds.width, height: resturentFeatureCollectionView.layer.bounds.height)
+        return CGSize(width: resturentFeatureCollectionView.bounds.width, height: resturentFeatureCollectionView.bounds.height)
     }
     
     

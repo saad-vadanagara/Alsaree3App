@@ -78,6 +78,7 @@ enum TabBar : String{
     }
 }
 
+
 enum HomeCellsList : Int, CaseIterable{
     case orderStatus = 0
     case bannerAdv
@@ -89,6 +90,21 @@ enum HomeCellsList : Int, CaseIterable{
     case offersNearby
     case otherCells
 }
+
+//enum HomeCellsList : Int, CaseIterable{
+//    case orderStatus = 0
+//    case bannerAdv
+//    case categoryCollection
+//    case dealsCollection
+//    case foodCategoryList
+//    case otherCells
+//}
+//
+//enum SectionData : Int , CaseIterable{
+//    case orderAgain
+//    case featured
+//    case offersNearby
+//}
 
 enum HomeCategoryCellList : Int , CaseIterable{
     
@@ -156,6 +172,8 @@ enum foodCategoryList : Int,CaseIterable{
     case sweets
     case fishes
     case easternFood
+    case sweets1
+    case fishes1
     
     var title : String{
         switch self {
@@ -167,6 +185,10 @@ enum foodCategoryList : Int,CaseIterable{
             return "Fishes"
         case .easternFood:
             return "EasternFood"
+        case .fishes1:
+            return "Fishes"
+        case .sweets1:
+            return "Sweets"
         }
     }
     
@@ -180,6 +202,10 @@ enum foodCategoryList : Int,CaseIterable{
             return "fish"
         case .easternFood:
             return "easternfood"
+        case .fishes1:
+            return "fish"
+        case .sweets1:
+            return "sweets"
         }
     }
 }

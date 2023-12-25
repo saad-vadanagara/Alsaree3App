@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import ShimmerSwift
 class HomeTabViewController: UIViewController {
     
     
@@ -39,7 +38,7 @@ class HomeTabViewController: UIViewController {
         hometabTableView.registerNib(of: CategoryHomeTabCell.self)
         hometabTableView.registerNib(of: AdvertisementCell.self)
         hometabTableView.registerNib(of: FoodCatrgoryCell.self)
-        hometabTableView.registerNib(of: goldCategoryCardCellTableViewCell.self)
+        hometabTableView.registerNib(of: GoldCategoryCardCellTableViewCell.self)
         hometabTableView.registerNib(of: ResturentTableViewCell.self)
         hometabTableView.registerNib(of: ResturentDetailsTableViewCell.self)
     }
@@ -67,13 +66,19 @@ class HomeTabViewController: UIViewController {
         hometabTableView.backgroundColor = ColorConstant.primaryWhiteBgcolor
         
         hometabTableView.rowHeight = UITableView.automaticDimension
-        hometabTableView.estimatedRowHeight = hometabTableView.bounds.height*0.55
+        hometabTableView.estimatedRowHeight = hometabTableView.bounds.height*0.45
+        hometabTableView.sectionHeaderTopPadding = 0
+        hometabTableView.sectionFooterHeight = 0
+        
+        hometabTableView.showsVerticalScrollIndicator = false
     }
     
 }
 
 
 extension HomeTabViewController:UITableViewDataSource{
+    
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         HomeCellsList.allCases.count
@@ -83,12 +88,12 @@ extension HomeTabViewController:UITableViewDataSource{
         
         switch HomeCellsList(rawValue: indexPath.row){
         case .orderStatus:
-            if true{
+            if false{
                 let cell = tableView.getCell(identifier: CellConstant.activeOrderHomeTabCell.rawValue) as! ActiveOrderHomeTabCell
                 cell.selectionStyle = .none
                 return cell
             }else{
-                let cell = tableView.getCell(identifier: "goldCategoryCardCellTableViewCell") as! goldCategoryCardCellTableViewCell
+                let cell = tableView.getCell(identifier: "GoldCategoryCardCellTableViewCell") as! GoldCategoryCardCellTableViewCell
                 cell.selectionStyle = .none
                 return cell
             }
@@ -111,19 +116,19 @@ extension HomeTabViewController:UITableViewDataSource{
         case .orderAgain :
             let cell = tableView.getCell(identifier: "ResturentTableViewCell") as! ResturentTableViewCell
             cell.featuredData = viewModel.resturentCollectionViewData[0]
-            cell.setupUI()
+           
             cell.selectionStyle = .none
             return cell
         case .featured:
             let cell = tableView.getCell(identifier: "ResturentTableViewCell") as! ResturentTableViewCell
             cell.featuredData = viewModel.resturentCollectionViewData[1]
-            cell.setupUI()
+            
             cell.selectionStyle = .none
             return cell
         case .offersNearby:
             let cell = tableView.getCell(identifier: "ResturentTableViewCell") as! ResturentTableViewCell
             cell.featuredData = viewModel.resturentCollectionViewData[2]
-            cell.setupUI()
+            
             cell.selectionStyle = .none
             return cell
         case .otherCells:
@@ -139,42 +144,55 @@ extension HomeTabViewController:UITableViewDataSource{
 
 
 extension HomeTabViewController : UITableViewDelegate{
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//
+//        // Getting the height of hole Screen
+//        let screenSize = UIScreen.main.bounds.height
+//
+//        switch HomeCellsList(rawValue: indexPath.row)
+//        {
+//        case .orderStatus:
+//            return screenSize*0.10
+//        case .categoryCollection:
+//            return screenSize*0.146
+//        case .dealsCollection:
+//            return screenSize*0.23
+//        case .foodCategoryList:
+//            return screenSize*0.16
+//        case .orderAgain:
+//            return screenSize*0.47
+//        case .offersNearby:
+//            return screenSize*0.47
+//        case .featured:
+//            return screenSize*0.47
+//        case .otherCells:
+//            return screenSize*0.37
+//
+//        default:
+//            return UITableView.automaticDimension
+//        }
+//    }
 
-
-        // Getting the height of hole Screen
-        let screenSize = UIScreen.main.bounds.height
-
-        switch HomeCellsList(rawValue: indexPath.row)
-        {
-        case .orderStatus:
-            return screenSize*0.10
-        case .categoryCollection:
-            return screenSize*0.146
-        case .dealsCollection:
-            return screenSize*0.23
-        case .foodCategoryList:
-            return screenSize*0.16
-        case .orderAgain:
-            return screenSize*0.47
-        case .offersNearby:
-            return screenSize*0.47
-        case .featured:
-            return screenSize*0.47
-        case .otherCells:
-            return screenSize*0.47
-
-        default:
-            return UITableView.automaticDimension
-        }
-
-
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = Bundle.main.loadNibNamed("TabBarTableViewHeader", owner: self, options: nil)?.first as! TabBarTableViewHeader
+        
+        view.setLabelText(lblrefrence: headerView.headerTitle, lbltext: "Featured", fontSize: 20)
+        view.setButtonText(button: headerView.headerButton, label: "See More", size: 14)
+        return headerView
     }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        hometabTableView.bounds.height*0.7
+    }
+    
+}    
 
 
-    
-    
+extension HomeTabViewController : UIScrollViewDelegate{
     
 }

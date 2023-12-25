@@ -40,6 +40,12 @@ class CategoryHomeTabCell: UITableViewCell {
         homeCategoryCollectionView.backgroundColor = UIColor.clear
         self.backgroundColor = UIColor.clear
     }
+    
+    override func systemLayoutSizeFitting(_ targetSize: CGSize, withHorizontalFittingPriority horizontalFittingPriority: UILayoutPriority, verticalFittingPriority: UILayoutPriority) -> CGSize {
+        self.homeCategoryCollectionView.frame = self.bounds
+        self.homeCategoryCollectionView.layoutIfNeeded()
+        return self.homeCategoryCollectionView.contentSize
+    }
 
     
 }
@@ -67,6 +73,6 @@ extension CategoryHomeTabCell : UICollectionViewDelegate{
 
 extension CategoryHomeTabCell : UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (collectionView.bounds.width - 30)/4 , height: collectionView.bounds.height )
+        return CGSize(width: (homeCategoryCollectionView.bounds.width-22)/4 , height: homeCategoryCollectionView.bounds.height)
     }
 }

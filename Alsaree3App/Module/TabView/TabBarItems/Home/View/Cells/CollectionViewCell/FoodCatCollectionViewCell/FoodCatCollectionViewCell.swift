@@ -22,8 +22,8 @@ class FoodCatCollectionViewCell: UICollectionViewCell {
         setLabelText(lblrefrence: categoryTitle, lbltext: foodCategoryList(rawValue: indexpath)?.title ?? TextConstant.empty.rawValue , fontSize: 12)
         
         foodImage.image = UIImage(named: foodCategoryList(rawValue: indexpath)?.images ?? TextConstant.empty.rawValue )
-        
-        foodImage.layer.cornerRadius = (foodImage.layer.bounds.width/2)
+
+        foodImage.layer.cornerRadius = (self.bounds.width/2)
         foodImage.clipsToBounds = true
         foodImage.layer.borderWidth = 0
         

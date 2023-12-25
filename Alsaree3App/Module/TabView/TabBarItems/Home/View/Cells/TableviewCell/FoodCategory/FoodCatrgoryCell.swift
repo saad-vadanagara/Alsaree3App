@@ -17,6 +17,8 @@ class FoodCatrgoryCell: UITableViewCell {
         setupUI()
     }
     
+    
+    
     func setupDelegate(){
         foodCategoryCollectionView.delegate = self
         foodCategoryCollectionView.dataSource = self
@@ -33,6 +35,15 @@ class FoodCatrgoryCell: UITableViewCell {
         foodCategoryCollectionView.collectionViewLayout = flowLayout
         foodCategoryCollectionView.backgroundColor = UIColor.clear
         self.backgroundColor = UIColor.clear
+        
+        foodCategoryCollectionView.showsHorizontalScrollIndicator = false
+    }
+    
+    override func systemLayoutSizeFitting(_ targetSize: CGSize, withHorizontalFittingPriority horizontalFittingPriority: UILayoutPriority, verticalFittingPriority: UILayoutPriority) -> CGSize {
+        
+        self.foodCategoryCollectionView.frame = self.bounds
+        self.foodCategoryCollectionView.layoutIfNeeded()
+        return self.foodCategoryCollectionView.contentSize
     }
 
     
@@ -57,7 +68,9 @@ extension FoodCatrgoryCell:UICollectionViewDelegate{
 }
 
 extension FoodCatrgoryCell : UICollectionViewDelegateFlowLayout{
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (foodCategoryCollectionView.bounds.width - 30)/4 , height: (foodCategoryCollectionView.bounds.height))
+        
+        return CGSize(width: (foodCategoryCollectionView.bounds.width )/4 , height: (foodCategoryCollectionView.bounds.height))
     }
 }

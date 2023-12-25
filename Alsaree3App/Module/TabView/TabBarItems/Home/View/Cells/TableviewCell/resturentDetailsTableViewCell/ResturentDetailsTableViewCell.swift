@@ -24,7 +24,7 @@ class ResturentDetailsTableViewCell: UITableViewCell {
         setupUI()
         
         let layout = TagFlowLayout()
-        layout.estimatedItemSize = CGSize(width: 140, height: 40)
+        layout.estimatedItemSize = CGSize(width: 70, height: 0)
         resturentFutrCollectionView.collectionViewLayout = layout
         
         resturentFutrCollectionView.registerNib(of: FeatureCell.self)
@@ -33,8 +33,6 @@ class ResturentDetailsTableViewCell: UITableViewCell {
         resturentDetailsView.layer.borderColor = ColorConstant.borderColorGray.cgColor
         resturentDetailsView.layer.borderWidth = 1
         resturentDetailsView.layer.cornerRadius = 15
-        
-        
     }
     
     func setDeligate(){

@@ -145,6 +145,15 @@ extension UIView{
     }
     
     
+    func coloredText(text: String, range: NSRange, color: UIColor) -> NSAttributedString {
+        let attributedString = NSMutableAttributedString(string: text)
+        
+        attributedString.addAttribute(.foregroundColor, value: color, range: range)
+        
+        return attributedString
+    }
+    
+    
     
 }
 

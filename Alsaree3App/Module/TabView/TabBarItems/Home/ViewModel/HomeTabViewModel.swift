@@ -19,4 +19,30 @@ class HomeTabViewModel{
     
     var isApiCallDone = false
     
+    
+//    var totalData = [
+//        HomeCellsList.allCases,
+//        SectionData.allCases
+//    ] as [Any]
+    
+    
+    enum SectionAboveHeader:Int,CaseIterable{
+        case orderStatus = 0
+        case bannerAdv
+    }
+    
+    enum SectionBelowHeader:Int,CaseIterable{
+        case dealsCollection
+        case foodCategoryList
+        case orderAgain
+        case featured
+        case offersNearby
+        case otherCells
+    }
+    
+    var HomeTabData = [
+        SectionAboveHeader.allCases,
+        SectionBelowHeader.allCases
+    ] as [Any]
+    
 }

@@ -50,12 +50,5 @@ class SingleCategoryCollectionViewCell: UICollectionViewCell {
         
     }
     
-//    func calculateCellHeight() -> CGFloat {
-//        let imageHeight = categoryImg.image?.size.height ?? 0
-//        let labelHeight = categoryTitle.sizeThatFits(CGSize(width: categoryTitle.frame.width, height: CGFloat.greatestFiniteMagnitude)).height
-//        let totalHeight = imageHeight + labelHeight
-//
-//        return totalHeight
-//    }
 
 }
