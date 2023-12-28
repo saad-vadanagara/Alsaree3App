@@ -45,28 +45,28 @@ extension UIView{
     
     func setLabelText(lblrefrence: UILabel, lbltext: String, fontSize: Int, font_Family: String = FontConstant.regular.rawValue, isBold: Bool = false, color: UIColor = UIColor.black, alignmentLeft: Bool = false, lineHeightMultiple: CGFloat = 1) {
         lblrefrence.text = lbltext
-
+        
         if let font = isBold ? UIFont.boldSystemFont(ofSize: CGFloat(fontSize)) : UIFont(name: font_Family, size: CGFloat(fontSize)) {
             let attributedString = NSMutableAttributedString(string: lbltext)
-
+            
             let paragraphStyle = NSMutableParagraphStyle()
             paragraphStyle.lineHeightMultiple = lineHeightMultiple
-
+            
             attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attributedString.length))
-
+            
             lblrefrence.attributedText = attributedString
             lblrefrence.font = font
         }
-
+        
         lblrefrence.textColor = color
-
+        
         if alignmentLeft {
             lblrefrence.textAlignment = .left
         } else {
             lblrefrence.textAlignment = .center
         }
     }
-
+    
     
     
     func setButtonTextWithImage(button: UIButton, image: String, text: String, textColor: UIColor = UIColor.black, fontSize: CGFloat, imageSize: CGSize){
@@ -147,7 +147,6 @@ extension UIView{
         
     }
     
-    
     func coloredText(text: String, range: NSRange, color: UIColor) -> NSAttributedString {
         let attributedString = NSMutableAttributedString(string: text)
         if let cairoFont = UIFont(name: FontConstant.bold.rawValue, size: 12) {
@@ -158,9 +157,6 @@ extension UIView{
         attributedString.addAttribute(.foregroundColor, value: color, range: range)
         return attributedString
     }
-
-    
-    
     
 }
 

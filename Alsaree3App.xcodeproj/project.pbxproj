@@ -29,10 +29,8 @@
 		922CB76D2B2E46D80067805A /* CategoryHomeTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 922CB76B2B2E46D80067805A /* CategoryHomeTabCell.xib */; };
 		922CB7712B2E477C0067805A /* SingleCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CB76F2B2E477C0067805A /* SingleCategoryCollectionViewCell.swift */; };
 		922CB7722B2E477C0067805A /* SingleCategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 922CB7702B2E477C0067805A /* SingleCategoryCollectionViewCell.xib */; };
+		925F46642B3D6ADC00083D65 /* UICollectionview+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925F46632B3D6ADC00083D65 /* UICollectionview+Extention.swift */; };
 		926141692B3AFF27005D3A40 /* CustomtabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926141682B3AFF27005D3A40 /* CustomtabBarController.swift */; };
-		92654B1F2B37F5F100D1FB40 /* UIButton+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92654B1E2B37F5F100D1FB40 /* UIButton+Extention.swift */; };
-		92654B222B37F65300D1FB40 /* UILabel+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92654B212B37F65300D1FB40 /* UILabel+Extention.swift */; };
-		92654B252B3813E400D1FB40 /* UIProgressView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92654B242B3813E400D1FB40 /* UIProgressView+Extention.swift */; };
 		92654B282B386CF000D1FB40 /* CustomUiProgresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92654B272B386CF000D1FB40 /* CustomUiProgresView.swift */; };
 		929BB7B82B31D9CC00ADCBD4 /* BasketTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929BB7B72B31D9CC00ADCBD4 /* BasketTabViewController.swift */; };
 		929E60F42B2C79FE00FD038A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E60F32B2C79FE00FD038A /* TabBarController.swift */; };
@@ -81,7 +79,6 @@
 		92FA14502B321EAF00148974 /* LoadingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92FA144E2B321EAF00148974 /* LoadingTableViewCell.xib */; };
 		92FA14582B3221A900148974 /* ResturentDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FA14562B3221A900148974 /* ResturentDetailsTableViewCell.swift */; };
 		92FA14592B3221A900148974 /* ResturentDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92FA14572B3221A900148974 /* ResturentDetailsTableViewCell.xib */; };
-		92FA145F2B3232DD00148974 /* LoderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FA145E2B3232DD00148974 /* LoderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,10 +123,8 @@
 		922CB76B2B2E46D80067805A /* CategoryHomeTabCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryHomeTabCell.xib; sourceTree = "<group>"; };
 		922CB76F2B2E477C0067805A /* SingleCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		922CB7702B2E477C0067805A /* SingleCategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleCategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		925F46632B3D6ADC00083D65 /* UICollectionview+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionview+Extention.swift"; sourceTree = "<group>"; };
 		926141682B3AFF27005D3A40 /* CustomtabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomtabBarController.swift; sourceTree = "<group>"; };
-		92654B1E2B37F5F100D1FB40 /* UIButton+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extention.swift"; sourceTree = "<group>"; };
-		92654B212B37F65300D1FB40 /* UILabel+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extention.swift"; sourceTree = "<group>"; };
-		92654B242B3813E400D1FB40 /* UIProgressView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIProgressView+Extention.swift"; sourceTree = "<group>"; };
 		92654B272B386CF000D1FB40 /* CustomUiProgresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUiProgresView.swift; sourceTree = "<group>"; };
 		929BB7B72B31D9CC00ADCBD4 /* BasketTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketTabViewController.swift; sourceTree = "<group>"; };
 		929E60F32B2C79FE00FD038A /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -182,7 +177,6 @@
 		92FA144E2B321EAF00148974 /* LoadingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingTableViewCell.xib; sourceTree = "<group>"; };
 		92FA14562B3221A900148974 /* ResturentDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturentDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		92FA14572B3221A900148974 /* ResturentDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResturentDetailsTableViewCell.xib; sourceTree = "<group>"; };
-		92FA145E2B3232DD00148974 /* LoderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoderView.swift; sourceTree = "<group>"; };
 		9F3D2DB8D56DEF7FF42F380A /* Pods-Alsaree3AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alsaree3AppTests.release.xcconfig"; path = "Target Support Files/Pods-Alsaree3AppTests/Pods-Alsaree3AppTests.release.xcconfig"; sourceTree = "<group>"; };
 		A77A3FCDF4E06BE4CB7F9084 /* Pods_Alsaree3App_Alsaree3AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alsaree3App_Alsaree3AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B683BDB30B428A9D94F98F8A /* Pods_Alsaree3AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alsaree3AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -338,12 +332,13 @@
 		922CB75E2B2E38B70067805A /* ExtraFile */ = {
 			isa = PBXGroup;
 			children = (
+				92A8B0622B32EAA70062628A /* LoaderFiles */,
 				922CB7612B2E3E500067805A /* CircluarProgressView.swift */,
 				926141682B3AFF27005D3A40 /* CustomtabBarController.swift */,
 				92112F562B306513005CA584 /* CollectionViewFiles.swift */,
 				921453A82B319A9D00F54890 /* Shimmer.swift */,
-				92FA145E2B3232DD00148974 /* LoderView.swift */,
 				92654B272B386CF000D1FB40 /* CustomUiProgresView.swift */,
+				925F46632B3D6ADC00083D65 /* UICollectionview+Extention.swift */,
 			);
 			path = ExtraFile;
 			sourceTree = "<group>";
@@ -599,7 +594,6 @@
 		92A66D792B2C18A200CB8EF5 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				92A8B0622B32EAA70062628A /* LoaderFiles */,
 				922CB75E2B2E38B70067805A /* ExtraFile */,
 				92A66D9F2B2C2FC600CB8EF5 /* Extention */,
 				92A66D9E2B2C2FB600CB8EF5 /* Constants */,
@@ -715,9 +709,6 @@
 				922CB7532B2E16330067805A /* UICollectionView+Extension.swift */,
 				922CB7522B2E16330067805A /* UITableView+Extension.swift */,
 				929F8FA62B2F741400536E70 /* UIImage+Extention.swift */,
-				92654B1E2B37F5F100D1FB40 /* UIButton+Extention.swift */,
-				92654B212B37F65300D1FB40 /* UILabel+Extention.swift */,
-				92654B242B3813E400D1FB40 /* UIProgressView+Extention.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -1043,26 +1034,23 @@
 				92A26E6F2B35B5C2008C9AFF /* TabBarTableViewHeader.swift in Sources */,
 				929F8F982B2F138900536E70 /* AdvCollectionViewCell.swift in Sources */,
 				929FF9092B301F6400E9C34A /* ResturentTableViewCell.swift in Sources */,
-				92FA145F2B3232DD00148974 /* LoderView.swift in Sources */,
 				92BDA2382B39F8C3008E7228 /* HomeTabCategoryHeader.swift in Sources */,
 				922CB76C2B2E46D80067805A /* CategoryHomeTabCell.swift in Sources */,
 				922CB75C2B2E34E00067805A /* BannerHomeTabCell.swift in Sources */,
-				92654B1F2B37F5F100D1FB40 /* UIButton+Extention.swift in Sources */,
 				926141692B3AFF27005D3A40 /* CustomtabBarController.swift in Sources */,
 				922CB7542B2E16330067805A /* UITableView+Extension.swift in Sources */,
 				929FF90E2B301F8C00E9C34A /* ResturentDetailsCollectionViewCell.swift in Sources */,
 				921453A92B319A9D00F54890 /* Shimmer.swift in Sources */,
 				929F8F942B2EF40F00536E70 /* AdvertisementCell.swift in Sources */,
 				92A66DA32B2C30A500CB8EF5 /* UIView+Extention.swift in Sources */,
+				925F46642B3D6ADC00083D65 /* UICollectionview+Extention.swift in Sources */,
 				92A66D482B2C185500CB8EF5 /* SceneDelegate.swift in Sources */,
 				929BB7B82B31D9CC00ADCBD4 /* BasketTabViewController.swift in Sources */,
-				92654B252B3813E400D1FB40 /* UIProgressView+Extention.swift in Sources */,
 				92A8B0642B32EAB80062628A /* Loaderfiles.swift in Sources */,
 				92654B282B386CF000D1FB40 /* CustomUiProgresView.swift in Sources */,
 				929F8F9E2B2F653800536E70 /* FoodCatrgoryCell.swift in Sources */,
 				922CB7712B2E477C0067805A /* SingleCategoryCollectionViewCell.swift in Sources */,
 				929E60F42B2C79FE00FD038A /* TabBarController.swift in Sources */,
-				92654B222B37F65300D1FB40 /* UILabel+Extention.swift in Sources */,
 				922CB7552B2E16330067805A /* UICollectionView+Extension.swift in Sources */,
 				92A66D892B2C20D700CB8EF5 /* HomeTabViewController.swift in Sources */,
 				929F8FAB2B2F8CEE00536E70 /* GoldCategoryCardCellTableViewCell.swift in Sources */,

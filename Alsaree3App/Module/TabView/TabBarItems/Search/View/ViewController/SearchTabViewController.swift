@@ -28,10 +28,6 @@ class SearchTabViewController: UIViewController{
         setupShimmer()
         
         LoaderManager.showLoader(in: view)
-
-//               DispatchQueue.main.async{
-//                   LoaderManager.hideLoader(in: self.view)
-//               }
         
     }
     

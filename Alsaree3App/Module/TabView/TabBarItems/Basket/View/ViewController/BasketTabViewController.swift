@@ -9,34 +9,41 @@ import UIKit
 
 class BasketTabViewController: UIViewController {
 
+    // IBOutlet
     @IBOutlet weak var BasketTabTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        BasketTabTableView.separatorStyle = .none
         setupdeligate()
         registerCell()
+        setUpTableView()
+    }
+    
+    func setUpTableView(){
+        BasketTabTableView.separatorStyle = .none
+    }
+    
+    func registerCell(){
+        BasketTabTableView.registerNib(of: ErrorStateTableViewCell.self)
     }
     
     func setupdeligate(){
         BasketTabTableView.delegate = self
         BasketTabTableView.dataSource = self
     }
-    
-    func registerCell(){
-        BasketTabTableView.registerNib(of: ErrorStateTableViewCell.self)
-    }
    
 }
 
 extension BasketTabViewController: UITableViewDataSource,UITableViewDelegate{
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell =  tableView.dequeueReusableCell(withIdentifier: "ErrorStateTableViewCell", for: indexPath) as! ErrorStateTableViewCell
+        
+        let cell = tableView.getCell(identifier: CellConstant.errorStateTableViewCell.rawValue) as ErrorStateTableViewCell
         cell.isApiError = true
         return cell
     }
@@ -45,6 +52,5 @@ extension BasketTabViewController: UITableViewDataSource,UITableViewDelegate{
         let tableviewScreen = tableView.bounds.height
         return tableviewScreen
     }
-    
 
 }

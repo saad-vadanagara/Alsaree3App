@@ -17,7 +17,6 @@ struct ColorConstant{
     static var borderColorYellow = UIColor(red: 0.87, green: 0.5, blue: 0.21, alpha: 1)
     static var borderColorGray = UIColor(red: 0.84, green: 0.83, blue: 0.83, alpha: 1)
 
-    
 }
 
 enum FontConstant:String{
@@ -34,12 +33,19 @@ enum TextConstant:String{
     case alsaree3App = "Alsaree3 App"
     case activeOrder = "Active Order"
     case orderNumber5thAvenueAlFurjanArea = "Order Number - 5th Avenue - Al Furjan Area"
+    case yourGoldCategoryCard = "Your Gold Category Card"
+    case goldCategoryCard = "Gold Category Card"
+    
+    case youveplacedthreeorderswithusOrdermoretoobtainour = "You've placed three orders with us. Order more to obtain our "
+    
+    
+    
     
 }
 
 enum ButtonTextConstant:String{
     case alFurjanArea = "Al Furjan Area"
-    
+    case seeMore = "See More"
     
 }
 
@@ -57,6 +63,7 @@ enum CellConstant : String{
     case categoryHomeTabCell = "CategoryHomeTabCell"
     case advertisementCell = "AdvertisementCell"
     case foodCatrgoryCell = "FoodCatrgoryCell"
+    case errorStateTableViewCell = "ErrorStateTableViewCell"
 }
 
 enum TabBar : String{
@@ -175,6 +182,10 @@ enum foodCategoryList : Int,CaseIterable{
     case easternFood
     case sweets1
     case fishes1
+    case easternFood1
+    case sweets2
+    case fishes2
+    case easternFood2
     
     var title : String{
         switch self {
@@ -190,6 +201,14 @@ enum foodCategoryList : Int,CaseIterable{
             return "Fishes"
         case .sweets1:
             return "Sweets"
+        case .easternFood1:
+            return "EasternFood"
+        case .fishes2:
+            return "Fishes"
+        case .sweets2:
+            return "Sweets"
+        case .easternFood2:
+            return "EasternFood"
         }
     }
     
@@ -207,6 +226,19 @@ enum foodCategoryList : Int,CaseIterable{
             return "fish"
         case .sweets1:
             return "sweets"
+        case .easternFood1:
+            return "easternfood"
+        case .fishes2:
+            return "fish"
+        case .sweets2:
+            return "sweets"
+        case .easternFood2:
+            return "easternfood"
         }
     }
+}
+
+
+enum AnimationConstant:String{
+    case transformrotationz = "transform.rotation.z"
 }

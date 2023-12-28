@@ -7,16 +7,16 @@
 import UIKit
 
 class CircularProgressView: UIView {
+    
     var progressLayer = CAShapeLayer()
     var trackLayer = CAShapeLayer()
+    
     var didConfigureLabel = false
     var rounded: Bool
     var filled: Bool
     
     let lineWidth: CGFloat?
-    
-    var timeToFill = 3.43
-    
+    var timeToFill = 3.5
     var progressColor = UIColor.white {
         didSet{
             progressLayer.strokeColor = progressColor.cgColor
@@ -115,7 +115,7 @@ class CircularProgressView: UIView {
     }
     
     init(frame: CGRect, lineWidth: CGFloat?, rounded: Bool) {
-     
+        
         progress = 0
         
         if lineWidth == nil{

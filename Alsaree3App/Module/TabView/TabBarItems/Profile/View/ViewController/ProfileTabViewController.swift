@@ -36,7 +36,7 @@ extension ProfileTabViewController: UITableViewDataSource,UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell =  tableView.dequeueReusableCell(withIdentifier: "ErrorStateTableViewCell", for: indexPath) as! ErrorStateTableViewCell
+        let cell = tableView.getCell(identifier: CellConstant.errorStateTableViewCell.rawValue) as ErrorStateTableViewCell
         cell.isInternetError = true
         return cell
     }

@@ -20,8 +20,6 @@ class FoodCatrgoryCell: UITableViewCell {
         setupUI()
     }
     
-    
-    
     func setupDelegate(){
         foodCategoryCollectionView.delegate = self
         foodCategoryCollectionView.dataSource = self

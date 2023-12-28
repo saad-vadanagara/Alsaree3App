@@ -22,7 +22,7 @@ class ResturentTableViewCell: UITableViewCell {
     
     func setupUI(){
         setLabelText(lblrefrence: collectionViewTitile, lbltext: featuredData?.name ?? "Offers Nearby", fontSize: 20,isBold: true)
-        setButtonText(button: seemoreBtn, label: "See More",color: ColorConstant.borderColorYellow, size: 14,isUnderline: true)
+        setButtonText(button: seemoreBtn, label: ButtonTextConstant.seeMore.rawValue,color: ColorConstant.borderColorYellow, size: 14,isUnderline: true)
     }
     
     func configureCollectionViewLayout() {
@@ -113,12 +113,10 @@ extension ResturentTableViewCell: UICollectionViewDelegate, UICollectionViewDele
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.getCell(indexPath: indexPath) as ResturentDetailsCollectionViewCell
-        
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
             animateCellSelection(at: indexPath)
-        
         }
 }
 
@@ -137,32 +135,27 @@ extension ResturentTableViewCell:UIScrollViewDelegate{
     }
     
     func handleDraggingWillEndForScrollView(_ scrollView: UIScrollView, inside collectionViewLayout: UICollectionViewFlowLayout, withVelocity velocity: CGPoint, usingIndexOfMajorCell indexOfMajorCell: Int) {
-        
-        //Calculating where scroll view should snap
-        let indexOfMajorCell = indexOfMajorCell
-        
-        let swipeVelocityThreshold: CGFloat = 0.5
-        
-        let majorCellIsTheCellBeforeDragging = indexOfMajorCell == indexOfCellBeforeDragging
-        let hasEnoughVelocityToSlideToTheNextCell = indexOfCellBeforeDragging + 1 < 5 && velocity.x > swipeVelocityThreshold
-        let hasEnoughVelocityToSlideToThePreviousCell = ((indexOfCellBeforeDragging - 1) >= 0) && (velocity.x < -swipeVelocityThreshold)
-        
-        let didUseSwipeToSkipCell = majorCellIsTheCellBeforeDragging && (hasEnoughVelocityToSlideToTheNextCell || hasEnoughVelocityToSlideToThePreviousCell)
-        
-        if didUseSwipeToSkipCell {
-            
-            let snapToIndex = indexOfCellBeforeDragging + (hasEnoughVelocityToSlideToTheNextCell ? 1 : -1)
-            let toValue = collectionViewLayout.itemSize.width * CGFloat(snapToIndex)
-            
-            // Damping equal 1 => no oscillations => decay animation
-            UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: velocity.x, options: .allowUserInteraction, animations: {
-                scrollView.contentOffset = CGPoint(x: toValue, y: 0)
-                scrollView.layoutIfNeeded()
-            }, completion: nil)
-            
-        } else {
-            let indexPath = IndexPath(row: indexOfMajorCell, section: 0)
-            collectionViewLayout.collectionView!.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+            let indexOfMajorCell = indexOfMajorCell
+
+            let swipeVelocityThreshold: CGFloat = 0.5
+            let majorCellIsTheCellBeforeDragging = indexOfMajorCell == indexOfCellBeforeDragging
+            let hasEnoughVelocityToSlideToTheNextCell = indexOfCellBeforeDragging + 1 < (featuredData?.details.count ?? 0) && velocity.x > swipeVelocityThreshold
+            let hasEnoughVelocityToSlideToThePreviousCell = ((indexOfCellBeforeDragging - 1) >= 0) && (velocity.x < -swipeVelocityThreshold)
+
+            let didUseSwipeToSkipCell = majorCellIsTheCellBeforeDragging && (hasEnoughVelocityToSlideToTheNextCell || hasEnoughVelocityToSlideToThePreviousCell)
+
+            if didUseSwipeToSkipCell {
+                let snapToIndex = indexOfCellBeforeDragging + (hasEnoughVelocityToSlideToTheNextCell ? 1 : -1)
+                let toValue = collectionViewLayout.itemSize.width * CGFloat(snapToIndex)
+
+                UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: velocity.x, options: .allowUserInteraction, animations: {
+                    scrollView.contentOffset = CGPoint(x: toValue, y: 0)
+                    scrollView.layoutIfNeeded()
+                }, completion: nil)
+            } else {
+                let indexPath = IndexPath(row: indexOfMajorCell, section: 0)
+                collectionViewLayout.collectionView!.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+            }
         }
-    }
+    
 }

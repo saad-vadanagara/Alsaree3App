@@ -27,7 +27,6 @@ class SingleCategoryCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -49,6 +48,4 @@ class SingleCategoryCollectionViewCell: UICollectionViewCell {
         parentView.backgroundColor = ColorConstant.whitecolor
         
     }
-    
-
 }

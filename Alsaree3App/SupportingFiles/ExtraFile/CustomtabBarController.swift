@@ -24,9 +24,8 @@ class CustomTabBar: UITabBar {
             // Adjust the spacing between the image and title for each tab bar item
             for (index, item) in tabBarItems.enumerated() {
                 // Adjust the insets to remove spacing
-                item.imageInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-                item.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -4) // Adjust the vertical position as needed
-            }
+                item.imageInsets = UIEdgeInsets(top: 3, left: 0, bottom: 0, right: 0)
+                item.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 0)            }
         }
     }
 

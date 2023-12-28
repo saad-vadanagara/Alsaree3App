@@ -9,8 +9,7 @@ import UIKit
 
 
 class ActiveOrderHomeTabCell: UITableViewCell {
-    
-    
+
     // MARK: IBOutlet
     @IBOutlet weak var contView: UIView!
     @IBOutlet weak var activeOrderlbl: UILabel!
@@ -41,7 +40,7 @@ class ActiveOrderHomeTabCell: UITableViewCell {
         
         //Adding color to Progress view
         circularProgressView.progressColor = ColorConstant.primaryYellowColor
-        circularProgressView.trackColor = UIColor.lightGray
+        circularProgressView.trackColor = ColorConstant.borderColorGray
         
         progressView.addSubview(circularProgressView)
         
@@ -63,7 +62,7 @@ class ActiveOrderHomeTabCell: UITableViewCell {
         
         // setup background color
         self.backgroundColor = UIColor.clear
-        contView.backgroundColor = UIColor.clear
+        subViewWithBorder.backgroundColor = ColorConstant.whitecolor
     }
     
     @IBAction func onDetailsBtnClick(_ sender: UIButton) {

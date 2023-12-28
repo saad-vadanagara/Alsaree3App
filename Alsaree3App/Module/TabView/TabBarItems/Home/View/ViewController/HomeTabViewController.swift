@@ -8,6 +8,7 @@
 
 import UIKit
 class HomeTabViewController: UIViewController {
+    
     // MARK: IBOutlet
     @IBOutlet weak var scooterimg: UIImageView!
     @IBOutlet weak var applicationNamelbl: UILabel!
@@ -20,10 +21,20 @@ class HomeTabViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
         settingDelegate()
+        setupTableView()
         registerTableViewCell()
+        setupUI()
         setupHeaderView()
+    }
+    
+    func setupTableView(){
+        hometabTableView.separatorStyle = .none
+        hometabTableView.backgroundColor = ColorConstant.primaryWhiteBgcolor
+        hometabTableView.sectionHeaderHeight = 0
+        hometabTableView.sectionFooterHeight = 0
+        hometabTableView.sectionHeaderTopPadding = 0
+        hometabTableView.showsVerticalScrollIndicator = false
     }
     
     func settingDelegate(){
@@ -44,30 +55,20 @@ class HomeTabViewController: UIViewController {
     }
     
     func setupHeaderView(){
-        
         headerNavigationView.backgroundColor = ColorConstant.whitecolor
         headerNavigationView.addBottomBorderWithColor(color: ColorConstant.borderColorGray, width: 1)
         view.applyShadow(to: headerNavigationView)
         
-    }
-    
-    func setupUI(){
-        
+        // Setting the label and button values Manually
         view.setLabelText(lblrefrence: applicationNamelbl, lbltext: TextConstant.alsaree3App.rawValue, fontSize: 16,alignmentLeft: true)
-        
         let imageSize = CGSize(width: 20, height: 20)
         view.setButtonTextWithImage(button: areaNavitionBtn, image: ImageConstant.downArrow.rawValue, text: ButtonTextConstant.alFurjanArea.rawValue, fontSize: 12, imageSize: imageSize)
         view.setImage(imageView: scooterimg, imageName: ImageConstant.scooter.rawValue)
         view.setCircleWithBorderColor(imageView: scooterimg, borderColor: ColorConstant.borderColorYellow, borderWidth: 1)
-        
-        // removing the seprator line
-        hometabTableView.separatorStyle = .none
-        hometabTableView.backgroundColor = ColorConstant.primaryWhiteBgcolor
-        hometabTableView.sectionHeaderHeight = 0
-        hometabTableView.sectionFooterHeight = 0
-        hometabTableView.sectionHeaderTopPadding = 0
-        
-        hometabTableView.showsVerticalScrollIndicator = false
+    }
+    
+    func setupUI(){
+        self.navigationController?.isNavigationBarHidden = true
     }
     
 }
@@ -94,26 +95,31 @@ extension HomeTabViewController:UITableViewDataSource{
         
         // Handle cells based on section type
         switch sectionData {
-        case let aboveHeaderSection as [SectionAboveHeader]:
-            let cellType = aboveHeaderSection[indexPath.row]
+        case let aboveSection as [SectionAboveHeader]:
+            
+            let cellType = aboveSection[indexPath.row]
+            
             switch cellType {
             case .orderStatus:
-                if true {
-                let cell = tableView.getCell(identifier: CellConstant.activeOrderHomeTabCell.rawValue) as! ActiveOrderHomeTabCell
-                cell.selectionStyle = .none
-                return cell
-            } else {
-                let cell = tableView.getCell(identifier: "GoldCategoryCardCellTableViewCell") as! GoldCategoryCardCellTableViewCell
-                cell.selectionStyle = .none
-                return cell
-            }
+                if true{
+                    let cell = tableView.getCell(identifier: CellConstant.activeOrderHomeTabCell.rawValue) as! ActiveOrderHomeTabCell
+                    cell.selectionStyle = .none
+                    return cell
+                }else{
+                    let cell = tableView.getCell(identifier: "GoldCategoryCardCellTableViewCell") as! GoldCategoryCardCellTableViewCell
+                    cell.selectionStyle = .none
+                    return cell
+                }
             case .bannerAdv:
                 let cell = tableView.getCell(identifier: CellConstant.bannerHomeTabCell.rawValue) as! BannerHomeTabCell
                 cell.selectionStyle = .none
                 return cell
             }
+            
         case let belowHeaderSection as [SectionBelowScrollingHeader]:
+            
             let cellType = belowHeaderSection[indexPath.row]
+            
             switch cellType {
             case .dealsCollection:
                 let cell = tableView.getCell(identifier: CellConstant.advertisementCell.rawValue) as! AdvertisementCell
@@ -156,21 +162,7 @@ extension HomeTabViewController : UITableViewDelegate{
         case 1:
             headerView = Bundle.main.loadNibNamed("HomeTabCategoryHeader", owner: self, options: nil)?.first as? HomeTabCategoryHeader
             return headerView
-        case 2:
-            let cell = Bundle.main.loadNibNamed("TabBarTableViewHeader", owner: self, options: nil)?.first as! TabBarTableViewHeader
-            view.setLabelText(lblrefrence: cell.headerTitle, lbltext: "Featured", fontSize: 20,isBold: true)
-            view.setButtonText(button: cell.headerButton, label: "See More",color: ColorConstant.primaryYellowColor, size: 14,isUnderline:true)
-            return cell
-        case 3:
-            let cell = Bundle.main.loadNibNamed("TabBarTableViewHeader", owner: self, options: nil)?.first as! TabBarTableViewHeader
-            view.setLabelText(lblrefrence: cell.headerTitle, lbltext: "Offers Nearby", fontSize: 20,isBold: true)
-            view.setButtonText(button: cell.headerButton, label: "See More",color: ColorConstant.primaryYellowColor, size: 14,isUnderline:true)
-            return cell
-        case 4:
-            let cell = Bundle.main.loadNibNamed("TabBarTableViewHeader", owner: self, options: nil)?.first as! TabBarTableViewHeader
-            view.setLabelText(lblrefrence: cell.headerTitle, lbltext: "Most Popular Place", fontSize: 20,isBold: true)
-            view.setButtonText(button: cell.headerButton, label: "See More",color: ColorConstant.primaryYellowColor, size: 14,isUnderline:true)
-            return cell
+            
         default:
             return nil
         }
@@ -197,13 +189,12 @@ extension HomeTabViewController : UIScrollViewDelegate{
         if headerRect.origin.y <= scrollView.contentOffset.y && scrollView.contentOffset.y <= headerRect.origin.y + headerRect.size.height {
             headerView?.hideImages()
             headerView?.setCustomConstrain()
-            headerView?.categroyBackView.backgroundColor = UIColor.lightGray
+            headerView?.categroyBackView.backgroundColor = ColorConstant.borderColorGray
         } else {
             headerView?.backgroundColor = UIColor.clear
             headerView?.showImages()// Reset to original height here
             headerView?.setDefaultConstrain()
             headerView?.categroyBackView.backgroundColor = UIColor.clear
         }
-        
     }
 }

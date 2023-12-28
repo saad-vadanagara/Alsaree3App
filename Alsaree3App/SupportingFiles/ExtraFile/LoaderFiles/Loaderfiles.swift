@@ -30,7 +30,7 @@ class NVActivityIndicatorAnimationBallClipRotateMultiple: NVActivityIndicatorAni
 
     func createAnimationIn(duration: CFTimeInterval, timingFunction: CAMediaTimingFunction, reverse: Bool) -> CAAnimation {
         // Rotate animation
-        let rotateAnimation = CAKeyframeAnimation(keyPath: "transform.rotation.z")
+        let rotateAnimation = CAKeyframeAnimation(keyPath: AnimationConstant.transformrotationz.rawValue)
 
         rotateAnimation.keyTimes = [0, 0.3,0.5,0.7,1]
         rotateAnimation.timingFunctions = [timingFunction, timingFunction]
