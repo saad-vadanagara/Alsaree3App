@@ -9,13 +9,20 @@ class ResturentTableViewCell: UITableViewCell {
     
     var featuredData : resturentCollectionViewDetails?
     var indexOfCellBeforeDragging: Int = 0
+    var isvalueChaged = false
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        setupUI()
         setDelegate()
         registerCell()
         configureCollectionViewLayout()
         resturentCollectionView.decelerationRate = .fast
+    }
+    
+    func setupUI(){
+        setLabelText(lblrefrence: collectionViewTitile, lbltext: featuredData?.name ?? "Offers Nearby", fontSize: 20,isBold: true)
+        setButtonText(button: seemoreBtn, label: "See More",color: ColorConstant.borderColorYellow, size: 14,isUnderline: true)
     }
     
     func configureCollectionViewLayout() {
@@ -26,9 +33,12 @@ class ResturentTableViewCell: UITableViewCell {
         flowLayout.itemSize = CGSize(width: resturentCollectionView.bounds.width * 0.65, height: resturentCollectionView.bounds.height)
         flowLayout.minimumInteritemSpacing = 0
         resturentCollectionView.collectionViewLayout = flowLayout
-
+        
         resturentCollectionView.showsHorizontalScrollIndicator = false
         resturentCollectionView.isPagingEnabled = false
+        
+        resturentCollectionView.backgroundColor = UIColor.clear
+        self.backgroundColor = UIColor.clear
     }
     
     func setDelegate() {
@@ -47,7 +57,14 @@ class ResturentTableViewCell: UITableViewCell {
     override func systemLayoutSizeFitting(_ targetSize: CGSize, withHorizontalFittingPriority horizontalFittingPriority: UILayoutPriority, verticalFittingPriority: UILayoutPriority) -> CGSize {
         self.resturentCollectionView.frame = self.bounds
         self.resturentCollectionView.layoutIfNeeded()
-        return self.resturentCollectionView.contentSize
+        
+        if isvalueChaged{
+            return self.resturentCollectionView.contentSize
+        }else{
+            resturentCollectionView.contentSize.height += 50
+            isvalueChaged = true
+            return self.resturentCollectionView.contentSize
+        }
     }
     
     func calculateSectionInset(forCollectionViewLayout collectionViewLayout: UICollectionViewFlowLayout, numberOfCells: Int) -> CGFloat {
@@ -56,11 +73,11 @@ class ResturentTableViewCell: UITableViewCell {
     }
     
     func configureCollectionViewLayoutItemSize(forCollectionViewLayout collectionViewLayout: UICollectionViewFlowLayout) {
-
+        
         let inset: CGFloat = calculateSectionInset(forCollectionViewLayout: collectionViewLayout, numberOfCells: 5)
-
+        
         collectionViewLayout.sectionInset = UIEdgeInsets(top: 0, left: inset/4, bottom: 0, right: inset/4)
-
+        
         collectionViewLayout.itemSize = CGSize(width: collectionViewLayout.collectionView!.frame.size.width - inset / 2, height: collectionViewLayout.collectionView!.frame.size.height)
         collectionViewLayout.collectionView?.reloadData()
     }
@@ -76,65 +93,76 @@ class ResturentTableViewCell: UITableViewCell {
         indexOfCellBeforeDragging = indexOfMajorCell
     }
     
-    func handleDraggingWillEndForScrollView(_ scrollView: UIScrollView, inside collectionViewLayout: UICollectionViewFlowLayout, withVelocity velocity: CGPoint, usingIndexOfMajorCell indexOfMajorCell: Int) {
-
-        //Calculating where scroll view should snap
-        let indexOfMajorCell = indexOfMajorCell
-
-        let swipeVelocityThreshold: CGFloat = 0.5
-
-        let majorCellIsTheCellBeforeDragging = indexOfMajorCell == indexOfCellBeforeDragging
-        let hasEnoughVelocityToSlideToTheNextCell = indexOfCellBeforeDragging + 1 < 5 && velocity.x > swipeVelocityThreshold
-        let hasEnoughVelocityToSlideToThePreviousCell = ((indexOfCellBeforeDragging - 1) >= 0) && (velocity.x < -swipeVelocityThreshold)
-
-        let didUseSwipeToSkipCell = majorCellIsTheCellBeforeDragging && (hasEnoughVelocityToSlideToTheNextCell || hasEnoughVelocityToSlideToThePreviousCell)
-
-        if didUseSwipeToSkipCell {
-
-            let snapToIndex = indexOfCellBeforeDragging + (hasEnoughVelocityToSlideToTheNextCell ? 1 : -1)
-            let toValue = collectionViewLayout.itemSize.width * CGFloat(snapToIndex)
-
-            // Damping equal 1 => no oscillations => decay animation
-            UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: velocity.x, options: .allowUserInteraction, animations: {
-                scrollView.contentOffset = CGPoint(x: toValue, y: 0)
-                scrollView.layoutIfNeeded()
-            }, completion: nil)
-
-        } else {
-            let indexPath = IndexPath(row: indexOfMajorCell, section: 0)
-            collectionViewLayout.collectionView!.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+    func animateCellSelection(at indexPath: IndexPath) {
+        let cell = resturentCollectionView.cellForItem(at: indexPath)
+        UIView.animate(withDuration: 0.3, animations: {
+            cell?.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
+        }) { (_) in
+            UIView.animate(withDuration: 0.3) {
+                cell?.transform = .identity
+            }
         }
     }
     
-    
-    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-            let indexOfMajorCell = indexOfMajorCell(in: resturentCollectionView.collectionViewLayout as! UICollectionViewFlowLayout)
-            setIndexOfCellBeforeStartingDragging(indexOfMajorCell: indexOfMajorCell)
-        }
-    
-    
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-            targetContentOffset.pointee = scrollView.contentOffset
-
-            let indexOfMajorCell = indexOfMajorCell(in: resturentCollectionView.collectionViewLayout as! UICollectionViewFlowLayout)
-            handleDraggingWillEndForScrollView(scrollView, inside: resturentCollectionView.collectionViewLayout as! UICollectionViewFlowLayout, withVelocity: velocity, usingIndexOfMajorCell: indexOfMajorCell)
-        }
-    
-
-    
 }
 
-extension ResturentTableViewCell: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource,UIScrollViewDelegate{
+extension ResturentTableViewCell: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return featuredData?.details.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.getCell(indexPath: indexPath) as ResturentDetailsCollectionViewCell
+        
         return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+            animateCellSelection(at: indexPath)
+        
+        }
+}
+
+extension ResturentTableViewCell:UIScrollViewDelegate{
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        targetContentOffset.pointee = scrollView.contentOffset
+        
+        let indexOfMajorCell = indexOfMajorCell(in: resturentCollectionView.collectionViewLayout as! UICollectionViewFlowLayout)
+        handleDraggingWillEndForScrollView(scrollView, inside: resturentCollectionView.collectionViewLayout as! UICollectionViewFlowLayout, withVelocity: velocity, usingIndexOfMajorCell: indexOfMajorCell)
     }
     
     
-   
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        let indexOfMajorCell = indexOfMajorCell(in: resturentCollectionView.collectionViewLayout as! UICollectionViewFlowLayout)
+        setIndexOfCellBeforeStartingDragging(indexOfMajorCell: indexOfMajorCell)
+    }
     
+    func handleDraggingWillEndForScrollView(_ scrollView: UIScrollView, inside collectionViewLayout: UICollectionViewFlowLayout, withVelocity velocity: CGPoint, usingIndexOfMajorCell indexOfMajorCell: Int) {
+        
+        //Calculating where scroll view should snap
+        let indexOfMajorCell = indexOfMajorCell
+        
+        let swipeVelocityThreshold: CGFloat = 0.5
+        
+        let majorCellIsTheCellBeforeDragging = indexOfMajorCell == indexOfCellBeforeDragging
+        let hasEnoughVelocityToSlideToTheNextCell = indexOfCellBeforeDragging + 1 < 5 && velocity.x > swipeVelocityThreshold
+        let hasEnoughVelocityToSlideToThePreviousCell = ((indexOfCellBeforeDragging - 1) >= 0) && (velocity.x < -swipeVelocityThreshold)
+        
+        let didUseSwipeToSkipCell = majorCellIsTheCellBeforeDragging && (hasEnoughVelocityToSlideToTheNextCell || hasEnoughVelocityToSlideToThePreviousCell)
+        
+        if didUseSwipeToSkipCell {
+            
+            let snapToIndex = indexOfCellBeforeDragging + (hasEnoughVelocityToSlideToTheNextCell ? 1 : -1)
+            let toValue = collectionViewLayout.itemSize.width * CGFloat(snapToIndex)
+            
+            // Damping equal 1 => no oscillations => decay animation
+            UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: velocity.x, options: .allowUserInteraction, animations: {
+                scrollView.contentOffset = CGPoint(x: toValue, y: 0)
+                scrollView.layoutIfNeeded()
+            }, completion: nil)
+            
+        } else {
+            let indexPath = IndexPath(row: indexOfMajorCell, section: 0)
+            collectionViewLayout.collectionView!.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        }
+    }
 }

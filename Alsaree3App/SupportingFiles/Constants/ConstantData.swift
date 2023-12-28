@@ -21,6 +21,7 @@ struct OrderAgain{
 struct featureDetails{
     var featureValue : String
     var image : String?
+    var istinted : Bool
 }
 
 var orderAgainData = [

@@ -17,8 +17,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="386" height="153"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="gaI-8Q-vJ5">
-                        <rect key="frame" x="20" y="19.999999999999996" width="346" height="45.666666666666657"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="gaI-8Q-vJ5">
+                        <rect key="frame" x="20" y="19.999999999999996" width="346" height="40.666666666666657"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aS1-GR-BxE">
                                 <rect key="frame" x="0.0" y="0.0" width="346" height="20.333333333333332"/>
@@ -27,7 +27,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZL-11-NMe">
-                                <rect key="frame" x="0.0" y="25.333333333333336" width="346" height="20.333333333333336"/>
+                                <rect key="frame" x="0.0" y="20.333333333333336" width="346" height="20.333333333333336"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -35,30 +35,30 @@
                         </subviews>
                     </stackView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dqb-KN-z2d">
-                        <rect key="frame" x="10" y="70.666666666666686" width="361" height="76.333333333333314"/>
+                        <rect key="frame" x="10" y="65.666666666666686" width="361" height="81.333333333333314"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GvD-dE-9dU">
-                                <rect key="frame" x="5" y="10" width="279.66666666666669" height="38.333333333333336"/>
+                                <rect key="frame" x="10" y="15.000000000000004" width="279.66666666666669" height="38.333333333333343"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZBc-y3-QnA">
-                                <rect key="frame" x="294.66666666666669" y="38.333333333333329" width="48.333333333333314" height="28"/>
+                                <rect key="frame" x="304.66666666666669" y="43.333333333333329" width="48.333333333333314" height="28"/>
                                 <color key="backgroundColor" red="0.86666666670000003" green="0.50196078430000002" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="20%">
-                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                    <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="12"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ZBc-y3-QnA" firstAttribute="leading" secondItem="GvD-dE-9dU" secondAttribute="trailing" constant="10" id="AHs-IA-xwM"/>
+                            <constraint firstItem="ZBc-y3-QnA" firstAttribute="leading" secondItem="GvD-dE-9dU" secondAttribute="trailing" constant="15" id="AHs-IA-xwM"/>
                             <constraint firstAttribute="bottomMargin" secondItem="GvD-dE-9dU" secondAttribute="bottom" constant="20" id="MxT-in-0ct"/>
                             <constraint firstAttribute="bottom" secondItem="ZBc-y3-QnA" secondAttribute="bottom" constant="10" id="QY1-2J-HnO"/>
-                            <constraint firstItem="GvD-dE-9dU" firstAttribute="leading" secondItem="dqb-KN-z2d" secondAttribute="leading" constant="5" id="kxG-3t-7ZF"/>
-                            <constraint firstItem="GvD-dE-9dU" firstAttribute="top" secondItem="dqb-KN-z2d" secondAttribute="top" constant="10" id="lIO-Rw-zEV"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ZBc-y3-QnA" secondAttribute="trailing" constant="10" id="tQF-f1-Vtm"/>
+                            <constraint firstItem="GvD-dE-9dU" firstAttribute="leading" secondItem="dqb-KN-z2d" secondAttribute="leading" constant="10" id="kxG-3t-7ZF"/>
+                            <constraint firstItem="GvD-dE-9dU" firstAttribute="top" secondItem="dqb-KN-z2d" secondAttribute="top" constant="15" id="lIO-Rw-zEV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZBc-y3-QnA" secondAttribute="trailing" id="tQF-f1-Vtm"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -78,6 +78,7 @@
                 <outlet property="customProgressView" destination="GvD-dE-9dU" id="K2O-jZ-gRj"/>
                 <outlet property="goldCatCardTitle" destination="aS1-GR-BxE" id="kKW-LM-AiX"/>
                 <outlet property="goldCaterogryLbl" destination="uZL-11-NMe" id="nrC-hd-fDH"/>
+                <outlet property="progressBtn" destination="ZBc-y3-QnA" id="PDF-DN-kxg"/>
             </connections>
             <point key="canvasLocation" x="157.25190839694656" y="57.394366197183103"/>
         </tableViewCell>

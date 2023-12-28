@@ -16,6 +16,7 @@ class FoodCatCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
     }
     
     func setupUI(){
@@ -23,7 +24,7 @@ class FoodCatCollectionViewCell: UICollectionViewCell {
         
         foodImage.image = UIImage(named: foodCategoryList(rawValue: indexpath)?.images ?? TextConstant.empty.rawValue )
 
-        foodImage.layer.cornerRadius = (self.bounds.width/2)
+        foodImage.layer.cornerRadius = ((self.bounds.width)/2)
         foodImage.clipsToBounds = true
         foodImage.layer.borderWidth = 0
         

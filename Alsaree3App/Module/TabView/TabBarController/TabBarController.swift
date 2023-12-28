@@ -9,11 +9,45 @@ import UIKit
 
 class TabBarController: UITabBarController {
     
+    var indicatorView: UIView!
+    let higherTabBarInset: CGFloat = 10
+    let indicatorHeight: CGFloat = 1.5
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTabBar()
+        setupBorder()
+        setupIndicatorView()
+    }
+   
+    func setupIndicatorView() {
+        guard let itemCount = tabBar.items?.count, itemCount > 0 else {
+            return
+        }
+
+        let tabWidth = tabBar.frame.width / CGFloat(itemCount)
+        indicatorView = UIView(frame: CGRect(x: 0, y: 0, width: tabWidth, height: indicatorHeight))
+        indicatorView.backgroundColor = ColorConstant.primaryYellowColor
+        tabBar.addSubview(indicatorView)
+    }
+
+
+
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+            guard let index = tabBar.items?.firstIndex(of: item),
+                  let count = tabBar.items?.count else { return }
+            
+            let tabWidth = tabBar.frame.width / CGFloat(count)
+            
+            UIView.animate(withDuration: 0.3) {
+                let newWidth = tabWidth * 0.8
+                let xOffset = (tabWidth - newWidth) / 2
+                self.indicatorView.frame = CGRect(x: tabWidth * CGFloat(index) + xOffset, y: 0, width: newWidth, height: self.indicatorHeight)
+            }
+        }
+    
+    func setupBorder(){
         tabBar.addTopBorderWithColor(color: ColorConstant.borderColorGray, width: 1.0)
-        
     }
     
     func setupTabBar(){

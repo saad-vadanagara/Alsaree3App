@@ -39,6 +39,8 @@ class CategoryHomeTabCell: UITableViewCell {
         // setting transprent backgroung
         homeCategoryCollectionView.backgroundColor = UIColor.clear
         self.backgroundColor = UIColor.clear
+        
+        homeCategoryCollectionView.showsHorizontalScrollIndicator = false
     }
     
     override func systemLayoutSizeFitting(_ targetSize: CGSize, withHorizontalFittingPriority horizontalFittingPriority: UILayoutPriority, verticalFittingPriority: UILayoutPriority) -> CGSize {
@@ -73,6 +75,6 @@ extension CategoryHomeTabCell : UICollectionViewDelegate{
 
 extension CategoryHomeTabCell : UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (homeCategoryCollectionView.bounds.width-22)/4 , height: homeCategoryCollectionView.bounds.height)
+        return CGSize(width: (homeCategoryCollectionView.bounds.width)/4 , height: homeCategoryCollectionView.bounds.height)
     }
 }

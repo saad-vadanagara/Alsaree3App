@@ -44,12 +44,14 @@ class ResturentDetailsTableViewCell: UITableViewCell {
         let imageSize = CGSize(width: 10, height: 10)
         
         resturentImage.image = UIImage(named: "resturentImage")
-        setLabelText(lblrefrence: resturentTitle, lbltext: "Ultimate Chicken - Wraps, Plates", fontSize: 20)
+        setLabelText(lblrefrence: resturentTitle, lbltext: "Ultimate Chicken - Wraps, Plates",fontSize: 20)
         
-        lowdeleveryView.backgroundColor = ColorConstant.primaryYellowColor
+        lowdeleveryView.backgroundColor = UIColor.white
+        lowdeleveryView.layer.borderColor = ColorConstant.borderColorGray.cgColor
+        lowdeleveryView.layer.borderWidth = 0.5
         applyCornerRadius(to: lowdeleveryView, radius: 5)
     
-        setLabelText(lblrefrence: selectedItemOffLbl, lbltext: "Get 20% off selected items", fontSize: 12)
+        setLabelText(lblrefrence: selectedItemOffLbl, lbltext: "Get 20% off selected items", fontSize: 12,color: ColorConstant.whitecolor)
         selectedItemView.backgroundColor = ColorConstant.primaryYellowColor
         applyCornerRadius(to: selectedItemView, radius: 5)
         
@@ -69,11 +71,11 @@ class ResturentDetailsTableViewCell: UITableViewCell {
 }
 
 let userPreferences1 = [
-    featureDetails(featureValue: "500+", image: "Heart"),
-    featureDetails(featureValue: "2.5 KM Away", image: nil),
-    featureDetails(featureValue: "25 - 45 Mins" , image: "Location"),
-    featureDetails(featureValue: "IQD 1000", image: "MotorCycle"),
-    featureDetails(featureValue: "3.4 Excellent", image: "Star")
+    featureDetails(featureValue: "500+", image: "Heart",istinted: false),
+    featureDetails(featureValue: "2.5 KM Away", image: nil,istinted: true),
+    featureDetails(featureValue: "25 - 45 Mins" , image: "Location",istinted: true),
+    featureDetails(featureValue: "IQD 1000", image: "MotorCycle",istinted: true),
+    featureDetails(featureValue: "3.4 Excellent", image: "Star",istinted: true)
 ]
 
 

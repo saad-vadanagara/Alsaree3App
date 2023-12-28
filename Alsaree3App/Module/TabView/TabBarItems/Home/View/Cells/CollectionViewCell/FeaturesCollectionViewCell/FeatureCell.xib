@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -24,10 +23,10 @@
                                 <rect key="frame" x="8" y="5" width="105" height="39"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iDs-mM-ccV">
-                                        <rect key="frame" x="0.0" y="0.0" width="60" height="39"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="59" height="39"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UpM-TX-6LB">
-                                        <rect key="frame" x="65" y="0.0" width="40" height="39"/>
+                                        <rect key="frame" x="64" y="0.0" width="41" height="39"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -35,7 +34,6 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Rg3-2z-yyO" firstAttribute="leading" secondItem="JGw-TN-6Yf" secondAttribute="leading" constant="8" id="9dk-zB-uMS"/>
                             <constraint firstAttribute="trailing" secondItem="Rg3-2z-yyO" secondAttribute="trailing" constant="8" id="NQl-fq-c6H"/>
@@ -61,9 +59,4 @@
             <point key="canvasLocation" x="193.12977099236642" y="19.366197183098592"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

@@ -1,0 +1,979 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01B9D2DFC082D525A7CD5AAF6CC76182 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		292EBC424E298092EAC7CB9F84965152 /* Pods-Alsaree3App-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B34E8E854F87B781ED05178E3409353A /* Pods-Alsaree3App-dummy.m */; };
+		296A394B0655A37A08D69A93BD245C04 /* Shimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817C1D258F6033718775CDEC30542FC3 /* Shimmer.swift */; };
+		32A42893DDAAD14CC262BB6A635BC387 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		412C220BCDA191D9D01463240FE4D867 /* ShimmeringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A03B1E2F00EADFFDF274A8F4B82708 /* ShimmeringView.swift */; };
+		45056170C4B2397E4C5DC20F398915ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		57D6DCE8E562CF264BC9C101D4CEE50B /* ShimmeringLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022D633127D74536A384BB9E57E92E56 /* ShimmeringLayer.swift */; };
+		5A2F035700C34BEB6A4F945B4299365E /* Pods-Alsaree3App-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AEE63760B8091775646E6C1545D00B73 /* Pods-Alsaree3App-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		675C1E359E59E0B3A5566F6D7EC12BE3 /* Pods-Alsaree3App-Alsaree3AppUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 30402073BD418824F796F9AEB7113E82 /* Pods-Alsaree3App-Alsaree3AppUITests-dummy.m */; };
+		88A8C5E7DFA7CF51B7891BEC2F427B72 /* ShimmerSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1B44A47A7ECDCDF92AF560B4E2D547 /* ShimmerSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C04EC0316FC3A2F32B76EF1A0BD3ACBA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		C48C70CD4A4984295F04AF750B1BC24E /* Pods-Alsaree3AppTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C3ECE55A51FD9C0734B9F8703CB196 /* Pods-Alsaree3AppTests-dummy.m */; };
+		C753CA5AD19DA90CE2094E9F9D252805 /* Pods-Alsaree3App-Alsaree3AppUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 661B6C0F76C1E1C539B3D486A17BA694 /* Pods-Alsaree3App-Alsaree3AppUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D29D20972561281B15BF754615743632 /* Pods-Alsaree3AppTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A161D7BF11C514475D02E02E134732AB /* Pods-Alsaree3AppTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E760EEDA25AA2747E7F0ADEA4C75206D /* ShimmeringMaskLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434C9BBD95B4E9698EA8A0F3E3D3D0AF /* ShimmeringMaskLayer.swift */; };
+		FCBB75F66CDBAD04A46E30AF6E7EA87C /* ShimmerSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9491DC9359EC198563D3A58B527E93CB /* ShimmerSwift-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1655885CE6EEB4C1982EBE115D8E63DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF2974CEBD4F57BEFE88471BC9F6361A;
+			remoteInfo = ShimmerSwift;
+		};
+		485D9573582256B3FB7462AF25A6FCFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF2974CEBD4F57BEFE88471BC9F6361A;
+			remoteInfo = ShimmerSwift;
+		};
+		D9D0F2A8121E8857D7C66EECAA3CF3C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4747FD72E01F06E1C9708BC94BDB00AB;
+			remoteInfo = "Pods-Alsaree3App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		022D633127D74536A384BB9E57E92E56 /* ShimmeringLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShimmeringLayer.swift; path = Shimmer/ShimmeringLayer.swift; sourceTree = "<group>"; };
+		05AB48C9F98BDE652B8EA087CE6E2B6C /* Pods-Alsaree3App-Alsaree3AppUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Alsaree3App-Alsaree3AppUITests-Info.plist"; sourceTree = "<group>"; };
+		09644E022718E4AE7CC19E094F52F498 /* Pods-Alsaree3App-Alsaree3AppUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Alsaree3App-Alsaree3AppUITests"; path = Pods_Alsaree3App_Alsaree3AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C01CC457180308DA88B8934F0503CFB /* ShimmerSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ShimmerSwift.modulemap; sourceTree = "<group>"; };
+		0EC8FE3BD603DFB166D14640CDC9924D /* Pods-Alsaree3AppTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Alsaree3AppTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		11C3ECE55A51FD9C0734B9F8703CB196 /* Pods-Alsaree3AppTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Alsaree3AppTests-dummy.m"; sourceTree = "<group>"; };
+		19DA578061B96E8C7A6C91929F37E602 /* Pods-Alsaree3App-Alsaree3AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Alsaree3App-Alsaree3AppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		208C55FC30E7AC11718E212FDD2A48DB /* Pods-Alsaree3App */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Alsaree3App"; path = Pods_Alsaree3App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		20C9CDF248087F0AF848717F5C49E2B7 /* Pods-Alsaree3App-Alsaree3AppUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Alsaree3App-Alsaree3AppUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		2C87C0605AA5FA494EA3BA36C19D692A /* Pods-Alsaree3AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Alsaree3AppTests.release.xcconfig"; sourceTree = "<group>"; };
+		30402073BD418824F796F9AEB7113E82 /* Pods-Alsaree3App-Alsaree3AppUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Alsaree3App-Alsaree3AppUITests-dummy.m"; sourceTree = "<group>"; };
+		4162D106C7C804C5977319EC197E5065 /* Pods-Alsaree3AppTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Alsaree3AppTests"; path = Pods_Alsaree3AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		434C9BBD95B4E9698EA8A0F3E3D3D0AF /* ShimmeringMaskLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShimmeringMaskLayer.swift; path = Shimmer/ShimmeringMaskLayer.swift; sourceTree = "<group>"; };
+		5353226B06FDC937F2E395D866C7BB17 /* Pods-Alsaree3App-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Alsaree3App-frameworks.sh"; sourceTree = "<group>"; };
+		584FBE61E7E91EC3D680BFE8DE756AC0 /* Pods-Alsaree3App.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Alsaree3App.modulemap"; sourceTree = "<group>"; };
+		661B6C0F76C1E1C539B3D486A17BA694 /* Pods-Alsaree3App-Alsaree3AppUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Alsaree3App-Alsaree3AppUITests-umbrella.h"; sourceTree = "<group>"; };
+		6B1B44A47A7ECDCDF92AF560B4E2D547 /* ShimmerSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ShimmerSwift-umbrella.h"; sourceTree = "<group>"; };
+		6C2AD02E659969DBE4EC19C66DBFE0AF /* Pods-Alsaree3App-Alsaree3AppUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Alsaree3App-Alsaree3AppUITests-frameworks.sh"; sourceTree = "<group>"; };
+		6EF94209853CE0767B90275C77E8AC0F /* ShimmerSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ShimmerSwift-prefix.pch"; sourceTree = "<group>"; };
+		72B8F68FCF3850375A239AA5F81E28D4 /* Pods-Alsaree3App-Alsaree3AppUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Alsaree3App-Alsaree3AppUITests.modulemap"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		817C1D258F6033718775CDEC30542FC3 /* Shimmer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Shimmer.swift; path = Shimmer/Shimmer.swift; sourceTree = "<group>"; };
+		821BC93370C3CB36FFC6E7D040882DCF /* Pods-Alsaree3App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Alsaree3App.release.xcconfig"; sourceTree = "<group>"; };
+		93027197DCE144EF9A5DDF15E6C717AA /* ShimmerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ShimmerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9491DC9359EC198563D3A58B527E93CB /* ShimmerSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ShimmerSwift-dummy.m"; sourceTree = "<group>"; };
+		99934E8B157E1153E149AD6AECCBD9AF /* Pods-Alsaree3App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Alsaree3App.debug.xcconfig"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A05E597F35A6F23D1A8B2C5998A4FE1E /* Pods-Alsaree3App-Alsaree3AppUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Alsaree3App-Alsaree3AppUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A161D7BF11C514475D02E02E134732AB /* Pods-Alsaree3AppTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Alsaree3AppTests-umbrella.h"; sourceTree = "<group>"; };
+		AC7F4F70FA278B9AE65D187FAAFB32AE /* Pods-Alsaree3AppTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Alsaree3AppTests-Info.plist"; sourceTree = "<group>"; };
+		AEE63760B8091775646E6C1545D00B73 /* Pods-Alsaree3App-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Alsaree3App-umbrella.h"; sourceTree = "<group>"; };
+		AFA71142F9B02F341F9D840FB3BA5F06 /* Pods-Alsaree3AppTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Alsaree3AppTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		B0B2351CA8AE6C7ACA5497D87470240B /* Pods-Alsaree3AppTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Alsaree3AppTests.modulemap"; sourceTree = "<group>"; };
+		B34E8E854F87B781ED05178E3409353A /* Pods-Alsaree3App-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Alsaree3App-dummy.m"; sourceTree = "<group>"; };
+		C5A03B1E2F00EADFFDF274A8F4B82708 /* ShimmeringView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShimmeringView.swift; path = Shimmer/ShimmeringView.swift; sourceTree = "<group>"; };
+		C84E59AE32C1B2B2FFB10E74801879F1 /* Pods-Alsaree3App-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Alsaree3App-Info.plist"; sourceTree = "<group>"; };
+		C8BA03FFDF8F794E7D741D932A6B2B0C /* Pods-Alsaree3AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Alsaree3AppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CB439551E8A8380BF6BD527B77485288 /* ShimmerSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ShimmerSwift-Info.plist"; sourceTree = "<group>"; };
+		D3038535EC7D0CB03C4978A4312E6CB3 /* ShimmerSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ShimmerSwift.debug.xcconfig; sourceTree = "<group>"; };
+		DAD47448741E573906272BA71A6DBD9D /* Pods-Alsaree3App-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Alsaree3App-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EB04F3A6C4D5B42067199C03A7CB9617 /* Pods-Alsaree3App-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Alsaree3App-acknowledgements.plist"; sourceTree = "<group>"; };
+		EE0CF3A0EA523476A09C6ABC781C0D28 /* Pods-Alsaree3App-Alsaree3AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Alsaree3App-Alsaree3AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FDB8E6300AEA8C87B928E153539B50E3 /* ShimmerSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ShimmerSwift.release.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3ECFD5EFC7797A1103A88095D76B0E0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01B9D2DFC082D525A7CD5AAF6CC76182 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B8AF14CA5A4360A4D1CE3D9A7000B1C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C04EC0316FC3A2F32B76EF1A0BD3ACBA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A174E9DCFB809A233FA474BE7AFAF4C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32A42893DDAAD14CC262BB6A635BC387 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B89456A383FEEAC7835242D2EE3A94FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45056170C4B2397E4C5DC20F398915ED /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		48929D70C83F537E86BDCF35EA3E4D67 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4EA20A73306EA285CE5447057DF4A341 /* ShimmerSwift */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		49EFD0D01438CA0D84332BD7EFE834BC /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				73B4583C6801DE087BBD3AB3F5CF0AB5 /* Pods-Alsaree3App */,
+				7A76E9675E63CBB677DB8FF65146FDDA /* Pods-Alsaree3App-Alsaree3AppUITests */,
+				E9B2DD9A2D2EF93671E4757217DF6D12 /* Pods-Alsaree3AppTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		4EA20A73306EA285CE5447057DF4A341 /* ShimmerSwift */ = {
+			isa = PBXGroup;
+			children = (
+				817C1D258F6033718775CDEC30542FC3 /* Shimmer.swift */,
+				022D633127D74536A384BB9E57E92E56 /* ShimmeringLayer.swift */,
+				434C9BBD95B4E9698EA8A0F3E3D3D0AF /* ShimmeringMaskLayer.swift */,
+				C5A03B1E2F00EADFFDF274A8F4B82708 /* ShimmeringView.swift */,
+				D48C7296F00B80BED300ACBF86347532 /* Support Files */,
+			);
+			path = ShimmerSwift;
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		73B4583C6801DE087BBD3AB3F5CF0AB5 /* Pods-Alsaree3App */ = {
+			isa = PBXGroup;
+			children = (
+				584FBE61E7E91EC3D680BFE8DE756AC0 /* Pods-Alsaree3App.modulemap */,
+				DAD47448741E573906272BA71A6DBD9D /* Pods-Alsaree3App-acknowledgements.markdown */,
+				EB04F3A6C4D5B42067199C03A7CB9617 /* Pods-Alsaree3App-acknowledgements.plist */,
+				B34E8E854F87B781ED05178E3409353A /* Pods-Alsaree3App-dummy.m */,
+				5353226B06FDC937F2E395D866C7BB17 /* Pods-Alsaree3App-frameworks.sh */,
+				C84E59AE32C1B2B2FFB10E74801879F1 /* Pods-Alsaree3App-Info.plist */,
+				AEE63760B8091775646E6C1545D00B73 /* Pods-Alsaree3App-umbrella.h */,
+				99934E8B157E1153E149AD6AECCBD9AF /* Pods-Alsaree3App.debug.xcconfig */,
+				821BC93370C3CB36FFC6E7D040882DCF /* Pods-Alsaree3App.release.xcconfig */,
+			);
+			name = "Pods-Alsaree3App";
+			path = "Target Support Files/Pods-Alsaree3App";
+			sourceTree = "<group>";
+		};
+		7A76E9675E63CBB677DB8FF65146FDDA /* Pods-Alsaree3App-Alsaree3AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				72B8F68FCF3850375A239AA5F81E28D4 /* Pods-Alsaree3App-Alsaree3AppUITests.modulemap */,
+				A05E597F35A6F23D1A8B2C5998A4FE1E /* Pods-Alsaree3App-Alsaree3AppUITests-acknowledgements.markdown */,
+				20C9CDF248087F0AF848717F5C49E2B7 /* Pods-Alsaree3App-Alsaree3AppUITests-acknowledgements.plist */,
+				30402073BD418824F796F9AEB7113E82 /* Pods-Alsaree3App-Alsaree3AppUITests-dummy.m */,
+				6C2AD02E659969DBE4EC19C66DBFE0AF /* Pods-Alsaree3App-Alsaree3AppUITests-frameworks.sh */,
+				05AB48C9F98BDE652B8EA087CE6E2B6C /* Pods-Alsaree3App-Alsaree3AppUITests-Info.plist */,
+				661B6C0F76C1E1C539B3D486A17BA694 /* Pods-Alsaree3App-Alsaree3AppUITests-umbrella.h */,
+				EE0CF3A0EA523476A09C6ABC781C0D28 /* Pods-Alsaree3App-Alsaree3AppUITests.debug.xcconfig */,
+				19DA578061B96E8C7A6C91929F37E602 /* Pods-Alsaree3App-Alsaree3AppUITests.release.xcconfig */,
+			);
+			name = "Pods-Alsaree3App-Alsaree3AppUITests";
+			path = "Target Support Files/Pods-Alsaree3App-Alsaree3AppUITests";
+			sourceTree = "<group>";
+		};
+		C53EB9EAD88C50544ED11F15C3F8618B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				208C55FC30E7AC11718E212FDD2A48DB /* Pods-Alsaree3App */,
+				09644E022718E4AE7CC19E094F52F498 /* Pods-Alsaree3App-Alsaree3AppUITests */,
+				4162D106C7C804C5977319EC197E5065 /* Pods-Alsaree3AppTests */,
+				93027197DCE144EF9A5DDF15E6C717AA /* ShimmerSwift.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				48929D70C83F537E86BDCF35EA3E4D67 /* Pods */,
+				C53EB9EAD88C50544ED11F15C3F8618B /* Products */,
+				49EFD0D01438CA0D84332BD7EFE834BC /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D48C7296F00B80BED300ACBF86347532 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0C01CC457180308DA88B8934F0503CFB /* ShimmerSwift.modulemap */,
+				9491DC9359EC198563D3A58B527E93CB /* ShimmerSwift-dummy.m */,
+				CB439551E8A8380BF6BD527B77485288 /* ShimmerSwift-Info.plist */,
+				6EF94209853CE0767B90275C77E8AC0F /* ShimmerSwift-prefix.pch */,
+				6B1B44A47A7ECDCDF92AF560B4E2D547 /* ShimmerSwift-umbrella.h */,
+				D3038535EC7D0CB03C4978A4312E6CB3 /* ShimmerSwift.debug.xcconfig */,
+				FDB8E6300AEA8C87B928E153539B50E3 /* ShimmerSwift.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ShimmerSwift";
+			sourceTree = "<group>";
+		};
+		E9B2DD9A2D2EF93671E4757217DF6D12 /* Pods-Alsaree3AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				B0B2351CA8AE6C7ACA5497D87470240B /* Pods-Alsaree3AppTests.modulemap */,
+				0EC8FE3BD603DFB166D14640CDC9924D /* Pods-Alsaree3AppTests-acknowledgements.markdown */,
+				AFA71142F9B02F341F9D840FB3BA5F06 /* Pods-Alsaree3AppTests-acknowledgements.plist */,
+				11C3ECE55A51FD9C0734B9F8703CB196 /* Pods-Alsaree3AppTests-dummy.m */,
+				AC7F4F70FA278B9AE65D187FAAFB32AE /* Pods-Alsaree3AppTests-Info.plist */,
+				A161D7BF11C514475D02E02E134732AB /* Pods-Alsaree3AppTests-umbrella.h */,
+				C8BA03FFDF8F794E7D741D932A6B2B0C /* Pods-Alsaree3AppTests.debug.xcconfig */,
+				2C87C0605AA5FA494EA3BA36C19D692A /* Pods-Alsaree3AppTests.release.xcconfig */,
+			);
+			name = "Pods-Alsaree3AppTests";
+			path = "Target Support Files/Pods-Alsaree3AppTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		198D3990E18825299198E7E57C674DD8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C753CA5AD19DA90CE2094E9F9D252805 /* Pods-Alsaree3App-Alsaree3AppUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BB990BA8775C347CECF139E5AA68F1B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A2F035700C34BEB6A4F945B4299365E /* Pods-Alsaree3App-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5240A18083FD57A34BA1BB384CCC0CBD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D29D20972561281B15BF754615743632 /* Pods-Alsaree3AppTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EBD86F88ECFEC3D5FBC692391DE4812 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88A8C5E7DFA7CF51B7891BEC2F427B72 /* ShimmerSwift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		45BDB199D5E3E5E0D22592A19FA19293 /* Pods-Alsaree3App-Alsaree3AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42B1FC534696FCDDDD42479399D34E97 /* Build configuration list for PBXNativeTarget "Pods-Alsaree3App-Alsaree3AppUITests" */;
+			buildPhases = (
+				198D3990E18825299198E7E57C674DD8 /* Headers */,
+				3AC5278BCFD74C83716ED255CF583490 /* Sources */,
+				3ECFD5EFC7797A1103A88095D76B0E0C /* Frameworks */,
+				497342FCCA2FF5979455C6431C0BEEDA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				146BC14B4EA0C2C4B78BE79C84631245 /* PBXTargetDependency */,
+			);
+			name = "Pods-Alsaree3App-Alsaree3AppUITests";
+			productName = Pods_Alsaree3App_Alsaree3AppUITests;
+			productReference = 09644E022718E4AE7CC19E094F52F498 /* Pods-Alsaree3App-Alsaree3AppUITests */;
+			productType = "com.apple.product-type.framework";
+		};
+		4747FD72E01F06E1C9708BC94BDB00AB /* Pods-Alsaree3App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FABC74AAFDC478DA587F2359AC154151 /* Build configuration list for PBXNativeTarget "Pods-Alsaree3App" */;
+			buildPhases = (
+				4BB990BA8775C347CECF139E5AA68F1B /* Headers */,
+				DFE5090C80E0D7629323E2B32E6BB210 /* Sources */,
+				A174E9DCFB809A233FA474BE7AFAF4C6 /* Frameworks */,
+				79093C4A522C7F6CE9F5645492344404 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				135DF9D50E6E713254C0E61BB4EC6AE5 /* PBXTargetDependency */,
+			);
+			name = "Pods-Alsaree3App";
+			productName = Pods_Alsaree3App;
+			productReference = 208C55FC30E7AC11718E212FDD2A48DB /* Pods-Alsaree3App */;
+			productType = "com.apple.product-type.framework";
+		};
+		BF2974CEBD4F57BEFE88471BC9F6361A /* ShimmerSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EA8043E01FCDD22C667496B667F6A46 /* Build configuration list for PBXNativeTarget "ShimmerSwift" */;
+			buildPhases = (
+				9EBD86F88ECFEC3D5FBC692391DE4812 /* Headers */,
+				F3CFECB34F03CE81AB467917A98EC3E7 /* Sources */,
+				B89456A383FEEAC7835242D2EE3A94FA /* Frameworks */,
+				F561594AC277A8E80ED05EA110E92C25 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShimmerSwift;
+			productName = ShimmerSwift;
+			productReference = 93027197DCE144EF9A5DDF15E6C717AA /* ShimmerSwift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DE3B7D5D6D525637DA14DB3D4C4018C6 /* Pods-Alsaree3AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7C51CCDABEB994DA2CA308FC69FD7A7 /* Build configuration list for PBXNativeTarget "Pods-Alsaree3AppTests" */;
+			buildPhases = (
+				5240A18083FD57A34BA1BB384CCC0CBD /* Headers */,
+				6D28AB7D569E2559B9ADD7B63594B5AB /* Sources */,
+				7B8AF14CA5A4360A4D1CE3D9A7000B1C /* Frameworks */,
+				7C47A1CC90E8906D5E3B3867B0EF3E1C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				93E9F55DAFD1E66DED091CE09B288C18 /* PBXTargetDependency */,
+			);
+			name = "Pods-Alsaree3AppTests";
+			productName = Pods_Alsaree3AppTests;
+			productReference = 4162D106C7C804C5977319EC197E5065 /* Pods-Alsaree3AppTests */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1410;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = C53EB9EAD88C50544ED11F15C3F8618B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4747FD72E01F06E1C9708BC94BDB00AB /* Pods-Alsaree3App */,
+				45BDB199D5E3E5E0D22592A19FA19293 /* Pods-Alsaree3App-Alsaree3AppUITests */,
+				DE3B7D5D6D525637DA14DB3D4C4018C6 /* Pods-Alsaree3AppTests */,
+				BF2974CEBD4F57BEFE88471BC9F6361A /* ShimmerSwift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		497342FCCA2FF5979455C6431C0BEEDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79093C4A522C7F6CE9F5645492344404 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C47A1CC90E8906D5E3B3867B0EF3E1C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F561594AC277A8E80ED05EA110E92C25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3AC5278BCFD74C83716ED255CF583490 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				675C1E359E59E0B3A5566F6D7EC12BE3 /* Pods-Alsaree3App-Alsaree3AppUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D28AB7D569E2559B9ADD7B63594B5AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C48C70CD4A4984295F04AF750B1BC24E /* Pods-Alsaree3AppTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFE5090C80E0D7629323E2B32E6BB210 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				292EBC424E298092EAC7CB9F84965152 /* Pods-Alsaree3App-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3CFECB34F03CE81AB467917A98EC3E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				296A394B0655A37A08D69A93BD245C04 /* Shimmer.swift in Sources */,
+				57D6DCE8E562CF264BC9C101D4CEE50B /* ShimmeringLayer.swift in Sources */,
+				E760EEDA25AA2747E7F0ADEA4C75206D /* ShimmeringMaskLayer.swift in Sources */,
+				412C220BCDA191D9D01463240FE4D867 /* ShimmeringView.swift in Sources */,
+				FCBB75F66CDBAD04A46E30AF6E7EA87C /* ShimmerSwift-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		135DF9D50E6E713254C0E61BB4EC6AE5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ShimmerSwift;
+			target = BF2974CEBD4F57BEFE88471BC9F6361A /* ShimmerSwift */;
+			targetProxy = 485D9573582256B3FB7462AF25A6FCFD /* PBXContainerItemProxy */;
+		};
+		146BC14B4EA0C2C4B78BE79C84631245 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ShimmerSwift;
+			target = BF2974CEBD4F57BEFE88471BC9F6361A /* ShimmerSwift */;
+			targetProxy = 1655885CE6EEB4C1982EBE115D8E63DC /* PBXContainerItemProxy */;
+		};
+		93E9F55DAFD1E66DED091CE09B288C18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Alsaree3App";
+			target = 4747FD72E01F06E1C9708BC94BDB00AB /* Pods-Alsaree3App */;
+			targetProxy = D9D0F2A8121E8857D7C66EECAA3CF3C8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3B67BE287BD7D344C856310DB6F950E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3038535EC7D0CB03C4978A4312E6CB3 /* ShimmerSwift.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ShimmerSwift/ShimmerSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ShimmerSwift/ShimmerSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ShimmerSwift/ShimmerSwift.modulemap";
+				PRODUCT_MODULE_NAME = ShimmerSwift;
+				PRODUCT_NAME = ShimmerSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		45285987FDC204B9DB7C0228892D4B3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		61901215610F5042678D6A4C748AA51E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE0CF3A0EA523476A09C6ABC781C0D28 /* Pods-Alsaree3App-Alsaree3AppUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Alsaree3App-Alsaree3AppUITests/Pods-Alsaree3App-Alsaree3AppUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Alsaree3App-Alsaree3AppUITests/Pods-Alsaree3App-Alsaree3AppUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6AF9D8D0B4F4FA4695A8EEF773CD3FBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		6CD8B0EE95013CE3F0BCA4668624506D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99934E8B157E1153E149AD6AECCBD9AF /* Pods-Alsaree3App.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Alsaree3App/Pods-Alsaree3App-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Alsaree3App/Pods-Alsaree3App.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		70D7D661C530F19F98757FBFBB23183A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDB8E6300AEA8C87B928E153539B50E3 /* ShimmerSwift.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ShimmerSwift/ShimmerSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ShimmerSwift/ShimmerSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ShimmerSwift/ShimmerSwift.modulemap";
+				PRODUCT_MODULE_NAME = ShimmerSwift;
+				PRODUCT_NAME = ShimmerSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		75EB450B26E0B2963E48023A85CFB7BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19DA578061B96E8C7A6C91929F37E602 /* Pods-Alsaree3App-Alsaree3AppUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Alsaree3App-Alsaree3AppUITests/Pods-Alsaree3App-Alsaree3AppUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Alsaree3App-Alsaree3AppUITests/Pods-Alsaree3App-Alsaree3AppUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9D99E2D29CBFD1764843DFF4440D3259 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 821BC93370C3CB36FFC6E7D040882DCF /* Pods-Alsaree3App.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Alsaree3App/Pods-Alsaree3App-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Alsaree3App/Pods-Alsaree3App.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C79D041285B98C9FFD0479472CDF56D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8BA03FFDF8F794E7D741D932A6B2B0C /* Pods-Alsaree3AppTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Alsaree3AppTests/Pods-Alsaree3AppTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Alsaree3AppTests/Pods-Alsaree3AppTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D124E5161F5219AE2124AEA10FA76FFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C87C0605AA5FA494EA3BA36C19D692A /* Pods-Alsaree3AppTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Alsaree3AppTests/Pods-Alsaree3AppTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Alsaree3AppTests/Pods-Alsaree3AppTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		42B1FC534696FCDDDD42479399D34E97 /* Build configuration list for PBXNativeTarget "Pods-Alsaree3App-Alsaree3AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61901215610F5042678D6A4C748AA51E /* Debug */,
+				75EB450B26E0B2963E48023A85CFB7BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45285987FDC204B9DB7C0228892D4B3E /* Debug */,
+				6AF9D8D0B4F4FA4695A8EEF773CD3FBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5EA8043E01FCDD22C667496B667F6A46 /* Build configuration list for PBXNativeTarget "ShimmerSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B67BE287BD7D344C856310DB6F950E5 /* Debug */,
+				70D7D661C530F19F98757FBFBB23183A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7C51CCDABEB994DA2CA308FC69FD7A7 /* Build configuration list for PBXNativeTarget "Pods-Alsaree3AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C79D041285B98C9FFD0479472CDF56D5 /* Debug */,
+				D124E5161F5219AE2124AEA10FA76FFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FABC74AAFDC478DA587F2359AC154151 /* Build configuration list for PBXNativeTarget "Pods-Alsaree3App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CD8B0EE95013CE3F0BCA4668624506D /* Debug */,
+				9D99E2D29CBFD1764843DFF4440D3259 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

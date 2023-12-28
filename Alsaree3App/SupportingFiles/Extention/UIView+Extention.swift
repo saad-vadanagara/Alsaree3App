@@ -43,13 +43,15 @@ extension UIView{
         button.setAttributedTitle(attributedText, for: .normal)
     }
     
-    func setLabelText(lblrefrence: UILabel, lbltext: String, fontSize: Int, font_Family: String = FontConstant.regular.rawValue, isBold: Bool = false, color: UIColor = UIColor.black, alignmentLeft: Bool = false, lineSpacing: CGFloat = 0.0) {
+    func setLabelText(lblrefrence: UILabel, lbltext: String, fontSize: Int, font_Family: String = FontConstant.regular.rawValue, isBold: Bool = false, color: UIColor = UIColor.black, alignmentLeft: Bool = false, lineHeightMultiple: CGFloat = 1) {
         lblrefrence.text = lbltext
 
         if let font = isBold ? UIFont.boldSystemFont(ofSize: CGFloat(fontSize)) : UIFont(name: font_Family, size: CGFloat(fontSize)) {
             let attributedString = NSMutableAttributedString(string: lbltext)
+
             let paragraphStyle = NSMutableParagraphStyle()
-            paragraphStyle.lineSpacing = lineSpacing
+            paragraphStyle.lineHeightMultiple = lineHeightMultiple
+
             attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attributedString.length))
 
             lblrefrence.attributedText = attributedString
@@ -64,6 +66,7 @@ extension UIView{
             lblrefrence.textAlignment = .center
         }
     }
+
     
     
     func setButtonTextWithImage(button: UIButton, image: String, text: String, textColor: UIColor = UIColor.black, fontSize: CGFloat, imageSize: CGSize){
@@ -147,11 +150,15 @@ extension UIView{
     
     func coloredText(text: String, range: NSRange, color: UIColor) -> NSAttributedString {
         let attributedString = NSMutableAttributedString(string: text)
-        
+        if let cairoFont = UIFont(name: FontConstant.bold.rawValue, size: 12) {
+            attributedString.addAttribute(.font, value: cairoFont, range: range)
+        } else {
+            print("Error loading Cairo-Bold font")
+        }
         attributedString.addAttribute(.foregroundColor, value: color, range: range)
-        
         return attributedString
     }
+
     
     
     

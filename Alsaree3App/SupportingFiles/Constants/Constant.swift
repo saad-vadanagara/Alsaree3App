@@ -16,6 +16,7 @@ struct ColorConstant{
     static var blackcolor = UIColor.black
     static var borderColorYellow = UIColor(red: 0.87, green: 0.5, blue: 0.21, alpha: 1)
     static var borderColorGray = UIColor(red: 0.84, green: 0.83, blue: 0.83, alpha: 1)
+
     
 }
 

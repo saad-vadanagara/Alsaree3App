@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="XCl-U9-1LO">
-                        <rect key="frame" x="20" y="0.0" width="310" height="107"/>
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="107"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KB1-sz-zX9">
                             <size key="itemSize" width="128" height="128"/>
@@ -31,8 +31,8 @@
                 <constraints>
                     <constraint firstItem="XCl-U9-1LO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="0GU-Je-nxZ"/>
                     <constraint firstAttribute="bottom" secondItem="XCl-U9-1LO" secondAttribute="bottom" id="8gP-Zm-BTb"/>
-                    <constraint firstItem="XCl-U9-1LO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="UGv-Yp-fUh"/>
-                    <constraint firstAttribute="trailing" secondItem="XCl-U9-1LO" secondAttribute="trailing" constant="20" id="wbL-MO-CIQ"/>
+                    <constraint firstItem="XCl-U9-1LO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="UGv-Yp-fUh"/>
+                    <constraint firstAttribute="trailing" secondItem="XCl-U9-1LO" secondAttribute="trailing" id="wbL-MO-CIQ"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

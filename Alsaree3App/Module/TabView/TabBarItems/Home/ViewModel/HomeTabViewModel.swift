@@ -5,11 +5,44 @@
 //  Created by Neosoft on 18/12/23.
 //
 
+
+
 import Foundation
 struct resturentCollectionViewDetails{
     var name : String
     var details : [OrderAgain]
 }
+
+enum SectionAboveHeader:Int,CaseIterable{
+    case orderStatus = 0
+    case bannerAdv
+}
+
+
+enum SectionBelowScrollingHeader:Int,CaseIterable{
+    case dealsCollection
+    case foodCategoryList
+    case orderAgain
+    case featured
+    case offersNearby
+    case otherCells
+}
+
+enum sectionOrderAgain:Int,CaseIterable{
+    case orderAgain
+}
+enum sectionFeatured:Int,CaseIterable{
+    case featured
+}
+enum sectionOffersNearby:Int,CaseIterable{
+    case offersNearby
+}
+
+enum sectionFooter:Int,CaseIterable{
+    case otherCells
+}
+
+
 class HomeTabViewModel{
     var resturentCollectionViewData = [
         resturentCollectionViewDetails(name: "Order Again", details: orderAgainData),
@@ -26,23 +59,10 @@ class HomeTabViewModel{
 //    ] as [Any]
     
     
-    enum SectionAboveHeader:Int,CaseIterable{
-        case orderStatus = 0
-        case bannerAdv
-    }
-    
-    enum SectionBelowHeader:Int,CaseIterable{
-        case dealsCollection
-        case foodCategoryList
-        case orderAgain
-        case featured
-        case offersNearby
-        case otherCells
-    }
-    
+   
     var HomeTabData = [
         SectionAboveHeader.allCases,
-        SectionBelowHeader.allCases
+        SectionBelowScrollingHeader.allCases
     ] as [Any]
     
 }

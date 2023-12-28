@@ -1,3 +1,4 @@
+
 //
 //  HomeTabViewController.swift
 //  Alsaree3App
@@ -7,8 +8,6 @@
 
 import UIKit
 class HomeTabViewController: UIViewController {
-    
-    
     // MARK: IBOutlet
     @IBOutlet weak var scooterimg: UIImageView!
     @IBOutlet weak var applicationNamelbl: UILabel!
@@ -17,6 +16,7 @@ class HomeTabViewController: UIViewController {
     @IBOutlet weak var headerNavigationView: UIView!
     
     let viewModel = HomeTabViewModel()
+    var headerView : HomeTabCategoryHeader?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,18 +57,15 @@ class HomeTabViewController: UIViewController {
         
         let imageSize = CGSize(width: 20, height: 20)
         view.setButtonTextWithImage(button: areaNavitionBtn, image: ImageConstant.downArrow.rawValue, text: ButtonTextConstant.alFurjanArea.rawValue, fontSize: 12, imageSize: imageSize)
-        
         view.setImage(imageView: scooterimg, imageName: ImageConstant.scooter.rawValue)
         view.setCircleWithBorderColor(imageView: scooterimg, borderColor: ColorConstant.borderColorYellow, borderWidth: 1)
         
         // removing the seprator line
         hometabTableView.separatorStyle = .none
         hometabTableView.backgroundColor = ColorConstant.primaryWhiteBgcolor
-        
-        hometabTableView.rowHeight = UITableView.automaticDimension
-        hometabTableView.estimatedRowHeight = hometabTableView.bounds.height*0.45
-        hometabTableView.sectionHeaderTopPadding = 0
+        hometabTableView.sectionHeaderHeight = 0
         hometabTableView.sectionFooterHeight = 0
+        hometabTableView.sectionHeaderTopPadding = 0
         
         hometabTableView.showsVerticalScrollIndicator = false
     }
@@ -78,121 +75,135 @@ class HomeTabViewController: UIViewController {
 
 extension HomeTabViewController:UITableViewDataSource{
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return viewModel.HomeTabData.count
+    }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        HomeCellsList.allCases.count
+        if let sectionData = viewModel.HomeTabData[section] as? [any CaseIterable] {
+            return sectionData.count
+        } else {
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // Get the section data for the current section
+        let sectionData = viewModel.HomeTabData[indexPath.section]
         
-        switch HomeCellsList(rawValue: indexPath.row){
-        case .orderStatus:
-            if false{
+        // Handle cells based on section type
+        switch sectionData {
+        case let aboveHeaderSection as [SectionAboveHeader]:
+            let cellType = aboveHeaderSection[indexPath.row]
+            switch cellType {
+            case .orderStatus:
+                if true {
                 let cell = tableView.getCell(identifier: CellConstant.activeOrderHomeTabCell.rawValue) as! ActiveOrderHomeTabCell
                 cell.selectionStyle = .none
                 return cell
-            }else{
+            } else {
                 let cell = tableView.getCell(identifier: "GoldCategoryCardCellTableViewCell") as! GoldCategoryCardCellTableViewCell
                 cell.selectionStyle = .none
                 return cell
             }
-        case .bannerAdv:
-            let cell = tableView.getCell(identifier: CellConstant.bannerHomeTabCell.rawValue) as! BannerHomeTabCell
-            cell.selectionStyle = .none
-            return cell
-        case .categoryCollection:
-            let cell = tableView.getCell(identifier: CellConstant.categoryHomeTabCell.rawValue) as! CategoryHomeTabCell
-            cell.selectionStyle = .none
-            return cell
-        case .dealsCollection:
-            let cell = tableView.getCell(identifier: CellConstant.advertisementCell.rawValue) as! AdvertisementCell
-            cell.selectionStyle = .none
-            return cell
-        case .foodCategoryList:
-            let cell = tableView.getCell(identifier: CellConstant.foodCatrgoryCell.rawValue) as! FoodCatrgoryCell
-            cell.selectionStyle = .none
-            return cell
-        case .orderAgain :
-            let cell = tableView.getCell(identifier: "ResturentTableViewCell") as! ResturentTableViewCell
-            cell.featuredData = viewModel.resturentCollectionViewData[0]
-           
-            cell.selectionStyle = .none
-            return cell
-        case .featured:
-            let cell = tableView.getCell(identifier: "ResturentTableViewCell") as! ResturentTableViewCell
-            cell.featuredData = viewModel.resturentCollectionViewData[1]
-            
-            cell.selectionStyle = .none
-            return cell
-        case .offersNearby:
-            let cell = tableView.getCell(identifier: "ResturentTableViewCell") as! ResturentTableViewCell
-            cell.featuredData = viewModel.resturentCollectionViewData[2]
-            
-            cell.selectionStyle = .none
-            return cell
-        case .otherCells:
-            let cell = tableView.getCell(identifier: "ResturentDetailsTableViewCell") as! ResturentDetailsTableViewCell
-            return cell
-        default :
+            case .bannerAdv:
+                let cell = tableView.getCell(identifier: CellConstant.bannerHomeTabCell.rawValue) as! BannerHomeTabCell
+                cell.selectionStyle = .none
+                return cell
+            }
+        case let belowHeaderSection as [SectionBelowScrollingHeader]:
+            let cellType = belowHeaderSection[indexPath.row]
+            switch cellType {
+            case .dealsCollection:
+                let cell = tableView.getCell(identifier: CellConstant.advertisementCell.rawValue) as! AdvertisementCell
+                cell.selectionStyle = .none
+                return cell
+            case .foodCategoryList:
+                let cell = tableView.getCell(identifier: CellConstant.foodCatrgoryCell.rawValue) as! FoodCatrgoryCell
+                cell.selectionStyle = .none
+                return cell
+                
+            case .orderAgain:
+                let cell = tableView.getCell(identifier: "ResturentTableViewCell") as! ResturentTableViewCell
+                cell.featuredData = viewModel.resturentCollectionViewData[0]
+                cell.selectionStyle = .none
+                return cell
+            case .featured:
+                let cell = tableView.getCell(identifier: "ResturentTableViewCell") as! ResturentTableViewCell
+                cell.featuredData = viewModel.resturentCollectionViewData[1]
+                cell.selectionStyle = .none
+                return cell
+            case .offersNearby:
+                let cell = tableView.getCell(identifier: "ResturentTableViewCell") as! ResturentTableViewCell
+                cell.featuredData = viewModel.resturentCollectionViewData[1]
+                cell.selectionStyle = .none
+                return cell
+            case .otherCells:
+                let cell = tableView.getCell(identifier: "ResturentDetailsTableViewCell") as! ResturentDetailsTableViewCell
+                return cell
+            }
+        default:
             return UITableViewCell()
         }
-        
     }
-    
 }
-
-
 extension HomeTabViewController : UITableViewDelegate{
-
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//
-//        // Getting the height of hole Screen
-//        let screenSize = UIScreen.main.bounds.height
-//
-//        switch HomeCellsList(rawValue: indexPath.row)
-//        {
-//        case .orderStatus:
-//            return screenSize*0.10
-//        case .categoryCollection:
-//            return screenSize*0.146
-//        case .dealsCollection:
-//            return screenSize*0.23
-//        case .foodCategoryList:
-//            return screenSize*0.16
-//        case .orderAgain:
-//            return screenSize*0.47
-//        case .offersNearby:
-//            return screenSize*0.47
-//        case .featured:
-//            return screenSize*0.47
-//        case .otherCells:
-//            return screenSize*0.37
-//
-//        default:
-//            return UITableView.automaticDimension
-//        }
-//    }
-
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = Bundle.main.loadNibNamed("TabBarTableViewHeader", owner: self, options: nil)?.first as! TabBarTableViewHeader
         
-        view.setLabelText(lblrefrence: headerView.headerTitle, lbltext: "Featured", fontSize: 20)
-        view.setButtonText(button: headerView.headerButton, label: "See More", size: 14)
-        return headerView
+        switch section{
+        case 1:
+            headerView = Bundle.main.loadNibNamed("HomeTabCategoryHeader", owner: self, options: nil)?.first as? HomeTabCategoryHeader
+            return headerView
+        case 2:
+            let cell = Bundle.main.loadNibNamed("TabBarTableViewHeader", owner: self, options: nil)?.first as! TabBarTableViewHeader
+            view.setLabelText(lblrefrence: cell.headerTitle, lbltext: "Featured", fontSize: 20,isBold: true)
+            view.setButtonText(button: cell.headerButton, label: "See More",color: ColorConstant.primaryYellowColor, size: 14,isUnderline:true)
+            return cell
+        case 3:
+            let cell = Bundle.main.loadNibNamed("TabBarTableViewHeader", owner: self, options: nil)?.first as! TabBarTableViewHeader
+            view.setLabelText(lblrefrence: cell.headerTitle, lbltext: "Offers Nearby", fontSize: 20,isBold: true)
+            view.setButtonText(button: cell.headerButton, label: "See More",color: ColorConstant.primaryYellowColor, size: 14,isUnderline:true)
+            return cell
+        case 4:
+            let cell = Bundle.main.loadNibNamed("TabBarTableViewHeader", owner: self, options: nil)?.first as! TabBarTableViewHeader
+            view.setLabelText(lblrefrence: cell.headerTitle, lbltext: "Most Popular Place", fontSize: 20,isBold: true)
+            view.setButtonText(button: cell.headerButton, label: "See More",color: ColorConstant.primaryYellowColor, size: 14,isUnderline:true)
+            return cell
+        default:
+            return nil
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 50
+        if section == 0{
+            return 0
+        }else{
+            return UITableView.automaticDimension
+        }
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         hometabTableView.bounds.height*0.7
     }
     
-}    
-
+}
 
 extension HomeTabViewController : UIScrollViewDelegate{
-    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let headerRect = hometabTableView.rect(forSection: 1)
+        
+        if headerRect.origin.y <= scrollView.contentOffset.y && scrollView.contentOffset.y <= headerRect.origin.y + headerRect.size.height {
+            headerView?.hideImages()
+            headerView?.setCustomConstrain()
+            headerView?.categroyBackView.backgroundColor = UIColor.lightGray
+        } else {
+            headerView?.backgroundColor = UIColor.clear
+            headerView?.showImages()// Reset to original height here
+            headerView?.setDefaultConstrain()
+            headerView?.categroyBackView.backgroundColor = UIColor.clear
+        }
+        
+    }
 }

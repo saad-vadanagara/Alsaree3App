@@ -29,6 +29,7 @@
 		922CB76D2B2E46D80067805A /* CategoryHomeTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 922CB76B2B2E46D80067805A /* CategoryHomeTabCell.xib */; };
 		922CB7712B2E477C0067805A /* SingleCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922CB76F2B2E477C0067805A /* SingleCategoryCollectionViewCell.swift */; };
 		922CB7722B2E477C0067805A /* SingleCategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 922CB7702B2E477C0067805A /* SingleCategoryCollectionViewCell.xib */; };
+		926141692B3AFF27005D3A40 /* CustomtabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926141682B3AFF27005D3A40 /* CustomtabBarController.swift */; };
 		92654B1F2B37F5F100D1FB40 /* UIButton+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92654B1E2B37F5F100D1FB40 /* UIButton+Extention.swift */; };
 		92654B222B37F65300D1FB40 /* UILabel+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92654B212B37F65300D1FB40 /* UILabel+Extention.swift */; };
 		92654B252B3813E400D1FB40 /* UIProgressView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92654B242B3813E400D1FB40 /* UIProgressView+Extention.swift */; };
@@ -68,6 +69,8 @@
 		92A66DA32B2C30A500CB8EF5 /* UIView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A66DA22B2C30A500CB8EF5 /* UIView+Extention.swift */; };
 		92A8B0642B32EAB80062628A /* Loaderfiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A8B0632B32EAB80062628A /* Loaderfiles.swift */; };
 		92A8B0672B32EB4E0062628A /* LoderMnager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A8B0662B32EB4E0062628A /* LoderMnager.swift */; };
+		92BDA2382B39F8C3008E7228 /* HomeTabCategoryHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BDA2372B39F8C3008E7228 /* HomeTabCategoryHeader.swift */; };
+		92BDA23A2B39F8DC008E7228 /* HomeTabCategoryHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92BDA2392B39F8DC008E7228 /* HomeTabCategoryHeader.xib */; };
 		92FA14462B31E36800148974 /* Cairo-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92FA14402B31E36600148974 /* Cairo-SemiBold.ttf */; };
 		92FA14472B31E36800148974 /* Cairo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92FA14412B31E36600148974 /* Cairo-Regular.ttf */; };
 		92FA14482B31E36800148974 /* Cairo-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92FA14422B31E36700148974 /* Cairo-Black.ttf */; };
@@ -78,7 +81,6 @@
 		92FA14502B321EAF00148974 /* LoadingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92FA144E2B321EAF00148974 /* LoadingTableViewCell.xib */; };
 		92FA14582B3221A900148974 /* ResturentDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FA14562B3221A900148974 /* ResturentDetailsTableViewCell.swift */; };
 		92FA14592B3221A900148974 /* ResturentDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92FA14572B3221A900148974 /* ResturentDetailsTableViewCell.xib */; };
-		92FA145C2B3232B500148974 /* loaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FA145B2B3232B500148974 /* loaderViewController.swift */; };
 		92FA145F2B3232DD00148974 /* LoderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FA145E2B3232DD00148974 /* LoderView.swift */; };
 /* End PBXBuildFile section */
 
@@ -124,6 +126,7 @@
 		922CB76B2B2E46D80067805A /* CategoryHomeTabCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryHomeTabCell.xib; sourceTree = "<group>"; };
 		922CB76F2B2E477C0067805A /* SingleCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		922CB7702B2E477C0067805A /* SingleCategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleCategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		926141682B3AFF27005D3A40 /* CustomtabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomtabBarController.swift; sourceTree = "<group>"; };
 		92654B1E2B37F5F100D1FB40 /* UIButton+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extention.swift"; sourceTree = "<group>"; };
 		92654B212B37F65300D1FB40 /* UILabel+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extention.swift"; sourceTree = "<group>"; };
 		92654B242B3813E400D1FB40 /* UIProgressView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIProgressView+Extention.swift"; sourceTree = "<group>"; };
@@ -167,6 +170,8 @@
 		92A66DA22B2C30A500CB8EF5 /* UIView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extention.swift"; sourceTree = "<group>"; };
 		92A8B0632B32EAB80062628A /* Loaderfiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loaderfiles.swift; sourceTree = "<group>"; };
 		92A8B0662B32EB4E0062628A /* LoderMnager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoderMnager.swift; sourceTree = "<group>"; };
+		92BDA2372B39F8C3008E7228 /* HomeTabCategoryHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabCategoryHeader.swift; sourceTree = "<group>"; };
+		92BDA2392B39F8DC008E7228 /* HomeTabCategoryHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTabCategoryHeader.xib; sourceTree = "<group>"; };
 		92FA14402B31E36600148974 /* Cairo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-SemiBold.ttf"; sourceTree = "<group>"; };
 		92FA14412B31E36600148974 /* Cairo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Regular.ttf"; sourceTree = "<group>"; };
 		92FA14422B31E36700148974 /* Cairo-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Black.ttf"; sourceTree = "<group>"; };
@@ -177,7 +182,6 @@
 		92FA144E2B321EAF00148974 /* LoadingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingTableViewCell.xib; sourceTree = "<group>"; };
 		92FA14562B3221A900148974 /* ResturentDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturentDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		92FA14572B3221A900148974 /* ResturentDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResturentDetailsTableViewCell.xib; sourceTree = "<group>"; };
-		92FA145B2B3232B500148974 /* loaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loaderViewController.swift; sourceTree = "<group>"; };
 		92FA145E2B3232DD00148974 /* LoderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoderView.swift; sourceTree = "<group>"; };
 		9F3D2DB8D56DEF7FF42F380A /* Pods-Alsaree3AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alsaree3AppTests.release.xcconfig"; path = "Target Support Files/Pods-Alsaree3AppTests/Pods-Alsaree3AppTests.release.xcconfig"; sourceTree = "<group>"; };
 		A77A3FCDF4E06BE4CB7F9084 /* Pods_Alsaree3App_Alsaree3AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alsaree3App_Alsaree3AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -335,6 +339,7 @@
 			isa = PBXGroup;
 			children = (
 				922CB7612B2E3E500067805A /* CircluarProgressView.swift */,
+				926141682B3AFF27005D3A40 /* CustomtabBarController.swift */,
 				92112F562B306513005CA584 /* CollectionViewFiles.swift */,
 				921453A82B319A9D00F54890 /* Shimmer.swift */,
 				92FA145E2B3232DD00148974 /* LoderView.swift */,
@@ -406,6 +411,7 @@
 		929E60F72B2C871D00FD038A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				92BDA2362B39F88E008E7228 /* FlotingHeader */,
 				92A26E692B356531008C9AFF /* header */,
 				921453862B315AD000F54890 /* CollectionViewCell */,
 				921453852B315AC800F54890 /* TableviewCell */,
@@ -605,6 +611,7 @@
 		92A66D7A2B2C18B700CB8EF5 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				92AD62482B3C34EF00A7E73D /* DemoPage */,
 				92FA145A2B32329B00148974 /* Pages */,
 				92A66D852B2C207000CB8EF5 /* TabView */,
 			);
@@ -724,6 +731,22 @@
 			path = LoaderFiles;
 			sourceTree = "<group>";
 		};
+		92AD62482B3C34EF00A7E73D /* DemoPage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DemoPage;
+			sourceTree = "<group>";
+		};
+		92BDA2362B39F88E008E7228 /* FlotingHeader */ = {
+			isa = PBXGroup;
+			children = (
+				92BDA2372B39F8C3008E7228 /* HomeTabCategoryHeader.swift */,
+				92BDA2392B39F8DC008E7228 /* HomeTabCategoryHeader.xib */,
+			);
+			path = FlotingHeader;
+			sourceTree = "<group>";
+		};
 		92FA144C2B321E8700148974 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -745,7 +768,6 @@
 		92FA145A2B32329B00148974 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
-				92FA145B2B3232B500148974 /* loaderViewController.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -878,6 +900,7 @@
 				929F8F9F2B2F653800536E70 /* FoodCatrgoryCell.xib in Resources */,
 				92FA14482B31E36800148974 /* Cairo-Black.ttf in Resources */,
 				92FA14502B321EAF00148974 /* LoadingTableViewCell.xib in Resources */,
+				92BDA23A2B39F8DC008E7228 /* HomeTabCategoryHeader.xib in Resources */,
 				929F8FA42B2F656700536E70 /* FoodCatCollectionViewCell.xib in Resources */,
 				922CB7682B2E43CC0067805A /* ActiveOrderHomeTabCell.xib in Resources */,
 				929F8F992B2F138900536E70 /* AdvCollectionViewCell.xib in Resources */,
@@ -1021,9 +1044,11 @@
 				929F8F982B2F138900536E70 /* AdvCollectionViewCell.swift in Sources */,
 				929FF9092B301F6400E9C34A /* ResturentTableViewCell.swift in Sources */,
 				92FA145F2B3232DD00148974 /* LoderView.swift in Sources */,
+				92BDA2382B39F8C3008E7228 /* HomeTabCategoryHeader.swift in Sources */,
 				922CB76C2B2E46D80067805A /* CategoryHomeTabCell.swift in Sources */,
 				922CB75C2B2E34E00067805A /* BannerHomeTabCell.swift in Sources */,
 				92654B1F2B37F5F100D1FB40 /* UIButton+Extention.swift in Sources */,
+				926141692B3AFF27005D3A40 /* CustomtabBarController.swift in Sources */,
 				922CB7542B2E16330067805A /* UITableView+Extension.swift in Sources */,
 				929FF90E2B301F8C00E9C34A /* ResturentDetailsCollectionViewCell.swift in Sources */,
 				921453A92B319A9D00F54890 /* Shimmer.swift in Sources */,
@@ -1036,7 +1061,6 @@
 				92654B282B386CF000D1FB40 /* CustomUiProgresView.swift in Sources */,
 				929F8F9E2B2F653800536E70 /* FoodCatrgoryCell.swift in Sources */,
 				922CB7712B2E477C0067805A /* SingleCategoryCollectionViewCell.swift in Sources */,
-				92FA145C2B3232B500148974 /* loaderViewController.swift in Sources */,
 				929E60F42B2C79FE00FD038A /* TabBarController.swift in Sources */,
 				92654B222B37F65300D1FB40 /* UILabel+Extention.swift in Sources */,
 				922CB7552B2E16330067805A /* UICollectionView+Extension.swift in Sources */,

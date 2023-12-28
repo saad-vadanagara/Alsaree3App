@@ -37,7 +37,7 @@ class SingleCategoryCollectionViewCell: UICollectionViewCell {
         
         categoryImg.image = UIImage(named: HomeCategoryCellList(rawValue: indexPath)?.imageName ?? "")
         if let title = HomeCategoryCellList(rawValue: indexPath)?.title{
-            setLabelText(lblrefrence: categoryTitle, lbltext: title , fontSize: 10)
+            setLabelText(lblrefrence: categoryTitle, lbltext: title , fontSize: 10,lineHeightMultiple: 0.7)
         }
         self.backgroundColor = UIColor.clear
         

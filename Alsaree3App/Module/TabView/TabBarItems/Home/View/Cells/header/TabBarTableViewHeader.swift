@@ -11,5 +11,10 @@ class TabBarTableViewHeader: UIView {
     
     @IBOutlet weak var headerTitle: UILabel!
     @IBOutlet weak var headerButton: UIButton!
-    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        self.backgroundColor = UIColor.clear
+        
+    }
 }

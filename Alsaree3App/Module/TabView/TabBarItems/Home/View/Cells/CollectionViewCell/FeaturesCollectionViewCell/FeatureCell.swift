@@ -8,7 +8,7 @@
 import UIKit
 
 class FeatureCell: UICollectionViewCell {
-
+    
     @IBOutlet weak var featureView: UIView!
     @IBOutlet weak var featurelbl: UILabel!
     @IBOutlet weak var featureImageWithLabel: UIImageView!
@@ -29,6 +29,12 @@ class FeatureCell: UICollectionViewCell {
             featureImageWithLabel.image = UIImage(named: feature?.image ?? "")
         }
         
+        if let isTinted = feature?.istinted, isTinted {
+            self.backgroundColor = ColorConstant.borderColorGray
+        } else {
+            self.backgroundColor = UIColor.clear
+        }
+        
     }
     
     
@@ -45,5 +51,5 @@ class FeatureCell: UICollectionViewCell {
         self.featurelbl.textColor = .black
     }
     
-
+    
 }

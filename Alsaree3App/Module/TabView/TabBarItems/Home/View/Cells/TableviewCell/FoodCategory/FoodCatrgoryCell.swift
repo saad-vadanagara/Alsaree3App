@@ -10,6 +10,9 @@ import UIKit
 class FoodCatrgoryCell: UITableViewCell {
 
     @IBOutlet weak var foodCategoryCollectionView: UICollectionView!
+    
+    
+    var isHeigthChnaged = false
     override func awakeFromNib() {
         super.awakeFromNib()
         setupDelegate()
@@ -37,13 +40,23 @@ class FoodCatrgoryCell: UITableViewCell {
         self.backgroundColor = UIColor.clear
         
         foodCategoryCollectionView.showsHorizontalScrollIndicator = false
+        foodCategoryCollectionView.contentInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        
     }
     
     override func systemLayoutSizeFitting(_ targetSize: CGSize, withHorizontalFittingPriority horizontalFittingPriority: UILayoutPriority, verticalFittingPriority: UILayoutPriority) -> CGSize {
         
         self.foodCategoryCollectionView.frame = self.bounds
         self.foodCategoryCollectionView.layoutIfNeeded()
-        return self.foodCategoryCollectionView.contentSize
+        
+        if isHeigthChnaged{
+            return self.foodCategoryCollectionView.contentSize
+        }else{
+            foodCategoryCollectionView.contentSize.height += 20
+            isHeigthChnaged = true
+            return self.foodCategoryCollectionView.contentSize
+        }
+        
     }
 
     
@@ -73,4 +86,8 @@ extension FoodCatrgoryCell : UICollectionViewDelegateFlowLayout{
         
         return CGSize(width: (foodCategoryCollectionView.bounds.width )/4 , height: (foodCategoryCollectionView.bounds.height))
     }
+}
+
+extension FoodCatrgoryCell:UIScrollViewDelegate{
+    
 }

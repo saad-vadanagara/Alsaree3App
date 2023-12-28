@@ -34,10 +34,11 @@ class CustomProgressView: UIView {
         let progressHeight: CGFloat = 15
         let centerY = (backView.frame.height - progressHeight) / 2.0
         progressView.frame = CGRect(x: 0, y: centerY, width: 0, height: progressHeight)
-        
-        progressView.backgroundColor = ColorConstant.primaryYellowColor
         progressView.layer.cornerRadius = progressHeight/2
         progressView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
+        
+        // Gradient Layer
+        progressView.backgroundColor = ColorConstant.primaryYellowColor
         addSubview(progressView)
         
         // Divider View
@@ -51,6 +52,7 @@ class CustomProgressView: UIView {
         // Set initial progress
         updateProgress()
     }
+
     
     
     private func updateProgress() {
