@@ -6,15 +6,15 @@
 //
 
 import Foundation
-import ShimmerSwift
 import UIKit
-class Shimmer{
-    static let shared = Shimmer()
-    private init() {}
-    func addShimmerAnimation(on shimmerView: UIView ) {
-        let shimmerView = ShimmeringView(frame: shimmerView.bounds)
-        shimmerView.addSubview(shimmerView)
-        shimmerView.isShimmering = true
-    }
-    
-}
+//import ShimmerSwift
+//class Shimmer{
+//    static let shared = Shimmer()
+//    private init() {}
+//    func addShimmerAnimation(on shimmerView: UIView ) {
+//        let shimmerView = ShimmeringView(frame: shimmerView.bounds)
+//        shimmerView.addSubview(shimmerView)
+//        shimmerView.isShimmering = true
+//    }
+//
+//}

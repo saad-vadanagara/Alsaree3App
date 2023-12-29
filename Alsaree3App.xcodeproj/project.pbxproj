@@ -67,6 +67,7 @@
 		92A66DA32B2C30A500CB8EF5 /* UIView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A66DA22B2C30A500CB8EF5 /* UIView+Extention.swift */; };
 		92A8B0642B32EAB80062628A /* Loaderfiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A8B0632B32EAB80062628A /* Loaderfiles.swift */; };
 		92A8B0672B32EB4E0062628A /* LoderMnager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A8B0662B32EB4E0062628A /* LoderMnager.swift */; };
+		92BB4ABD2B3E8FA400FCD513 /* RestaurantDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB4ABC2B3E8FA400FCD513 /* RestaurantDetailsVC.swift */; };
 		92BDA2382B39F8C3008E7228 /* HomeTabCategoryHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BDA2372B39F8C3008E7228 /* HomeTabCategoryHeader.swift */; };
 		92BDA23A2B39F8DC008E7228 /* HomeTabCategoryHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92BDA2392B39F8DC008E7228 /* HomeTabCategoryHeader.xib */; };
 		92FA14462B31E36800148974 /* Cairo-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92FA14402B31E36600148974 /* Cairo-SemiBold.ttf */; };
@@ -165,6 +166,9 @@
 		92A66DA22B2C30A500CB8EF5 /* UIView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extention.swift"; sourceTree = "<group>"; };
 		92A8B0632B32EAB80062628A /* Loaderfiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loaderfiles.swift; sourceTree = "<group>"; };
 		92A8B0662B32EB4E0062628A /* LoderMnager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoderMnager.swift; sourceTree = "<group>"; };
+		92BB4ABC2B3E8FA400FCD513 /* RestaurantDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailsVC.swift; sourceTree = "<group>"; };
+		92BB4ABE2B3EA05100FCD513 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		92BB4ABF2B3EA05200FCD513 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		92BDA2372B39F8C3008E7228 /* HomeTabCategoryHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabCategoryHeader.swift; sourceTree = "<group>"; };
 		92BDA2392B39F8DC008E7228 /* HomeTabCategoryHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTabCategoryHeader.xib; sourceTree = "<group>"; };
 		92FA14402B31E36600148974 /* Cairo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -759,6 +763,7 @@
 		92FA145A2B32329B00148974 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				92BB4ABC2B3E8FA400FCD513 /* RestaurantDetailsVC.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -854,6 +859,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = 92A66D392B2C185500CB8EF5;
 			productRefGroup = 92A66D432B2C185500CB8EF5 /* Products */;
@@ -1053,6 +1059,7 @@
 				929E60F42B2C79FE00FD038A /* TabBarController.swift in Sources */,
 				922CB7552B2E16330067805A /* UICollectionView+Extension.swift in Sources */,
 				92A66D892B2C20D700CB8EF5 /* HomeTabViewController.swift in Sources */,
+				92BB4ABD2B3E8FA400FCD513 /* RestaurantDetailsVC.swift in Sources */,
 				929F8FAB2B2F8CEE00536E70 /* GoldCategoryCardCellTableViewCell.swift in Sources */,
 				92FA144F2B321EAF00148974 /* LoadingTableViewCell.swift in Sources */,
 				92112F572B306513005CA584 /* CollectionViewFiles.swift in Sources */,
@@ -1105,6 +1112,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				92A66D4C2B2C185500CB8EF5 /* Base */,
+				92BB4ABF2B3EA05200FCD513 /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1113,6 +1121,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				92A66D542B2C185700CB8EF5 /* Base */,
+				92BB4ABE2B3EA05100FCD513 /* ar */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1124,6 +1133,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_ANALYZER_OSOBJECT_C_STYLE_CAST = NO;
@@ -1174,7 +1184,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1188,6 +1198,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_ANALYZER_OSOBJECT_C_STYLE_CAST = NO;
@@ -1232,7 +1243,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

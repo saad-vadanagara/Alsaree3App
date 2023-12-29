@@ -7,6 +7,7 @@ class ResturentTableViewCell: UITableViewCell {
     @IBOutlet weak var seemoreBtn: UIButton!
     @IBOutlet weak var resturentCollectionView: UICollectionView!
     
+    var hometabDelegate : HomeTabViewController?
     var featuredData : resturentCollectionViewDetails?
     var indexOfCellBeforeDragging: Int = 0
     var isvalueChaged = false
@@ -104,6 +105,11 @@ class ResturentTableViewCell: UITableViewCell {
         }
     }
     
+    @IBAction func onSeeMoreButton(_ sender: UIButton) {
+        hometabDelegate?.seeMoreBtnNavigation()
+    }
+    
+    
 }
 
 extension ResturentTableViewCell: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource{
@@ -159,3 +165,4 @@ extension ResturentTableViewCell:UIScrollViewDelegate{
         }
     
 }
+

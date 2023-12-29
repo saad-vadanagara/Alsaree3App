@@ -1,0 +1,48 @@
+
+/* Class = "UITabBarItem"; title = "Profile"; ObjectID = "0Qz-dy-XZP"; */
+"0Qz-dy-XZP.title" = "Profile";
+
+/* Class = "UIButton"; configuration.title = "Button"; ObjectID = "2Xo-As-j72"; */
+"2Xo-As-j72.configuration.title" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "2Xo-As-j72"; */
+"2Xo-As-j72.normalTitle" = "Button";
+
+/* Class = "UITabBarItem"; title = "home"; ObjectID = "8Ac-t5-su3"; */
+"8Ac-t5-su3.title" = "home";
+
+/* Class = "UIButton"; configuration.title = "Al Furjan Area"; ObjectID = "CRd-Wc-ucO"; */
+"CRd-Wc-ucO.configuration.title" = "Al Furjan Area";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "CRd-Wc-ucO"; */
+"CRd-Wc-ucO.normalTitle" = "Button";
+
+/* Class = "UITabBarItem"; title = "Basket"; ObjectID = "HY1-gV-HBd"; */
+"HY1-gV-HBd.title" = "Basket";
+
+/* Class = "UITabBarItem"; title = "Search"; ObjectID = "JrD-IK-zai"; */
+"JrD-IK-zai.title" = "Search";
+
+/* Class = "UIButton"; configuration.title = "Button"; ObjectID = "KKD-bp-gAh"; */
+"KKD-bp-gAh.configuration.title" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "KKD-bp-gAh"; */
+"KKD-bp-gAh.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = " "; ObjectID = "c0X-XG-zbe"; */
+"c0X-XG-zbe.text" = " ";
+
+/* Class = "UIButton"; configuration.title = "Button"; ObjectID = "hFw-eE-lQy"; */
+"hFw-eE-lQy.configuration.title" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "hFw-eE-lQy"; */
+"hFw-eE-lQy.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Alasree3"; ObjectID = "j3i-Uw-YzH"; */
+"j3i-Uw-YzH.text" = "Alasree3";
+
+/* Class = "UIButton"; configuration.title = "Button"; ObjectID = "vSw-xt-IIw"; */
+"vSw-xt-IIw.configuration.title" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "vSw-xt-IIw"; */
+"vSw-xt-IIw.normalTitle" = "Button";

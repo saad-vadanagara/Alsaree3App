@@ -122,6 +122,9 @@ class ResturentDetailsCollectionViewCell: UICollectionViewCell {
         view.layer.cornerRadius = radius
         view.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
     }
+    
+    
+    
 }
 let userPreferences = [
     featureDetails(featureValue: "500+", image: "Heart",istinted: false),

@@ -27,7 +27,6 @@ class ActiveOrderHomeTabCell: UITableViewCell {
         super.awakeFromNib()
         setupUI()
         setUpCircularprogress(currentProgress: 0.3)
-        
     }
     
     func setUpCircularprogress(currentProgress: Float){

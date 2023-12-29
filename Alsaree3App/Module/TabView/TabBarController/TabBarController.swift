@@ -13,7 +13,7 @@ class TabBarController: UITabBarController {
     let higherTabBarInset: CGFloat = 10
     let indicatorHeight: CGFloat = 2
     let indicatorWidthRatio: CGFloat = 0.8
-    let animationDuration: TimeInterval = 0.3
+    let animationDuration: TimeInterval = 0.1
     let shakeAnimation: CABasicAnimation = {
         let shake = CABasicAnimation(keyPath: "position")
         shake.duration = 0.1
@@ -60,8 +60,8 @@ class TabBarController: UITabBarController {
     }
     
     func addShakeEffect(to view: UIView) {
-        shakeAnimation.fromValue = NSValue(cgPoint: CGPoint(x: view.center.x - 1, y: view.center.y))
-        shakeAnimation.toValue = NSValue(cgPoint: CGPoint(x: view.center.x + 1, y: view.center.y))
+        shakeAnimation.fromValue = NSValue(cgPoint: CGPoint(x: view.center.x - 3, y: view.center.y))
+        shakeAnimation.toValue = NSValue(cgPoint: CGPoint(x: view.center.x + 3, y: view.center.y))
         view.layer.add(shakeAnimation, forKey: "position")
     }
     

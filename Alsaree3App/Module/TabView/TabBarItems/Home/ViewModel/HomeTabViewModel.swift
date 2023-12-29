@@ -8,6 +8,15 @@
 
 
 import Foundation
+//main enum
+
+enum ScrollDirection {
+    case up
+    case down
+    case none
+}
+
+
 struct resturentCollectionViewDetails{
     var name : String
     var details : [OrderAgain]
@@ -42,6 +51,9 @@ enum sectionFooter:Int,CaseIterable{
     case otherCells
 }
 
+protocol NavigateFormHomeTab{
+    func seeMoreBtnNavigation()
+}
 
 class HomeTabViewModel{
     var resturentCollectionViewData = [
