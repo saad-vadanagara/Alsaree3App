@@ -27,6 +27,10 @@ class HomeTabViewController: UIViewController {
     private var previousScrollOffset: CGFloat = 0
     private var tabBarVisible = true
     
+    override func viewWillAppear(_ animated: Bool) {
+        hometabTableView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         settingDelegate()
@@ -100,7 +104,7 @@ class HomeTabViewController: UIViewController {
         circularProgressView.setProgress(to: currentProgress)
         let percentage = Int(currentProgress * 100)
         view.setLabelText(lblrefrence: progressLbl, lbltext: "\(percentage)%", fontSize: 12)
-
+        
     }
     
     func setupUI(){
@@ -138,18 +142,17 @@ extension HomeTabViewController:UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Get the section data for the current section
-        let sectionData = viewModel.HomeTabData[indexPath.section]
         
+        let sectionData = viewModel.HomeTabData[indexPath.section]
         // Handle cells based on section type
         switch sectionData {
         case let aboveSection as [SectionAboveHeader]:
-            
             let cellType = aboveSection[indexPath.row]
-            
             switch cellType {
             case .orderStatus:
                 if true{
                     let cell = tableView.getCell(identifier: CellConstant.activeOrderHomeTabCell.rawValue) as! ActiveOrderHomeTabCell
+                    
                     cell.selectionStyle = .none
                     return cell
                 }else{
@@ -203,6 +206,19 @@ extension HomeTabViewController:UITableViewDataSource{
     }
 }
 extension HomeTabViewController : UITableViewDelegate{
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch (indexPath.section, indexPath.row) {
+            case (0, 0):
+                return viewModel.activeOrder ? UITableView.automaticDimension : 0
+            case (1, _):
+                // For section 1, set the height based on your logic for other cells in that section
+                return UITableView.automaticDimension
+            default:
+                // For other sections and rows, use automatic dimension
+                return UITableView.automaticDimension
+            }
+    }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
@@ -272,17 +288,17 @@ extension HomeTabViewController : UIScrollViewDelegate{
     private func updateTabBarVisibility(for scrollDirection: ScrollDirection) {
         let isScrollingDown = scrollDirection == .down
         let isScrollingUp = scrollDirection == .up
-
+        
         let animationDuration: TimeInterval = 0.3
-
-            UIView.animate(withDuration: animationDuration, animations: {
-                // Adjust the Y-coordinate based on the scroll direction
-                self.tabBarController?.tabBar.frame.origin.y = isScrollingDown ?
-                    (self.view.frame.origin.y + self.view.frame.size.height) :
-                    (self.view.frame.origin.y + self.view.frame.size.height - self.tabBarController!.tabBar.frame.size.height)
-            }) { (_) in
-                // Optionally, you can add completion code here if needed
-            }
+        
+        UIView.animate(withDuration: animationDuration, animations: {
+            // Adjust the Y-coordinate based on the scroll direction
+            self.tabBarController?.tabBar.frame.origin.y = isScrollingDown ?
+            (self.view.frame.origin.y + self.view.frame.size.height) :
+            (self.view.frame.origin.y + self.view.frame.size.height - self.tabBarController!.tabBar.frame.size.height)
+        }) { (_) in
+            // Optionally, you can add completion code here if needed
+        }
         
     }
     
@@ -291,6 +307,8 @@ extension HomeTabViewController : UIScrollViewDelegate{
 extension HomeTabViewController:NavigateFormHomeTab{
     func seeMoreBtnNavigation() {
         let newViewController = storyboard?.instantiateViewController(withIdentifier: "RestaurantDetailsVC") as! RestaurantDetailsVC
+        // extra function
+        viewModel.activeOrder = true
         newViewController.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(newViewController, animated: true)
     }

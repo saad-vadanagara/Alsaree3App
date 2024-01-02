@@ -18,16 +18,17 @@ class SearchTabViewController: UIViewController{
     @IBOutlet weak var areaNavigationView: UIView!
     @IBOutlet weak var searchtabTableView: UITableView!
     
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         settingDelegate()
         registerTableViewCell()
-        
         searchtabTableView.separatorStyle = .none
         searchtabTableView.backgroundColor = ColorConstant.primaryWhiteBgcolor
 //        setupShimmer()
-        
         LoaderManager.showLoader(in: view)
+        
         
     }
     

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -18,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="B5P-YZ-S5u">
-                        <rect key="frame" x="20" y="8" width="329" height="137.33333333333334"/>
+                        <rect key="frame" x="0.0" y="8" width="369" height="137.33333333333334"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WfG-5F-RGY">
                             <size key="itemSize" width="128" height="128"/>
@@ -36,10 +37,10 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="AZi-39-5wI" firstAttribute="top" secondItem="B5P-YZ-S5u" secondAttribute="bottom" constant="5" id="16q-SU-VVR"/>
-                    <constraint firstItem="B5P-YZ-S5u" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="93O-87-75q"/>
+                    <constraint firstItem="B5P-YZ-S5u" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="93O-87-75q"/>
                     <constraint firstAttribute="bottom" secondItem="AZi-39-5wI" secondAttribute="bottom" constant="5" id="9Fx-3l-ote"/>
                     <constraint firstItem="AZi-39-5wI" firstAttribute="centerX" secondItem="B5P-YZ-S5u" secondAttribute="centerX" id="Ikx-6M-hSp"/>
-                    <constraint firstAttribute="trailing" secondItem="B5P-YZ-S5u" secondAttribute="trailing" constant="20" id="PMD-e1-kuO"/>
+                    <constraint firstAttribute="trailing" secondItem="B5P-YZ-S5u" secondAttribute="trailing" id="PMD-e1-kuO"/>
                     <constraint firstItem="B5P-YZ-S5u" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="cpd-gz-8Mf"/>
                     <constraint firstItem="B5P-YZ-S5u" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.75" id="x5C-UL-vUw"/>
                 </constraints>

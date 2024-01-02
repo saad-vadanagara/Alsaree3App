@@ -56,6 +56,11 @@ protocol NavigateFormHomeTab{
 }
 
 class HomeTabViewModel{
+    
+    var activeOrder = false
+    var bannerdaat = true
+    var scrollingCollectionview = true
+    
     var resturentCollectionViewData = [
         resturentCollectionViewDetails(name: "Order Again", details: orderAgainData),
         resturentCollectionViewDetails(name: "Featured", details: featuredData),
