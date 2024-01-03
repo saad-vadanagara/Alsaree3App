@@ -75,6 +75,7 @@
 		92BB4ABD2B3E8FA400FCD513 /* RestaurantDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB4ABC2B3E8FA400FCD513 /* RestaurantDetailsVC.swift */; };
 		92BDA2382B39F8C3008E7228 /* HomeTabCategoryHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BDA2372B39F8C3008E7228 /* HomeTabCategoryHeader.swift */; };
 		92BDA23A2B39F8DC008E7228 /* HomeTabCategoryHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92BDA2392B39F8DC008E7228 /* HomeTabCategoryHeader.xib */; };
+		92C3CD692B4524BD00706D99 /* CenteredCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C3CD682B4524BD00706D99 /* CenteredCollectionViewFlowLayout.swift */; };
 		92FA14462B31E36800148974 /* Cairo-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92FA14402B31E36600148974 /* Cairo-SemiBold.ttf */; };
 		92FA14472B31E36800148974 /* Cairo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92FA14412B31E36600148974 /* Cairo-Regular.ttf */; };
 		92FA14482B31E36800148974 /* Cairo-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92FA14422B31E36700148974 /* Cairo-Black.ttf */; };
@@ -181,6 +182,7 @@
 		92BB4ABF2B3EA05200FCD513 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		92BDA2372B39F8C3008E7228 /* HomeTabCategoryHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabCategoryHeader.swift; sourceTree = "<group>"; };
 		92BDA2392B39F8DC008E7228 /* HomeTabCategoryHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTabCategoryHeader.xib; sourceTree = "<group>"; };
+		92C3CD682B4524BD00706D99 /* CenteredCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenteredCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		92FA14402B31E36600148974 /* Cairo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-SemiBold.ttf"; sourceTree = "<group>"; };
 		92FA14412B31E36600148974 /* Cairo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Regular.ttf"; sourceTree = "<group>"; };
 		92FA14422B31E36700148974 /* Cairo-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Black.ttf"; sourceTree = "<group>"; };
@@ -353,6 +355,7 @@
 				921453A82B319A9D00F54890 /* Shimmer.swift */,
 				92654B272B386CF000D1FB40 /* CustomUiProgresView.swift */,
 				925F46632B3D6ADC00083D65 /* UICollectionview+Extention.swift */,
+				92C3CD682B4524BD00706D99 /* CenteredCollectionViewFlowLayout.swift */,
 			);
 			path = ExtraFile;
 			sourceTree = "<group>";
@@ -1121,6 +1124,7 @@
 				929FF90E2B301F8C00E9C34A /* ResturentDetailsCollectionViewCell.swift in Sources */,
 				921453A92B319A9D00F54890 /* Shimmer.swift in Sources */,
 				929F8F942B2EF40F00536E70 /* AdvertisementCell.swift in Sources */,
+				92C3CD692B4524BD00706D99 /* CenteredCollectionViewFlowLayout.swift in Sources */,
 				92A66DA32B2C30A500CB8EF5 /* UIView+Extention.swift in Sources */,
 				925F46642B3D6ADC00083D65 /* UICollectionview+Extention.swift in Sources */,
 				92A66D482B2C185500CB8EF5 /* SceneDelegate.swift in Sources */,

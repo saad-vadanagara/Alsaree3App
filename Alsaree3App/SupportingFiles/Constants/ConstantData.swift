@@ -28,6 +28,10 @@ var orderAgainData = [
     OrderAgain(image: "resturentImage", title: "Ultimate Chicken - Wraps, Pl", likes: "500+", distance: "2.5 KM Away", reachTime: "25 - 45 Mins", iqd: "IQD 1000", rating: "3.4 Excellent", offer: "30% off entire menu", lowDelevery: true),
     OrderAgain(image: "resturentImage", title: "Ultimate Chicken - Wraps, Pl", likes: "500+", distance: "2.5 KM Away", reachTime: "25 - 45 Mins", iqd: "IQD 1000", rating: "3.4 Excellent", offer: "30% off entire menu", lowDelevery: true),
     OrderAgain(image: "resturentImage", title: "Ultimate Chicken - Wraps, Pl", likes: "500+", distance: "2.5 KM Away", reachTime: "25 - 45 Mins", iqd: "IQD 1000", rating: "3.4 Excellent", offer: "30% off entire menu", lowDelevery: true),
+    OrderAgain(image: "resturentImage", title: "Ultimate Chicken - Wraps, Pl", likes: "500+", distance: "2.5 KM Away", reachTime: "25 - 45 Mins", iqd: "IQD 1000", rating: "3.4 Excellent", offer: "30% off entire menu", lowDelevery: true),
+    OrderAgain(image: "resturentImage", title: "Ultimate Chicken - Wraps, Pl", likes: "500+", distance: "2.5 KM Away", reachTime: "25 - 45 Mins", iqd: "IQD 1000", rating: "3.4 Excellent", offer: "30% off entire menu", lowDelevery: true),
+    OrderAgain(image: "resturentImage", title: "Ultimate Chicken - Wraps, Pl", likes: "500+", distance: "2.5 KM Away", reachTime: "25 - 45 Mins", iqd: "IQD 1000", rating: "3.4 Excellent", offer: "30% off entire menu", lowDelevery: true),
+    OrderAgain(image: "resturentImage", title: "Ultimate Chicken - Wraps, Pl", likes: "500+", distance: "2.5 KM Away", reachTime: "25 - 45 Mins", iqd: "IQD 1000", rating: "3.4 Excellent", offer: "30% off entire menu", lowDelevery: true),
     OrderAgain(image: "resturentImage", title: "Ultimate Chicken - Wraps, Pl", likes: "500+", distance: "2.5 KM Away", reachTime: "25 - 45 Mins", iqd: "IQD 1000", rating: "3.4 Excellent", offer: "30% off entire menu", lowDelevery: true)
 
 ]
