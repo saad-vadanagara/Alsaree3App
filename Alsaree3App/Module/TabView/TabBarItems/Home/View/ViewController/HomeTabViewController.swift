@@ -79,7 +79,6 @@ class HomeTabViewController: UIViewController {
         
         // Setting the label and button values Manually
         view.setLabelText(lblrefrence: applicationNamelbl, lbltext: TextConstant.alsaree3App.rawValue, fontSize: 16,alignmentLeft: true)
-        let imageSize = CGSize(width: 20, height: 20)
         view.setLabelText(lblrefrence: locationLbl, lbltext: "Al Furjan Area", fontSize: 12,lineHeightMultiple: 0.8)
         view.setImage(imageView: downArrowImage, imageName: "downArrow")
         view.setImage(imageView: scooterimg, imageName: ImageConstant.scooter.rawValue)
@@ -198,6 +197,7 @@ extension HomeTabViewController:UITableViewDataSource{
                 return cell
             case .otherCells:
                 let cell = tableView.getCell(identifier: "ResturentDetailsTableViewCell") as! ResturentDetailsTableViewCell
+                cell.selectionStyle = .none
                 return cell
             }
         default:

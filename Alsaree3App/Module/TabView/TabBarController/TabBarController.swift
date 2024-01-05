@@ -7,69 +7,26 @@
 
 import UIKit
 
-class TabBarController: UITabBarController {
-    
-    var indicatorView: UIView!
-    let higherTabBarInset: CGFloat = 10
-    let indicatorHeight: CGFloat = 2
-    let indicatorWidthRatio: CGFloat = 0.8
-    let animationDuration: TimeInterval = 0.1
-    let shakeAnimation: CABasicAnimation = {
-        let shake = CABasicAnimation(keyPath: "position")
-        shake.duration = 0.1
-        shake.repeatCount = 1
-        shake.autoreverses = true
-        return shake
-    }()
-    
+class TabBarController: UITabBarController,UITabBarControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTabBar()
         setupBorder()
-        setupIndicatorView()
+        self.delegate = self
     }
-    
-    func setupIndicatorView() {
-        guard let itemCount = tabBar.items?.count, itemCount > 0 else {
-            return
-        }
-        
-        let tabWidth = tabBar.frame.width / CGFloat(itemCount)
-        let initialWidth = tabWidth * indicatorWidthRatio
-        let initialX = (tabWidth - initialWidth) / 2
-        
-        indicatorView = UIView(frame: CGRect(x: initialX, y: 0, width: initialWidth, height: indicatorHeight))
-        indicatorView.backgroundColor = ColorConstant.primaryYellowColor
-        tabBar.addSubview(indicatorView)
-    }
-    
-    
-    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        guard let index = tabBar.items?.firstIndex(of: item),
-              let count = tabBar.items?.count else { return }
-        
-        let tabWidth = tabBar.frame.width / CGFloat(count)
-        let newWidth = tabWidth * indicatorWidthRatio
-        let xOffset = (tabWidth - newWidth) / 2
-        
-        UIView.animate(withDuration: animationDuration, animations: {
-            self.indicatorView.frame = CGRect(x: tabWidth * CGFloat(index) + xOffset, y: 0, width: newWidth, height: self.indicatorHeight)
-        }, completion: { _ in
-            self.addShakeEffect(to: self.indicatorView)
-        })
-    }
-    
-    func addShakeEffect(to view: UIView) {
-        shakeAnimation.fromValue = NSValue(cgPoint: CGPoint(x: view.center.x - 3, y: view.center.y))
-        shakeAnimation.toValue = NSValue(cgPoint: CGPoint(x: view.center.x + 3, y: view.center.y))
-        view.layer.add(shakeAnimation, forKey: "position")
-    }
-    
-    
     func setupBorder() {
         tabBar.addTopBorderWithColor(color: ColorConstant.borderColorGray, width: 1.0)
     }
     
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+            guard let fromView = selectedViewController?.view, let toView = viewController.view else {
+                return false // Make sure you want this as false
+            }
+            if fromView != toView {
+                UIView.transition(from: fromView, to: toView, duration: 0.3, options: [.transitionCrossDissolve], completion: nil)
+            }
+            return true
+        }
     
     func setupTabBar(){
         let normalTextAttributes: [NSAttributedString.Key: Any] = [
@@ -107,7 +64,6 @@ class TabBarController: UITabBarController {
             items[3].selectedImage = UIImage(named: TabBar.Basket.imageName)?.withRenderingMode(.alwaysTemplate)
             items[3].image = UIImage(named: TabBar.Basket.imageName)?.withRenderingMode(.alwaysTemplate)
             items[3].title = TabBar.Basket.rawValue
-            
         }
     }
 }

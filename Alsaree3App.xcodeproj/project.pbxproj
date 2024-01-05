@@ -34,6 +34,8 @@
 		92654B282B386CF000D1FB40 /* CustomUiProgresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92654B272B386CF000D1FB40 /* CustomUiProgresView.swift */; };
 		929BB7B82B31D9CC00ADCBD4 /* BasketTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929BB7B72B31D9CC00ADCBD4 /* BasketTabViewController.swift */; };
 		929E60F42B2C79FE00FD038A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E60F32B2C79FE00FD038A /* TabBarController.swift */; };
+		929F1B9A2B480AA100B0F08F /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F1B992B480AA100B0F08F /* LaunchScreenViewController.swift */; };
+		929F1B9D2B480B1B00B0F08F /* LaunchScreenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F1B9C2B480B1B00B0F08F /* LaunchScreenService.swift */; };
 		929F8F942B2EF40F00536E70 /* AdvertisementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F8F922B2EF40F00536E70 /* AdvertisementCell.swift */; };
 		929F8F952B2EF40F00536E70 /* AdvertisementCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 929F8F932B2EF40F00536E70 /* AdvertisementCell.xib */; };
 		929F8F982B2F138900536E70 /* AdvCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F8F962B2F138900536E70 /* AdvCollectionViewCell.swift */; };
@@ -76,6 +78,7 @@
 		92BDA2382B39F8C3008E7228 /* HomeTabCategoryHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BDA2372B39F8C3008E7228 /* HomeTabCategoryHeader.swift */; };
 		92BDA23A2B39F8DC008E7228 /* HomeTabCategoryHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92BDA2392B39F8DC008E7228 /* HomeTabCategoryHeader.xib */; };
 		92C3CD692B4524BD00706D99 /* CenteredCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C3CD682B4524BD00706D99 /* CenteredCollectionViewFlowLayout.swift */; };
+		92D8910A2B45962C00BA32AA /* shimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D891092B45962C00BA32AA /* shimmer.swift */; };
 		92FA14462B31E36800148974 /* Cairo-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92FA14402B31E36600148974 /* Cairo-SemiBold.ttf */; };
 		92FA14472B31E36800148974 /* Cairo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92FA14412B31E36600148974 /* Cairo-Regular.ttf */; };
 		92FA14482B31E36800148974 /* Cairo-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92FA14422B31E36700148974 /* Cairo-Black.ttf */; };
@@ -135,6 +138,8 @@
 		92654B272B386CF000D1FB40 /* CustomUiProgresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUiProgresView.swift; sourceTree = "<group>"; };
 		929BB7B72B31D9CC00ADCBD4 /* BasketTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketTabViewController.swift; sourceTree = "<group>"; };
 		929E60F32B2C79FE00FD038A /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		929F1B992B480AA100B0F08F /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		929F1B9C2B480B1B00B0F08F /* LaunchScreenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenService.swift; sourceTree = "<group>"; };
 		929F8F922B2EF40F00536E70 /* AdvertisementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisementCell.swift; sourceTree = "<group>"; };
 		929F8F932B2EF40F00536E70 /* AdvertisementCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdvertisementCell.xib; sourceTree = "<group>"; };
 		929F8F962B2F138900536E70 /* AdvCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -183,6 +188,7 @@
 		92BDA2372B39F8C3008E7228 /* HomeTabCategoryHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabCategoryHeader.swift; sourceTree = "<group>"; };
 		92BDA2392B39F8DC008E7228 /* HomeTabCategoryHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTabCategoryHeader.xib; sourceTree = "<group>"; };
 		92C3CD682B4524BD00706D99 /* CenteredCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenteredCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		92D891092B45962C00BA32AA /* shimmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shimmer.swift; sourceTree = "<group>"; };
 		92FA14402B31E36600148974 /* Cairo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-SemiBold.ttf"; sourceTree = "<group>"; };
 		92FA14412B31E36600148974 /* Cairo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Regular.ttf"; sourceTree = "<group>"; };
 		92FA14422B31E36700148974 /* Cairo-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Black.ttf"; sourceTree = "<group>"; };
@@ -449,6 +455,22 @@
 			path = BannerCell;
 			sourceTree = "<group>";
 		};
+		929F1B982B480A5C00B0F08F /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				929F1B992B480AA100B0F08F /* LaunchScreenViewController.swift */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		929F1B9B2B480AE800B0F08F /* ModuleServices */ = {
+			isa = PBXGroup;
+			children = (
+				929F1B9C2B480B1B00B0F08F /* LaunchScreenService.swift */,
+			);
+			path = ModuleServices;
+			sourceTree = "<group>";
+		};
 		929F8F912B2EF3A000536E70 /* AdvTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -624,7 +646,7 @@
 		92A66D7A2B2C18B700CB8EF5 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				92AD62482B3C34EF00A7E73D /* DemoPage */,
+				929F1B982B480A5C00B0F08F /* SplashScreen */,
 				92FA145A2B32329B00148974 /* Pages */,
 				92A66D852B2C207000CB8EF5 /* TabView */,
 			);
@@ -730,6 +752,7 @@
 				922CB7522B2E16330067805A /* UITableView+Extension.swift */,
 				929F8FA62B2F741400536E70 /* UIImage+Extention.swift */,
 				92AE0B0E2B43ED9A00E71A32 /* UserDefault+Extention.swift */,
+				92D891092B45962C00BA32AA /* shimmer.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -743,17 +766,9 @@
 			path = LoaderFiles;
 			sourceTree = "<group>";
 		};
-		92AD62482B3C34EF00A7E73D /* DemoPage */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DemoPage;
-			sourceTree = "<group>";
-		};
 		92AE0B062B43E69600E71A32 /* NetwrokingServices */ = {
 			isa = PBXGroup;
 			children = (
-				92AE0B102B43EE9500E71A32 /* New Group */,
 				92AE0B072B43EAAD00E71A32 /* Services */,
 			);
 			path = NetwrokingServices;
@@ -762,6 +777,7 @@
 		92AE0B072B43EAAD00E71A32 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				929F1B9B2B480AE800B0F08F /* ModuleServices */,
 				92AE0B092B43EAF400E71A32 /* APIs */,
 			);
 			path = Services;
@@ -774,13 +790,6 @@
 				92AE0B0B2B43EAF400E71A32 /* APIManager.swift */,
 			);
 			path = APIs;
-			sourceTree = "<group>";
-		};
-		92AE0B102B43EE9500E71A32 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		92AE0B112B43EEAA00E71A32 /* Reachability */ = {
@@ -1109,6 +1118,7 @@
 				929F8FA32B2F656700536E70 /* FoodCatCollectionViewCell.swift in Sources */,
 				92FA14582B3221A900148974 /* ResturentDetailsTableViewCell.swift in Sources */,
 				92AE0B0F2B43ED9A00E71A32 /* UserDefault+Extention.swift in Sources */,
+				929F1B9D2B480B1B00B0F08F /* LaunchScreenService.swift in Sources */,
 				92112F5B2B30667F005CA584 /* FeatureCell.swift in Sources */,
 				921453A12B317DB600F54890 /* ProfileTabViewController.swift in Sources */,
 				92A66D462B2C185500CB8EF5 /* AppDelegate.swift in Sources */,
@@ -1139,6 +1149,7 @@
 				922CB7552B2E16330067805A /* UICollectionView+Extension.swift in Sources */,
 				92A66D892B2C20D700CB8EF5 /* HomeTabViewController.swift in Sources */,
 				92BB4ABD2B3E8FA400FCD513 /* RestaurantDetailsVC.swift in Sources */,
+				929F1B9A2B480AA100B0F08F /* LaunchScreenViewController.swift in Sources */,
 				929F8FAB2B2F8CEE00536E70 /* GoldCategoryCardCellTableViewCell.swift in Sources */,
 				92FA144F2B321EAF00148974 /* LoadingTableViewCell.swift in Sources */,
 				92112F572B306513005CA584 /* CollectionViewFiles.swift in Sources */,
@@ -1150,6 +1161,7 @@
 				929FF9182B30258B00E9C34A /* ConstantData.swift in Sources */,
 				929FF9152B30231300E9C34A /* HomeTabViewModel.swift in Sources */,
 				922CB7672B2E43CC0067805A /* ActiveOrderHomeTabCell.swift in Sources */,
+				92D8910A2B45962C00BA32AA /* shimmer.swift in Sources */,
 				922CB7572B2E21CF0067805A /* SearchTabViewController.swift in Sources */,
 				92A8B0672B32EB4E0062628A /* LoderMnager.swift in Sources */,
 			);
@@ -1264,7 +1276,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1323,7 +1335,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1349,6 +1361,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1378,6 +1391,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1399,6 +1413,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MARKETING_VERSION = 1.0;
@@ -1419,6 +1434,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MARKETING_VERSION = 1.0;

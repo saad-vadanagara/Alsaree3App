@@ -1,16 +1,16 @@
 PODS:
-  - ShimmerSwift (2.1.1)
+  - UIView-Shimmer (1.0.4)
 
 DEPENDENCIES:
-  - ShimmerSwift
+  - UIView-Shimmer (~> 1.0)
 
 SPEC REPOS:
   trunk:
-    - ShimmerSwift
+    - UIView-Shimmer
 
 SPEC CHECKSUMS:
-  ShimmerSwift: f7ed2daf9c246de8299dfd9e12c6ab465cba9842
+  UIView-Shimmer: ff0a32c73d67c7dbdea3d9e530538b10d18aea56
 
-PODFILE CHECKSUM: cd823eb234ea89ac7b35424ba0630a4b6187d8d6
+PODFILE CHECKSUM: 908664daf672adfe361fb14449b43c48b5ccf976
 
 COCOAPODS: 1.11.3

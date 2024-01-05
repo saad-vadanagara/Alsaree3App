@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -17,34 +18,34 @@
                 <rect key="frame" x="0.0" y="0.0" width="265" height="144"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k05-85-re5">
-                        <rect key="frame" x="0.0" y="5" width="265" height="134"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jt3-L7-G7p">
+                        <rect key="frame" x="0.0" y="0.0" width="265" height="144"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m8O-nn-sNP">
-                                <rect key="frame" x="15" y="0.0" width="235" height="134"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QUb-Go-yot">
+                                <rect key="frame" x="15" y="0.0" width="235" height="144"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="m8O-nn-sNP" secondAttribute="trailing" constant="15" id="ERJ-e9-p3n"/>
-                            <constraint firstItem="m8O-nn-sNP" firstAttribute="top" secondItem="k05-85-re5" secondAttribute="top" id="eUa-Rj-qyU"/>
-                            <constraint firstItem="m8O-nn-sNP" firstAttribute="leading" secondItem="k05-85-re5" secondAttribute="leading" constant="15" id="p8y-X4-ofn"/>
-                            <constraint firstAttribute="bottom" secondItem="m8O-nn-sNP" secondAttribute="bottom" id="xJZ-fQ-UjP"/>
+                            <constraint firstItem="QUb-Go-yot" firstAttribute="top" secondItem="Jt3-L7-G7p" secondAttribute="top" id="05n-rf-8Y4"/>
+                            <constraint firstItem="QUb-Go-yot" firstAttribute="leading" secondItem="Jt3-L7-G7p" secondAttribute="leading" constant="15" id="7OC-MT-WFf"/>
+                            <constraint firstAttribute="trailing" secondItem="QUb-Go-yot" secondAttribute="trailing" constant="15" id="Red-ek-fi1"/>
+                            <constraint firstAttribute="bottom" secondItem="QUb-Go-yot" secondAttribute="bottom" id="ilj-Kw-kao"/>
                         </constraints>
                     </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="k05-85-re5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="QdT-0U-Ps3"/>
-                <constraint firstAttribute="trailing" secondItem="k05-85-re5" secondAttribute="trailing" id="Sgv-Da-TDx"/>
-                <constraint firstAttribute="bottom" secondItem="k05-85-re5" secondAttribute="bottom" constant="5" id="jkv-xq-058"/>
-                <constraint firstItem="k05-85-re5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="qNg-3l-BfD"/>
+                <constraint firstAttribute="bottom" secondItem="Jt3-L7-G7p" secondAttribute="bottom" id="Og4-xo-La1"/>
+                <constraint firstItem="Jt3-L7-G7p" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="awg-iv-Kz1"/>
+                <constraint firstAttribute="trailing" secondItem="Jt3-L7-G7p" secondAttribute="trailing" id="bf8-43-vFP"/>
+                <constraint firstItem="Jt3-L7-G7p" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="gpd-Ip-V1N"/>
             </constraints>
             <size key="customSize" width="265" height="144"/>
             <connections>
-                <outlet property="advCollectionView" destination="m8O-nn-sNP" id="PTc-ev-erS"/>
-                <outlet property="parentView" destination="k05-85-re5" id="sGt-BY-rtd"/>
+                <outlet property="advCollectionView" destination="QUb-Go-yot" id="w2I-M1-IUL"/>
+                <outlet property="parentView" destination="Jt3-L7-G7p" id="8rY-Jb-JBd"/>
             </connections>
             <point key="canvasLocation" x="303.05343511450383" y="52.816901408450704"/>
         </collectionViewCell>

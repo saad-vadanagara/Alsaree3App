@@ -10,7 +10,8 @@
 #endif
 #endif
 
+#import "UIView_Shimmer.h"
 
-FOUNDATION_EXPORT double ShimmerSwiftVersionNumber;
-FOUNDATION_EXPORT const unsigned char ShimmerSwiftVersionString[];
+FOUNDATION_EXPORT double UIView_ShimmerVersionNumber;
+FOUNDATION_EXPORT const unsigned char UIView_ShimmerVersionString[];
 

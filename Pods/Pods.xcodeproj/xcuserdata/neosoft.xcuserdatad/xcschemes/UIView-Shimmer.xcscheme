@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1410"
+   LastUpgradeVersion = "1300"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BF2974CEBD4F57BEFE88471BC9F6361A"
-               BuildableName = "ShimmerSwift.framework"
-               BlueprintName = "ShimmerSwift"
+               BlueprintIdentifier = "A27B2CC756B877BE29030AE88795A973"
+               BuildableName = "UIView_Shimmer.framework"
+               BlueprintName = "UIView-Shimmer"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

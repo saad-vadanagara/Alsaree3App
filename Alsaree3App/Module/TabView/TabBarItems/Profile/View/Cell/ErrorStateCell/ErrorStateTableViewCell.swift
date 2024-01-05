@@ -35,12 +35,12 @@ class ErrorStateTableViewCell: UITableViewCell {
         if isInternetError {
             errorImg.image = UIImage(named: "nointernet")
 //            errorlbl.text = "Could not connect to the internet. Please check your network"
-            setLabelText(lblrefrence: errorlbl, lbltext: "Could not connect to the internet. Please check your network", fontSize: 12)
-            setButtonText(button: tryAgainButton, label: "Try again", color: ColorConstant.primaryYellowColor, size: 13)
+            setLabelText(lblrefrence: errorlbl, lbltext: "Could not connect to the internet. Please check your network", fontSize: 18,lineHeightMultiple: 0.7)
+            setButtonText(button: tryAgainButton, label: "Try again", color: ColorConstant.primaryYellowColor, size: 20)
         } else if isApiError {
             errorImg.image = UIImage(named: "apierror")
-            setLabelText(lblrefrence: errorlbl, lbltext: "API Error", fontSize: 12)
-            setButtonText(button: tryAgainButton, label: "Try again", color: ColorConstant.primaryYellowColor, size: 13)
+            setLabelText(lblrefrence: errorlbl, lbltext: "API Error", fontSize: 18)
+            setButtonText(button: tryAgainButton, label: "Try again", color: ColorConstant.primaryYellowColor, size: 20)
         }
         
     }

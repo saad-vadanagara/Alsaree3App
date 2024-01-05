@@ -14,7 +14,7 @@ class LoaderManager {
         activityIndicator.setUpAnimation(
             in: view.layer,
             size: CGSize(width: 30, height: 30),
-            color: UIColor.systemPink
+            color: ColorConstant.primaryYellowColor
         )
     }
 

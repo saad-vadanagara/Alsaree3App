@@ -4,7 +4,7 @@ import Foundation
 typealias AnyDict = [String: Any]
 typealias AnyDictString = [String: String]
 
-let DEV_ROOT_POINT = ""
+let DEV_ROOT_POINT = "https://alsaree3service.com/api/Z381SQ4J6H/"
 let PROD_ROOT_POINT = ""
 
 let contentValue = "application/x-www-form-urlencoded"

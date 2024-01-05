@@ -142,14 +142,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kOC-Eq-9t1">
                                 <rect key="frame" x="0.0" y="44" width="375" height="70"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Ed-X5-MQ1">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scooter" translatesAutoresizingMaskIntoConstraints="NO" id="5Ed-X5-MQ1">
                                         <rect key="frame" x="20" y="10" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Ukk-MC-VXn"/>
                                             <constraint firstAttribute="width" constant="50" id="Ya4-zc-4HZ"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0X-XG-zbe">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="                                                          ." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0X-XG-zbe">
                                         <rect key="frame" x="80" y="10" width="275" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -158,17 +158,17 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IEZ-pY-vhw">
                                         <rect key="frame" x="80" y="35.5" width="275" height="22.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vjl-93-yJp">
-                                                <rect key="frame" x="0.0" y="11.5" width="0.0" height="0.0"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="                                    " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vjl-93-yJp">
+                                                <rect key="frame" x="0.0" y="1" width="157" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Elv-t6-E5b">
-                                                <rect key="frame" x="0.0" y="-1" width="25" height="25"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="downArrow" translatesAutoresizingMaskIntoConstraints="NO" id="Elv-t6-E5b">
+                                                <rect key="frame" x="162" y="1.5" width="20" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="25" id="25p-Bx-jYa"/>
-                                                    <constraint firstAttribute="height" constant="25" id="aFI-OB-aCa"/>
+                                                    <constraint firstAttribute="width" constant="20" id="25p-Bx-jYa"/>
+                                                    <constraint firstAttribute="height" constant="20" id="aFI-OB-aCa"/>
                                                 </constraints>
                                             </imageView>
                                         </subviews>
@@ -177,7 +177,7 @@
                                             <constraint firstItem="Elv-t6-E5b" firstAttribute="centerY" secondItem="IEZ-pY-vhw" secondAttribute="centerY" id="69N-Ci-7gu"/>
                                             <constraint firstItem="Vjl-93-yJp" firstAttribute="centerY" secondItem="IEZ-pY-vhw" secondAttribute="centerY" id="BFi-i5-gj7"/>
                                             <constraint firstItem="Vjl-93-yJp" firstAttribute="leading" secondItem="IEZ-pY-vhw" secondAttribute="leading" id="FdW-76-hgl"/>
-                                            <constraint firstItem="Elv-t6-E5b" firstAttribute="leading" secondItem="Vjl-93-yJp" secondAttribute="trailing" id="tKu-td-f22"/>
+                                            <constraint firstItem="Elv-t6-E5b" firstAttribute="leading" secondItem="Vjl-93-yJp" secondAttribute="trailing" constant="5" id="tKu-td-f22"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -438,6 +438,7 @@
     <resources>
         <image name="arrowleft" width="24" height="24"/>
         <image name="downArrow" width="18" height="18"/>
+        <image name="scooter" width="375" height="375"/>
         <image name="share" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
