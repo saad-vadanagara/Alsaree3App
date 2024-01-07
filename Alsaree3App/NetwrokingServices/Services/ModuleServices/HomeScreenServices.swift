@@ -52,7 +52,4 @@ class HomeScreenServices{
         }
     }
     
-    
-    func 
-    
 }

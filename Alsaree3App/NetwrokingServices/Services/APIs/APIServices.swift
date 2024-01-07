@@ -100,8 +100,9 @@ extension APIServices {
             switch self{
             case .AppSettings:
                 auth_key = try EncriptionManager().aesEncrypt(value: KeyConstant.authKey, key: KeyConstant.key, iv: KeyConstant.iv16)
-            case.CheckFeedBack:
+            case.CheckFeedBack,.GetLoyalityDetails,.GetTheCartWithCampaignDiscount:
                 auth_key = try EncriptionManager().aesEncrypt(value: authKey, key: KeyConstant.key, iv: KeyConstant.iv16)
+            
             }
         } catch {
             print(error)
