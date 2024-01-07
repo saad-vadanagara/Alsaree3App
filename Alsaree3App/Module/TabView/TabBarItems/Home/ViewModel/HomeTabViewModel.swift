@@ -8,6 +8,7 @@
 
 
 import Foundation
+import UIKit
 //main enum
 
 enum ScrollDirection {
@@ -60,6 +61,8 @@ class HomeTabViewModel{
     var activeOrder = false
     var bannerdaat = true
     var scrollingCollectionview = true
+    var appSettingData : AppSettingModel?
+    var checkFeedBackData : CheckFeedBackModel?
     
     var resturentCollectionViewData = [
         resturentCollectionViewDetails(name: "Order Again", details: orderAgainData),
@@ -81,5 +84,53 @@ class HomeTabViewModel{
         SectionAboveHeader.allCases,
         SectionBelowScrollingHeader.allCases
     ] as [Any]
+    
+    
+    func callApi(){
+        let parameters = AppSettingParams(device_type: "ios", type: "7", device_token:"", device_unique_id:UIDevice.current.identifierForVendor?.uuidString ?? "" )
+        HomeScreenServices().getAppSettings(parameters: parameters) { responce  in
+            switch responce{
+            case.success(let data):
+                self.appSettingData = data
+                authKey = data.authKey
+            case.failure(let error):
+                print(error.localizedDescription)
+            }
+            
+        }
+    }
+    
+    func callSecondApi(){
+        let parameter = CheckFeedBackParams(user_id: "", server_token: "")
+        HomeScreenServices().getFeedBackResponce(parameters: parameter) { responce in
+            switch responce{
+            case .success(let data):
+                self.checkFeedBackData = data
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func callThirdApi(){
+        let parameter = CheckFeedBackParams(user_id: "", server_token: "")
+    }
+    
+    
+    static func aesEncrypt(value: String, key: String, iv: String) throws -> String {
+        let data = value.data(using: .utf8)!
+        var encryptedData:Data? = Data(base64Encoded: "")
+        do{
+            let encrypted = try AES(key: key, iv: iv, padding: .pkcs5).encrypt([UInt8](data))
+            encryptedData = Data(encrypted)
+        }
+        catch let error{
+            print(error.localizedDescription)
+
+        }
+
+        return encryptedData!.base64EncodedString()
+    }
+    
     
 }

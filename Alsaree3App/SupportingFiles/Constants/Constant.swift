@@ -242,3 +242,10 @@ enum foodCategoryList : Int,CaseIterable{
 enum AnimationConstant:String{
     case transformrotationz = "transform.rotation.z"
 }
+
+
+struct KeyConstant{
+    static var authKey = "BVcWXejZ32WLY8GWDhhnhKN752F8mZww"
+    static var key = "lRXFMcdSasKyzvAB"
+    static var iv16 = "SKEWJS2EGV8LP99D"
+}

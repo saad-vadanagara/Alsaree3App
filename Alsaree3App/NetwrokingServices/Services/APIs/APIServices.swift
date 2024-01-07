@@ -4,7 +4,9 @@ import Foundation
 typealias AnyDict = [String: Any]
 typealias AnyDictString = [String: String]
 
-let DEV_ROOT_POINT = "https://alsaree3service.com/api/Z381SQ4J6H/"
+var authKey : String = String()
+
+let DEV_ROOT_POINT = "https://alsaree3service.com"
 let PROD_ROOT_POINT = ""
 
 let contentValue = "application/x-www-form-urlencoded"
@@ -30,45 +32,23 @@ var BaseURL: String {
 
 
 enum APIServices {
-    case userRegister(parameters: AnyDict)
-    case userLogin(parameters: AnyDict)
-    case forgotPassword(parameters: AnyDict)
-    case changePassword(parameters: AnyDict)
-    case updateAccount(parameters: AnyDict)
-    case fetchAccountDetails
-    case getProductList(parameters: AnyDict)
-    case getProductDetails(parameters: AnyDict)
-    case setRating(parameters: AnyDict)
-    case addToCart(parameters: AnyDict)
-    case editCart(parameters: AnyDict)
-    case deleteCart(parameters: AnyDict)
-    case getCartItems
-    case setOrder(parameters: AnyDict)
-    case getOrderList
-    case getOrderDetail(parameters: AnyDict)
+    
+    case AppSettings(parameters: AnyDict)
+    case CheckFeedBack(parameters: AnyDict)
+    case GetLoyalityDetails(parameters: AnyDict)
+    case GetTheCartWithCampaignDiscount(parameters: AnyDict)
 }
 
 extension APIServices {
     var Path: String {
-        let apiDomain = "/api/"
+        let apiDomain = "/api/Z381SQ4J6H/"
         var servicePath: String = ""
         switch self {
-        case .userRegister: servicePath = apiDomain + "users/register"
-        case .userLogin: servicePath = apiDomain + "users/login"
-        case .forgotPassword: servicePath = apiDomain + "users/forgot"
-        case .changePassword: servicePath = apiDomain + "users/change"
-        case .updateAccount: servicePath = apiDomain + "users/update"
-        case .fetchAccountDetails: servicePath = apiDomain + "users/getUserData"
-        case .getProductList: servicePath = apiDomain + "products/getList"
-        case .getProductDetails: servicePath = apiDomain + "products/getDetail"
-        case .setRating: servicePath = apiDomain + "products/setRating"
-        case .addToCart: servicePath = apiDomain + "addToCart"
-        case .editCart: servicePath = apiDomain + "editCart"
-        case .deleteCart: servicePath = apiDomain + "deleteCart"
-        case .getCartItems: servicePath = apiDomain + "cart"
-        case .setOrder: servicePath = apiDomain + "order"
-        case .getOrderList: servicePath = apiDomain + "orderList"
-        case .getOrderDetail: servicePath = apiDomain + "orderDetail"
+        case .AppSettings: servicePath = apiDomain + "admin/check_app_keys"
+        case .CheckFeedBack: servicePath = apiDomain + "user/check_feedback"
+        case .GetLoyalityDetails: servicePath = apiDomain + "get_loyalty_detail"
+        case .GetTheCartWithCampaignDiscount : servicePath = apiDomain + "get_loyalty_detail"
+            
         }
         
         return BaseURL + servicePath
@@ -77,7 +57,9 @@ extension APIServices {
     
     var parameters: AnyDict? {
         switch self {
-        case .userRegister(parameters: let param), .userLogin(let param), .forgotPassword(let param), .changePassword(let param), .updateAccount(let param), .getProductList(let param), .getProductDetails(let param), .setRating(let param), .addToCart(let param), .editCart(let param), .deleteCart(let param), .setOrder(let param), .getOrderDetail(let param) :
+        case .AppSettings(let param):
+            return param
+        case .CheckFeedBack(let param):
             return param
         default:
             return nil
@@ -90,10 +72,8 @@ extension APIServices {
         headerDict[contentKey] = contentValue
         
         switch self {
-        case .changePassword(_), .updateAccount(_), .fetchAccountDetails, .addToCart(_), .editCart(_), .deleteCart(_), .getCartItems, .setOrder(_), .getOrderList, .getOrderDetail(_):
-            let currentAccessToken = UserDefaults.standard.getUserToken() ?? "NO TOKEN"
-            headerDict = [contentKey: contentValue,
-                          "access_token": currentAccessToken]
+        case .AppSettings,.CheckFeedBack:
+            return appSettingsHeader()
         default:
             break
         }
@@ -102,11 +82,44 @@ extension APIServices {
     
     var httpMethod: String {
         switch self {
-        case .fetchAccountDetails, .getProductList, .getProductDetails, .getCartItems, .getOrderList, .getOrderDetail :
-            return "GET"
-        default:
+        case .AppSettings,.CheckFeedBack:
             return "POST"
+        default:
+            return "GET"
         }
     }
+    
+    private func appSettingsHeader() -> AnyDictString {
+        var headerDict = AnyDictString()
+        headerDict[contentKey] = contentValue
+        let longitude = String(describing: LocationManager.shared.currentLocation?.longitude)
+        let latitude = String(describing: LocationManager.shared.currentLocation?.latitude)
+        let app_version = "1.3.00"
+        var auth_key = String()
+        do {
+            switch self{
+            case .AppSettings:
+                auth_key = try EncriptionManager().aesEncrypt(value: KeyConstant.authKey, key: KeyConstant.key, iv: KeyConstant.iv16)
+            case.CheckFeedBack:
+                auth_key = try EncriptionManager().aesEncrypt(value: authKey, key: KeyConstant.key, iv: KeyConstant.iv16)
+            }
+        } catch {
+            print(error)
+        }
+        let device_type = "ios"
+        let language = "en"
+        headerDict = [
+            contentKey: contentValue,
+            "longitude": longitude,
+            "latitude": latitude,
+            "app_version": app_version,
+            "auth_key": auth_key,
+            "device_type": device_type,
+            "language": language
+        ]
+        return headerDict
+    }
+    
 }
+
 

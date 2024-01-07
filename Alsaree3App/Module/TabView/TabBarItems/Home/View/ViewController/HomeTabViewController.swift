@@ -29,7 +29,10 @@ class HomeTabViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         hometabTableView.reloadData()
+        viewModel.callApi()
+        viewModel.callSecondApi()
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -309,6 +312,8 @@ extension HomeTabViewController:NavigateFormHomeTab{
         let newViewController = storyboard?.instantiateViewController(withIdentifier: "RestaurantDetailsVC") as! RestaurantDetailsVC
         // extra function
         viewModel.activeOrder = true
+        viewModel.callApi()
+        viewModel.callSecondApi()
         newViewController.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(newViewController, animated: true)
     }

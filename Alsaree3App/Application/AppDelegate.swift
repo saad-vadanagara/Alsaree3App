@@ -11,10 +11,27 @@ import CoreData
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var locationManager: LocationManager?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        locationManager = LocationManager.shared
+
+        locationManager?.requestLocationPermission { granted in
+            if granted {
+                self.locationManager?.getCurrentLocation { coordinates in
+                    if let coordinates = coordinates {
+                        print("Latitude: \(coordinates.latitude), Longitude: \(coordinates.longitude)")
+                    } else {
+                        // Handle the case where location is not available
+                        print("Location not available")
+                    }
+                }
+            } else {
+                // Handle the case where location permission is not granted
+                print("Location permission not granted")
+            }
+        }
         return true
     }
 

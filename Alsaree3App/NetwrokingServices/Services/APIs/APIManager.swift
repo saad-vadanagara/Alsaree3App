@@ -2,25 +2,19 @@
 
 import Foundation
 
-enum APIResponse<T> {
-    case success(value: T)
-    case failure(error: Error)
-}
-
 class APIManager {
     
     static let sharedInstance = APIManager()
     
     private init(){}
     
-    public func performRequest(serviceType: APIServices, completionHandler: @escaping(APIResponse<Any>) -> Void){
+    public func performRequest(serviceType: APIServices, completionHandler: @escaping(Result<Data,Error>)->Void){
         
               //  Reachability to check network connected or not
                         if !Reachability.isConnectedToNetwork(){
-                            completionHandler(.failure(error: "no internet" as! Error))
+                            completionHandler(.failure("no internet" as! Error))
                             return
                         }
-        
         
         let session = URLSession.shared
         
@@ -53,14 +47,14 @@ class APIManager {
             
             // ensure there is no error for this HTTP response
             guard error == nil else {
-                completionHandler(.failure(error: error!))
+                completionHandler(.failure(error!))
                 print ("error: \(error!)")
                 return
             }
             
             // ensure there is data returned from this HTTP response
             guard let content = data else {
-                completionHandler(.failure(error: error!))
+                completionHandler(.failure(error!))
                 print("No data")
                 return
             }
@@ -70,7 +64,7 @@ class APIManager {
                 print("Not containing JSON")
                 return
             }
-            completionHandler(.success(value: content))
+            completionHandler(.success(content))
         }
         task.resume()
     }
