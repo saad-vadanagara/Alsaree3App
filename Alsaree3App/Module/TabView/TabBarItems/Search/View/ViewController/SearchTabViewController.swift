@@ -24,57 +24,9 @@ class SearchTabViewController: UIViewController{
         registerTableViewCell()
         searchtabTableView.separatorStyle = .none
         searchtabTableView.backgroundColor = ColorConstant.primaryWhiteBgcolor
-//        setupShimmer()
         view.setTemplateWithSubviews(true, animate: true, viewBackgroundColor: .systemBackground)
-        LoaderManager.showLoader(in: view)
         self.navigationController?.isNavigationBarHidden = true
     }
-    
-//    func setupShimmer() {
-//        if false {
-//            // Handle shimmering when API call is done
-//        } else {
-//            scooterimg.layer.cornerRadius = 0
-//            scooterimg.layer.borderWidth = 0
-//
-//            let applicationNamelblShimmer = ShimmeringView(frame: applicationNamelbl.bounds)
-//            applicationNamelbl.addSubview(applicationNamelblShimmer)
-//
-//            let areaNavigationViewShimmer = ShimmeringView(frame: areaNavigationView.bounds)
-//            areaNavigationView.addSubview(areaNavigationViewShimmer)
-//
-//
-//            let applicationNamelblBackgroundView = UIView(frame: applicationNamelbl.bounds)
-//            applicationNamelblBackgroundView.layer.cornerRadius = 5
-//            applicationNamelblBackgroundView.backgroundColor = ColorConstant.borderColorGray
-//
-//
-//            let areaNavigationViewContentView = UIView(frame: areaNavigationViewShimmer.bounds)
-//            areaNavigationViewContentView.layer.cornerRadius = 5
-//            areaNavigationViewContentView.backgroundColor = ColorConstant.borderColorGray
-//
-//
-//            let scooterimgContainer = UIView(frame: scooterimg.bounds)
-//            scooterimg.addSubview(scooterimgContainer)
-//
-//
-//            let scooterimgShimmer = ShimmeringView(frame: scooterimgContainer.bounds)
-//            scooterimgContainer.addSubview(scooterimgShimmer)
-//
-//            let scooterimgContentView = UIView(frame: scooterimgShimmer.bounds)
-//            scooterimgContentView.layer.cornerRadius = 5
-//            scooterimgContentView.backgroundColor = ColorConstant.borderColorGray
-//
-//
-//            areaNavigationViewShimmer.contentView = areaNavigationViewContentView
-//            applicationNamelblShimmer.contentView = applicationNamelblBackgroundView
-//            scooterimgShimmer.contentView = scooterimgContentView
-//
-//            scooterimgShimmer.isShimmering = true
-//            applicationNamelblShimmer.isShimmering = true
-//            areaNavigationViewShimmer.isShimmering = true
-//        }
-    
     
     func settingDelegate(){
         searchtabTableView.delegate = self

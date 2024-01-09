@@ -28,14 +28,13 @@ class HomeTabViewController: UIViewController {
     private var tabBarVisible = true
     
     override func viewWillAppear(_ animated: Bool) {
-        hometabTableView.reloadData()
-        viewModel.callHomeScreenApis()
         viewModel.homeTabDeligate = self
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.callHomeScreenApis()
         settingDelegate()
         setupTableview()
         registerTableViewCell()
@@ -73,6 +72,7 @@ class HomeTabViewController: UIViewController {
         hometabTableView.registerNib(of: GoldCategoryCardCellTableViewCell.self)
         hometabTableView.registerNib(of: ResturentTableViewCell.self)
         hometabTableView.registerNib(of: ResturentDetailsTableViewCell.self)
+        hometabTableView.registerNib(of: LoadingTableViewCell.self)
     }
     
     func setupHeaderView(){
@@ -130,31 +130,30 @@ class HomeTabViewController: UIViewController {
 extension HomeTabViewController:UITableViewDataSource{
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return viewModel.HomeTabData.count
+        return 2
     }
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let sectionData = viewModel.HomeTabData[section] as? [any CaseIterable] {
-            return sectionData.count
-        } else {
-            return 0
+        if section == 0{
+            return viewModel.getTableViewCount(Section: 0)
+        }else{
+            return viewModel.getTableViewCount(Section: 1)
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // Get the section data for the current section
+        if viewModel.getTableViewCount() == 1 {
+            let loadingCell = tableView.dequeueReusableCell(withIdentifier: "LoadingTableViewCell", for: indexPath) as! LoadingTableViewCell
+            loadingCell.selectionStyle = .none
+            return loadingCell
+        }
         
-        let sectionData = viewModel.HomeTabData[indexPath.section]
-        // Handle cells based on section type
-        switch sectionData {
-        case let aboveSection as [SectionAboveHeader]:
-            let cellType = aboveSection[indexPath.row]
-            switch cellType {
-            case .orderStatus:
+        if indexPath.section == 0 {
+            
+            switch indexPath.row{
+            case 0 :
                 if true{
                     let cell = tableView.getCell(identifier: CellConstant.activeOrderHomeTabCell.rawValue) as! ActiveOrderHomeTabCell
-                    
                     cell.selectionStyle = .none
                     return cell
                 }else{
@@ -162,65 +161,65 @@ extension HomeTabViewController:UITableViewDataSource{
                     cell.selectionStyle = .none
                     return cell
                 }
-            case .bannerAdv:
+            case 1:
                 let cell = tableView.getCell(identifier: CellConstant.bannerHomeTabCell.rawValue) as! BannerHomeTabCell
                 cell.selectionStyle = .none
                 return cell
+            default:
+                return UITableViewCell()
             }
+        }else{
             
-        case let belowHeaderSection as [SectionBelowScrollingHeader]:
-            
-            let cellType = belowHeaderSection[indexPath.row]
-            
-            switch cellType {
-            case .dealsCollection:
+            switch indexPath.row{
+            case 0 :
                 let cell = tableView.getCell(identifier: CellConstant.advertisementCell.rawValue) as! AdvertisementCell
                 cell.selectionStyle = .none
                 return cell
-            case .foodCategoryList:
+            case 1:
                 let cell = tableView.getCell(identifier: CellConstant.foodCatrgoryCell.rawValue) as! FoodCatrgoryCell
                 cell.selectionStyle = .none
                 return cell
-                
-            case .orderAgain:
+            case 2:
                 let cell = tableView.getCell(identifier: "ResturentTableViewCell") as! ResturentTableViewCell
                 cell.featuredData = viewModel.resturentCollectionViewData[0]
                 cell.hometabDelegate = self
                 cell.selectionStyle = .none
                 return cell
-            case .featured:
+            case 3:
                 let cell = tableView.getCell(identifier: "ResturentTableViewCell") as! ResturentTableViewCell
                 cell.featuredData = viewModel.resturentCollectionViewData[1]
                 cell.selectionStyle = .none
                 return cell
-            case .offersNearby:
+            case 4:
                 let cell = tableView.getCell(identifier: "ResturentTableViewCell") as! ResturentTableViewCell
                 cell.featuredData = viewModel.resturentCollectionViewData[1]
                 cell.selectionStyle = .none
                 return cell
-            case .otherCells:
+            default:
                 let cell = tableView.getCell(identifier: "ResturentDetailsTableViewCell") as! ResturentDetailsTableViewCell
                 cell.selectionStyle = .none
                 return cell
             }
-        default:
-            return UITableViewCell()
         }
+        
     }
+    
+    
 }
 extension HomeTabViewController : UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if viewModel.getTableViewCount()==1{
+            return tableView.bounds.height
+        }
         switch (indexPath.section, indexPath.row) {
-            case (0, 0):
-                return viewModel.activeOrder ? UITableView.automaticDimension : 0
-            case (1, _):
-                // For section 1, set the height based on your logic for other cells in that section
-                return UITableView.automaticDimension
-            default:
-                // For other sections and rows, use automatic dimension
-                return UITableView.automaticDimension
-            }
+        case (0, 0):
+            return viewModel.activeOrder ? UITableView.automaticDimension : 0
+        case (1, _):
+            return UITableView.automaticDimension
+        default:
+            return UITableView.automaticDimension
+        }
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
