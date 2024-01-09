@@ -1,16 +1,22 @@
 PODS:
+  - SDWebImage (5.18.8):
+    - SDWebImage/Core (= 5.18.8)
+  - SDWebImage/Core (5.18.8)
   - UIView-Shimmer (1.0.4)
 
 DEPENDENCIES:
+  - SDWebImage (~> 5.0)
   - UIView-Shimmer (~> 1.0)
 
 SPEC REPOS:
   trunk:
+    - SDWebImage
     - UIView-Shimmer
 
 SPEC CHECKSUMS:
+  SDWebImage: a81bbb3ba4ea5f810f4069c68727cb118467a04a
   UIView-Shimmer: ff0a32c73d67c7dbdea3d9e530538b10d18aea56
 
-PODFILE CHECKSUM: 908664daf672adfe361fb14449b43c48b5ccf976
+PODFILE CHECKSUM: 9660e9080c08da01858aec5c31738a20a7759c85
 
 COCOAPODS: 1.11.3

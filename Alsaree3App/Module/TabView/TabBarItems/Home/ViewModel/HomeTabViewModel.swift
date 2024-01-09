@@ -84,23 +84,14 @@ class HomeTabViewModel{
             self.homeTabDeligate?.hometabTableView.reloadData()
         }
     }
-    
-    //    func callHomeScreenApis(){
-    //        callApi()
-    //        callFeedBackApi()
-    //        callLoyaltyDetailApi()
-    //        callDeliveryListForNearestCityApi()
-    //        callHomeScreenMainDetailWithBannerImagesOffersApi()
-    //        callHomeScreenStoreListApi()
-    //        callPushZoneApi()
-    //    }
-    
+
     func callApi(){
         let parameters = AppSettingParams(device_type: "ios", type: "7", device_token:"", device_unique_id:UIDevice.current.identifierForVendor?.uuidString ?? "" )
         HomeScreenServices().getAppSettings(parameters: parameters) { responce  in
             switch responce{
             case.success(let data):
                 authKey = data.authKey
+                SDWebImageManager.shared.imageBaseUrl = data.imageBaseURL
                 self.dispatchGroup.leave()
                 print("AppSetting done")
             case.failure(let error):

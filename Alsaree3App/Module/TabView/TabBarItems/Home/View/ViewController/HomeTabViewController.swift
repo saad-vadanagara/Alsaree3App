@@ -163,7 +163,9 @@ extension HomeTabViewController:UITableViewDataSource{
                 }
             case 1:
                 let cell = tableView.getCell(identifier: CellConstant.bannerHomeTabCell.rawValue) as! BannerHomeTabCell
+                cell.bannerData = viewModel.loyaltyDetail
                 cell.selectionStyle = .none
+                cell.setupUi()
                 return cell
             default:
                 return UITableViewCell()
@@ -311,7 +313,6 @@ extension HomeTabViewController:NavigateFormHomeTab{
         let newViewController = storyboard?.instantiateViewController(withIdentifier: "RestaurantDetailsVC") as! RestaurantDetailsVC
         // extra function
         viewModel.activeOrder = true
-        
         newViewController.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(newViewController, animated: true)
     }
