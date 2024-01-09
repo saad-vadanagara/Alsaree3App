@@ -248,4 +248,6 @@ struct KeyConstant{
     static var authKey = "BVcWXejZ32WLY8GWDhhnhKN752F8mZww"
     static var key = "lRXFMcdSasKyzvAB"
     static var iv16 = "SKEWJS2EGV8LP99D"
+    static var key2 = "XHfZhnLrWOJyPZAW";
+    static var iv162 = "WMVYXBCU2ZUFVJ72";
 }

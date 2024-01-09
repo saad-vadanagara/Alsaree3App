@@ -23,7 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     if let coordinates = coordinates {
                         print("Latitude: \(coordinates.latitude), Longitude: \(coordinates.longitude)")
                     } else {
-                        // Handle the case where location is not available
                         print("Location not available")
                     }
                 }
@@ -32,8 +31,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("Location permission not granted")
             }
         }
+        
+        
         return true
     }
+    
+   
 
     // MARK: UISceneSession Lifecycle
 

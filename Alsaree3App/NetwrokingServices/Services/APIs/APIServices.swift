@@ -35,8 +35,15 @@ enum APIServices {
     
     case AppSettings(parameters: AnyDict)
     case CheckFeedBack(parameters: AnyDict)
-    case GetLoyalityDetails(parameters: AnyDict)
-    case GetTheCartWithCampaignDiscount(parameters: AnyDict)
+    case LoyalityDetails(parameters: AnyDict)
+    case CartWithCampaignDiscount(parameters: AnyDict)
+    case DeliveryListForNearestCity(parameters: AnyDict)
+    case HomeScreenMainDetailWithBannerImagesOffers(parameters: AnyDict)
+    case HomeScreenStoreList(parameters: AnyDict)
+    case Push_Zone(parameters: AnyDict)
+    
+    //dummycase
+    case get
 }
 
 extension APIServices {
@@ -46,8 +53,15 @@ extension APIServices {
         switch self {
         case .AppSettings: servicePath = apiDomain + "admin/check_app_keys"
         case .CheckFeedBack: servicePath = apiDomain + "user/check_feedback"
-        case .GetLoyalityDetails: servicePath = apiDomain + "get_loyalty_detail"
-        case .GetTheCartWithCampaignDiscount : servicePath = apiDomain + "get_loyalty_detail"
+        case .LoyalityDetails: servicePath = apiDomain + "user/get_loyalty_detail"
+        case .CartWithCampaignDiscount : servicePath = apiDomain + "user/get_cart_with_campaign_discount_v1"
+        case .DeliveryListForNearestCity : servicePath = apiDomain + "user/v2_get_delivery_list_for_nearest_city"
+        case .HomeScreenMainDetailWithBannerImagesOffers : servicePath = apiDomain + "user/get_home_screen_main_detail_with_banner_images_offers"
+        case .HomeScreenStoreList : servicePath = apiDomain + "user/get_home_screen_store_list"
+        case .Push_Zone : servicePath = apiDomain + "user/get_push_zone"
+            
+            //dummmy
+        case .get: "dummy"
             
         }
         
@@ -61,6 +75,18 @@ extension APIServices {
             return param
         case .CheckFeedBack(let param):
             return param
+        case .LoyalityDetails(let param):
+            return param
+        case .CartWithCampaignDiscount(let param):
+            return param
+        case .DeliveryListForNearestCity(let param):
+            return param
+        case .HomeScreenMainDetailWithBannerImagesOffers(let param):
+            return param
+        case .HomeScreenStoreList(parameters: let param):
+            return param
+        case .Push_Zone(let param):
+            return param
         default:
             return nil
         }
@@ -68,41 +94,39 @@ extension APIServices {
     
     //headers code
     var header: AnyDictString {
-        var headerDict = AnyDictString()
-        headerDict[contentKey] = contentValue
-        
-        switch self {
-        case .AppSettings,.CheckFeedBack:
-            return appSettingsHeader()
-        default:
-            break
-        }
-        return headerDict
+        return appSettingsHeader()
     }
     
     var httpMethod: String {
         switch self {
-        case .AppSettings,.CheckFeedBack:
-            return "POST"
-        default:
+        case .get:
             return "GET"
+        default:
+            return "POST"
         }
     }
     
     private func appSettingsHeader() -> AnyDictString {
         var headerDict = AnyDictString()
         headerDict[contentKey] = contentValue
-        let longitude = String(describing: LocationManager.shared.currentLocation?.longitude)
-        let latitude = String(describing: LocationManager.shared.currentLocation?.latitude)
+        var longitude: String = ""
+        var latitude: String = ""
+        
+        if let currentLocation = LocationManager.shared.currentLocation {
+            longitude = String(describing: currentLocation.longitude)
+            latitude = String(describing: currentLocation.latitude)
+        }
         let app_version = "1.3.00"
         var auth_key = String()
         do {
             switch self{
             case .AppSettings:
                 auth_key = try EncriptionManager().aesEncrypt(value: KeyConstant.authKey, key: KeyConstant.key, iv: KeyConstant.iv16)
-            case.CheckFeedBack,.GetLoyalityDetails,.GetTheCartWithCampaignDiscount:
-                auth_key = try EncriptionManager().aesEncrypt(value: authKey, key: KeyConstant.key, iv: KeyConstant.iv16)
-            
+            case.CheckFeedBack,.LoyalityDetails,.CartWithCampaignDiscount,.DeliveryListForNearestCity,.HomeScreenMainDetailWithBannerImagesOffers,.HomeScreenStoreList,.Push_Zone:
+                auth_key = try EncriptionManager().aesEncrypt(value: authKey, key: KeyConstant.key2, iv: KeyConstant.iv162)
+                //dummy
+            case .get : break
+                
             }
         } catch {
             print(error)
@@ -111,8 +135,8 @@ extension APIServices {
         let language = "en"
         headerDict = [
             contentKey: contentValue,
-            "longitude": longitude,
-            "latitude": latitude,
+            "longitude": longitude ,
+            "latitude": latitude ,
             "app_version": app_version,
             "auth_key": auth_key,
             "device_type": device_type,
