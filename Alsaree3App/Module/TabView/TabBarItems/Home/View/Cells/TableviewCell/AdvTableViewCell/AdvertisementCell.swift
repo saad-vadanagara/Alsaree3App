@@ -13,6 +13,9 @@ class AdvertisementCell: UITableViewCell {
     @IBOutlet weak var advCollectionView: UICollectionView!
     @IBOutlet weak var advPageControl: UIPageControl!
     
+    var advertisementBannerData : [Banner]?
+    var isHeigthChnaged = false
+    
     // MARK: Local Variables
     var currentscrollIndex = 1
     var contentOffset = CGPoint()
@@ -25,10 +28,32 @@ class AdvertisementCell: UITableViewCell {
         setupPageControl()
         self.backgroundColor = UIColor.clear
     }
+    
+    func reloadData(){
+        advCollectionView.reloadData()
+        setupPageControl()
+    }
+    
+    override func systemLayoutSizeFitting(_ targetSize: CGSize, withHorizontalFittingPriority horizontalFittingPriority: UILayoutPriority, verticalFittingPriority: UILayoutPriority) -> CGSize {
+        
+        self.advCollectionView.frame = self.bounds
+        self.advCollectionView.layoutIfNeeded()
+        
+        if isHeigthChnaged{
+            return self.advCollectionView.contentSize
+        }else{
+            advCollectionView.contentSize.height += 50
+            isHeigthChnaged = true
+            return self.advCollectionView.contentSize
+        }
+        
+    }
 
     func setCollectionview() {
         advCollectionView.delegate = self
         advCollectionView.dataSource = self
+        
+        advCollectionView.contentInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
 
         centeredCollectionViewFlowLayout = (advCollectionView.collectionViewLayout as! CenteredCollectionViewFlowLayout)
         centeredCollectionViewFlowLayout.itemSize = CGSize(width: advCollectionView.bounds.width * 0.9, height: advCollectionView.bounds.height)
@@ -50,10 +75,8 @@ class AdvertisementCell: UITableViewCell {
         advPageControl.currentPageIndicatorTintColor = ColorConstant.primaryYellowColor
         advPageControl.pageIndicatorTintColor = ColorConstant.borderColorGray
         advPageControl.currentPage = 0
-        advPageControl.numberOfPages = DealsList.allCases.count
+        advPageControl.numberOfPages = advertisementBannerData?.count ?? 5
     }
-  
-  
 
     @IBAction func pageControlAction(_ sender: UIPageControl) {
      
@@ -62,12 +85,13 @@ class AdvertisementCell: UITableViewCell {
 
 extension AdvertisementCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        DealsList.allCases.count
+        advertisementBannerData?.count ?? 5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.getCell(indexPath: indexPath) as AdvCollectionViewCell
         cell.indexPath = indexPath.row
+        cell.imageUrl = advertisementBannerData?[indexPath.row].image_url ?? ""
         cell.setupUI()
         return cell
     }

@@ -21,15 +21,15 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jt3-L7-G7p">
                         <rect key="frame" x="0.0" y="0.0" width="265" height="144"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QUb-Go-yot">
-                                <rect key="frame" x="15" y="0.0" width="235" height="144"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QUb-Go-yot">
+                                <rect key="frame" x="0.0" y="0.0" width="265" height="144"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="QUb-Go-yot" firstAttribute="top" secondItem="Jt3-L7-G7p" secondAttribute="top" id="05n-rf-8Y4"/>
-                            <constraint firstItem="QUb-Go-yot" firstAttribute="leading" secondItem="Jt3-L7-G7p" secondAttribute="leading" constant="15" id="7OC-MT-WFf"/>
-                            <constraint firstAttribute="trailing" secondItem="QUb-Go-yot" secondAttribute="trailing" constant="15" id="Red-ek-fi1"/>
+                            <constraint firstItem="QUb-Go-yot" firstAttribute="leading" secondItem="Jt3-L7-G7p" secondAttribute="leading" id="7OC-MT-WFf"/>
+                            <constraint firstAttribute="trailing" secondItem="QUb-Go-yot" secondAttribute="trailing" id="Red-ek-fi1"/>
                             <constraint firstAttribute="bottom" secondItem="QUb-Go-yot" secondAttribute="bottom" id="ilj-Kw-kao"/>
                         </constraints>
                     </view>
@@ -44,7 +44,7 @@
             </constraints>
             <size key="customSize" width="265" height="144"/>
             <connections>
-                <outlet property="advCollectionView" destination="QUb-Go-yot" id="w2I-M1-IUL"/>
+                <outlet property="advCollectionViewImage" destination="QUb-Go-yot" id="gZr-Ol-vpT"/>
                 <outlet property="parentView" destination="Jt3-L7-G7p" id="8rY-Jb-JBd"/>
             </connections>
             <point key="canvasLocation" x="303.05343511450383" y="52.816901408450704"/>

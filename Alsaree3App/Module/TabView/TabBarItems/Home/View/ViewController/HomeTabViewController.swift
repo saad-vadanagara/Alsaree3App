@@ -175,6 +175,8 @@ extension HomeTabViewController:UITableViewDataSource{
             switch indexPath.row{
             case 0 :
                 let cell = tableView.getCell(identifier: CellConstant.advertisementCell.rawValue) as! AdvertisementCell
+                cell.advertisementBannerData = viewModel.banner
+                cell.reloadData()
                 cell.selectionStyle = .none
                 return cell
             case 1:

@@ -11,15 +11,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="183" id="KGk-i7-Jjw" customClass="AdvertisementCell" customModule="Alsaree3App" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="369" height="183"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="263" id="KGk-i7-Jjw" customClass="AdvertisementCell" customModule="Alsaree3App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="368" height="263"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="369" height="183"/>
+                <rect key="frame" x="0.0" y="0.0" width="368" height="263"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="B5P-YZ-S5u">
-                        <rect key="frame" x="0.0" y="8" width="369" height="137.33333333333334"/>
+                        <rect key="frame" x="0.0" y="8" width="368" height="219"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WfG-5F-RGY" customClass="CenteredCollectionViewFlowLayout" customModule="Alsaree3App" customModuleProvider="target">
                             <size key="itemSize" width="128" height="128"/>
@@ -29,7 +29,7 @@
                         </collectionViewFlowLayout>
                     </collectionView>
                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="AZi-39-5wI">
-                        <rect key="frame" x="126.66666666666669" y="150.33333333333334" width="116" height="27.666666666666657"/>
+                        <rect key="frame" x="126" y="232" width="116" height="26"/>
                         <connections>
                             <action selector="pageControlAction:" destination="KGk-i7-Jjw" eventType="valueChanged" id="28o-9M-eY1"/>
                         </connections>
@@ -42,7 +42,6 @@
                     <constraint firstItem="AZi-39-5wI" firstAttribute="centerX" secondItem="B5P-YZ-S5u" secondAttribute="centerX" id="Ikx-6M-hSp"/>
                     <constraint firstAttribute="trailing" secondItem="B5P-YZ-S5u" secondAttribute="trailing" id="PMD-e1-kuO"/>
                     <constraint firstItem="B5P-YZ-S5u" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="cpd-gz-8Mf"/>
-                    <constraint firstItem="B5P-YZ-S5u" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.75" id="x5C-UL-vUw"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -50,7 +49,7 @@
                 <outlet property="advCollectionView" destination="B5P-YZ-S5u" id="QF5-Oe-Hg4"/>
                 <outlet property="advPageControl" destination="AZi-39-5wI" id="qmH-RV-j1m"/>
             </connections>
-            <point key="canvasLocation" x="28.244274809160306" y="68.661971830985919"/>
+            <point key="canvasLocation" x="27.480916030534349" y="96.83098591549296"/>
         </tableViewCell>
     </objects>
     <resources>

@@ -9,18 +9,19 @@ import UIKit
 
 class AdvCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var parentView: UIView!
-    @IBOutlet weak var advCollectionView: UIImageView!
+    @IBOutlet weak var advCollectionViewImage: UIImageView!
     var indexPath = Int()
-    
+    var imageUrl = ""
     override func awakeFromNib() {
         super.awakeFromNib()
         self.backgroundColor = UIColor.clear
     }
     
     func setupUI(){
-        advCollectionView.image = UIImage(named: DealsList(rawValue: indexPath)?.title ?? "")
-        parentView.layer.cornerRadius = 10
-        parentView.backgroundColor = ColorConstant.borderColorGray
+//        advCollectionView.image = UIImage(named: DealsList(rawValue: indexPath)?.title ?? "")
+        SDWebImageManager.shared.loadImage(with: imageUrl , into: advCollectionViewImage)
+        advCollectionViewImage.layer.cornerRadius = 20
+        parentView.backgroundColor = UIColor.clear
 
         
     }

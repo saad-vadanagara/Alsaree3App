@@ -7,6 +7,7 @@ class ResturentTableViewCell: UITableViewCell {
     @IBOutlet weak var seemoreBtn: UIButton!
     @IBOutlet weak var resturentCollectionView: UICollectionView!
     
+    var resturentTableViewCellData :
     var hometabDelegate : HomeTabViewController?
     var featuredData : resturentCollectionViewDetails?
     var isvalueChaged = false
