@@ -7,7 +7,8 @@ class ResturentTableViewCell: UITableViewCell {
     @IBOutlet weak var seemoreBtn: UIButton!
     @IBOutlet weak var resturentCollectionView: UICollectionView!
     
-    var resturentTableViewCellData :
+    var resturentTableViewCellData : [Stores]?
+    var storeTitile : String?
     var hometabDelegate : HomeTabViewController?
     var featuredData : resturentCollectionViewDetails?
     var isvalueChaged = false
@@ -21,11 +22,15 @@ class ResturentTableViewCell: UITableViewCell {
         configureCollectionViewLayout()
         resturentCollectionView.decelerationRate = .fast
     }
+    func reloadCollViewData(){
+        setLabelText(lblrefrence: collectionViewTitile, lbltext: storeTitile ?? "hello", fontSize: 18,isBold : true)
+        resturentCollectionView.reloadData()
+    }
     
     func setupUI(){
-        setLabelText(lblrefrence: collectionViewTitile, lbltext: featuredData?.name ?? "Offers Nearby", fontSize: 20,isBold: true)
         setButtonText(button: seemoreBtn, label: ButtonTextConstant.seeMore.rawValue,color: ColorConstant.borderColorYellow, size: 14,isUnderline: true)
     }
+    
     
     func configureCollectionViewLayout() {
         
@@ -57,7 +62,7 @@ class ResturentTableViewCell: UITableViewCell {
         if isvalueChaged{
             return self.resturentCollectionView.contentSize
         }else{
-            resturentCollectionView.contentSize.height += 50
+            resturentCollectionView.contentSize.height += 60
             isvalueChaged = true
             return self.resturentCollectionView.contentSize
         }
@@ -82,11 +87,13 @@ class ResturentTableViewCell: UITableViewCell {
 
 extension ResturentTableViewCell: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return featuredData?.details.count ?? 0
+        return resturentTableViewCellData?.count ?? (featuredData?.details.count)!
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.getCell(indexPath: indexPath) as ResturentDetailsCollectionViewCell
+        cell.resturentDetailsData = resturentTableViewCellData?[indexPath.row]
+        cell.reloadCollectionView()
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

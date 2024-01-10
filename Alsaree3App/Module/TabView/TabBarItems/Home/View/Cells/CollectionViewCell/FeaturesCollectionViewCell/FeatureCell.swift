@@ -14,12 +14,14 @@ class FeatureCell: UICollectionViewCell {
     @IBOutlet weak var featureImageWithLabel: UIImageView!
     
     var feature : featureDetails?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         setupUi()
         setuplblText()
     }
+
     
     func fillDetails(){
         featurelbl.text = feature?.featureValue

@@ -9,6 +9,7 @@ import UIKit
 
 class ResturentDetailsCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var parentCellView: UIView!
     @IBOutlet weak var resturentInternelView: UIView!
     @IBOutlet weak var selectedItemView: UIView!
     @IBOutlet weak var selectedItemOffLbl: UILabel!
@@ -18,6 +19,9 @@ class ResturentDetailsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var resturentImage: UIImageView!
     @IBOutlet weak var resturentFeatureCollectionView: UICollectionView!
     
+    var resturentDetailsData : Stores?
+    var isHeigthChnaged = false
+    var resturentFeatureDate : [featureDetails]?
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
@@ -26,6 +30,38 @@ class ResturentDetailsCollectionViewCell: UICollectionViewCell {
         registerCell()
         drawTriangleforSelectedView()
         drawTriangleforlowdeleveryView()
+    }
+    
+    func reloadCollectionView(){
+        setupReloadedData()
+        setupFeatureDetails()
+        self.resturentFeatureCollectionView.reloadData()
+    }
+    
+    func setupFeatureDetails(){
+        resturentFeatureDate = [
+            featureDetails(featureValue: "500+", image: "Heart",istinted: false),
+            featureDetails(featureValue: (String(format: "%.2f", resturentDetailsData?.distance ?? 0.0)+" KM Away"), image: nil, istinted: true),
+            featureDetails(featureValue: "\(resturentDetailsData?.delivery_time ?? 0) - \(resturentDetailsData?.delivery_time_max ?? 0) Mins", image:"Location", istinted: true),
+            featureDetails(featureValue: " IQD \(resturentDetailsData?.delivery_price_after_discount ?? 0) ", image: "MotorCycle", istinted: true),
+            featureDetails(featureValue: "\(String(format: "%.2f", resturentDetailsData?.user_rate ?? 0.0)) Excellent", image: "Star",istinted: true)
+            
+        ]
+    }
+    override func systemLayoutSizeFitting(_ targetSize: CGSize, withHorizontalFittingPriority horizontalFittingPriority: UILayoutPriority, verticalFittingPriority: UILayoutPriority) -> CGSize {
+        
+        self.resturentFeatureCollectionView.frame = self.bounds
+        self.resturentFeatureCollectionView.layoutIfNeeded()
+        
+        if isHeigthChnaged{
+            return self.resturentFeatureCollectionView.contentSize
+        }else{
+            resturentFeatureCollectionView.contentSize.height += 50
+            isHeigthChnaged = true
+            return self.resturentFeatureCollectionView.contentSize
+        }
+        
+//        return self.resturentFeatureCollectionView.contentSize
     }
     
     func setupCollectionView(){
@@ -84,14 +120,12 @@ class ResturentDetailsCollectionViewCell: UICollectionViewCell {
         triangleLayer.zPosition = -1
         self.layer.addSublayer(triangleLayer)
     }
+    func setupReloadedData(){
+        SDWebImageManager.shared.loadImage(with: resturentDetailsData?.image_url ?? "", into: resturentImage)
+        setLabelText(lblrefrence: resturentTitle, lbltext: resturentDetailsData?.name ?? "", fontSize: 20,alignmentLeft:true)
+    }
 
     func setupUI(){
-        
-        // setting resturent Image
-        resturentImage.image = UIImage(named: "resturntIamgewithsouth")
-        
-        //setting the label text
-        setLabelText(lblrefrence: resturentTitle, lbltext: "Ultimate Chicken - Wraps, Plates",fontSize: 20)
         
         // setup low delevery sticker
         lowdeleveryView.backgroundColor = UIColor.white
@@ -115,6 +149,17 @@ class ResturentDetailsCollectionViewCell: UICollectionViewCell {
         resturentInternelView.layer.maskedCorners = [.layerMaxXMaxYCorner,.layerMinXMaxYCorner]
         resturentInternelView.clipsToBounds = true
         
+        // image Curve code
+        resturentImage.layer.cornerRadius = 15
+        resturentImage.layer.maskedCorners = [.layerMaxXMinYCorner,.layerMinXMinYCorner]
+        resturentImage.layer.borderColor = ColorConstant.borderColorGray.cgColor
+        resturentImage.layer.borderWidth = 0.2
+        resturentImage.clipsToBounds = true
+        
+        // adding the shadow
+        parentCellView.layer.shadowRadius = 1
+        parentCellView.layer.shadowColor = UIColor.black.cgColor
+        
     }
     
     func applyCornerRadius(to view: UIView, radius: CGFloat) {
@@ -126,23 +171,17 @@ class ResturentDetailsCollectionViewCell: UICollectionViewCell {
     
     
 }
-let userPreferences = [
-    featureDetails(featureValue: "500+", image: "Heart",istinted: false),
-    featureDetails(featureValue: "2.5 KM Away", image: nil,istinted: true),
-    featureDetails(featureValue: "25 - 45 Mins" , image: "Location",istinted: true),
-    featureDetails(featureValue: "IQD 1000", image: "MotorCycle",istinted: true),
-    featureDetails(featureValue: "3.4 Excellent", image: "Star",istinted: true)
-]
+
 
 extension ResturentDetailsCollectionViewCell : UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        userPreferences.count
+        resturentFeatureDate?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FeatureCell", for: indexPath) as! FeatureCell
-        cell.feature = userPreferences[indexPath.row]
+        cell.feature = resturentFeatureDate?[indexPath.row]
         cell.fillDetails()
         cell.featurelbl.preferredMaxLayoutWidth = collectionView.frame.width - 16
         

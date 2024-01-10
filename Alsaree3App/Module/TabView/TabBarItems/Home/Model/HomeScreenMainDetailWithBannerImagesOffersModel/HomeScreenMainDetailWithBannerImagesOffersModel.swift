@@ -19,10 +19,10 @@ struct HomeScreenMainDetailWithBannerImagesOffersModel: Codable {
 	let brands : [Brands]?
 	let tags : [Tags]?
 	let ads : [Ads]?
-	let store_offers : [Store_offers]?
+	let store_offers : [Stores]?
 	let zone_id : String?
-	let horizontal_stores : [Horizontal_stores]?
-	let horizontal_stores_2 : [Horizontal_stores_2]?
+	let horizontal_stores : [Stores]?
+	let horizontal_stores_2 : [Stores]?
 
 	enum CodingKeys: String, CodingKey {
 
@@ -70,10 +70,10 @@ struct HomeScreenMainDetailWithBannerImagesOffersModel: Codable {
 		brands = try values.decodeIfPresent([Brands].self, forKey: .brands)
 		tags = try values.decodeIfPresent([Tags].self, forKey: .tags)
 		ads = try values.decodeIfPresent([Ads].self, forKey: .ads)
-		store_offers = try values.decodeIfPresent([Store_offers].self, forKey: .store_offers)
+		store_offers = try values.decodeIfPresent([Stores].self, forKey: .store_offers)
 		zone_id = try values.decodeIfPresent(String.self, forKey: .zone_id)
-		horizontal_stores = try values.decodeIfPresent([Horizontal_stores].self, forKey: .horizontal_stores)
-		horizontal_stores_2 = try values.decodeIfPresent([Horizontal_stores_2].self, forKey: .horizontal_stores_2)
+		horizontal_stores = try values.decodeIfPresent([Stores].self, forKey: .horizontal_stores)
+		horizontal_stores_2 = try values.decodeIfPresent([Stores].self, forKey: .horizontal_stores_2)
 	}
 
 }

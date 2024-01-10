@@ -157,7 +157,7 @@ extension HomeTabViewController:UITableViewDataSource{
                     cell.selectionStyle = .none
                     return cell
                 }else{
-                    let cell = tableView.getCell(identifier: "GoldCategoryCardCellTableViewCell") as! GoldCategoryCardCellTableViewCell
+                    let cell = tableView.getCell(identifier: CellConstant.goldCategoryCardCellTableViewCell.rawValue) as! GoldCategoryCardCellTableViewCell
                     cell.selectionStyle = .none
                     return cell
                 }
@@ -184,23 +184,29 @@ extension HomeTabViewController:UITableViewDataSource{
                 cell.selectionStyle = .none
                 return cell
             case 2:
-                let cell = tableView.getCell(identifier: "ResturentTableViewCell") as! ResturentTableViewCell
-                cell.featuredData = viewModel.resturentCollectionViewData[0]
+                let cell = tableView.getCell(identifier: CellConstant.resturentTableViewCell.rawValue) as! ResturentTableViewCell
                 cell.hometabDelegate = self
+                cell.resturentTableViewCellData = viewModel.recentlyAddedStores
+                cell.storeTitile = viewModel.recentlyAddedTitle
+                cell.reloadCollViewData()
                 cell.selectionStyle = .none
                 return cell
             case 3:
-                let cell = tableView.getCell(identifier: "ResturentTableViewCell") as! ResturentTableViewCell
-                cell.featuredData = viewModel.resturentCollectionViewData[1]
+                let cell = tableView.getCell(identifier: CellConstant.resturentTableViewCell.rawValue) as! ResturentTableViewCell
+                cell.resturentTableViewCellData = viewModel.nearbyResturentStore
+                cell.storeTitile = viewModel.nearbyResturentTitle
+                cell.reloadCollViewData()
                 cell.selectionStyle = .none
                 return cell
             case 4:
-                let cell = tableView.getCell(identifier: "ResturentTableViewCell") as! ResturentTableViewCell
-                cell.featuredData = viewModel.resturentCollectionViewData[1]
+                let cell = tableView.getCell(identifier: CellConstant.resturentTableViewCell.rawValue) as! ResturentTableViewCell
+                cell.resturentTableViewCellData = viewModel.mostPopularStore
+                cell.storeTitile = viewModel.mostPopularTitle
+                cell.reloadCollViewData()
                 cell.selectionStyle = .none
                 return cell
             default:
-                let cell = tableView.getCell(identifier: "ResturentDetailsTableViewCell") as! ResturentDetailsTableViewCell
+                let cell = tableView.getCell(identifier: CellConstant.resturentDetailsTableViewCell.rawValue) as! ResturentDetailsTableViewCell
                 cell.selectionStyle = .none
                 return cell
             }

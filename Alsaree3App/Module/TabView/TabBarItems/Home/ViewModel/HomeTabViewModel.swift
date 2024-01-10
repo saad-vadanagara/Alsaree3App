@@ -28,9 +28,13 @@ class HomeTabViewModel{
     var loyaltyDetail : LoyaltyDetailsModel?
     var deliveryListForNearestCityData : DeliveryListForNearestCityModel?
     //MARK: Data for home tab
-    var horizontalStores : [Horizontal_stores]?
-    var horizontalStores2 : [Horizontal_stores_2]?
-    var store_offers : [Store_offers]?
+    var recentlyAddedTitle : String?
+    var mostPopularTitle : String?
+    var nearbyResturentTitle : String?
+    
+    var recentlyAddedStores : [Stores]?
+    var mostPopularStore : [Stores]?
+    var nearbyResturentStore : [Stores]?
     var brands : [Brands]?
     var tags : [Tags]?
     var banner : [Banner]?
@@ -46,7 +50,7 @@ class HomeTabViewModel{
     ] as [Any]
     
     func getTableViewCount(Section:Int = 0) -> Int{
-        if homeScreenStoreListData == nil || horizontalStores == nil {
+        if homeScreenStoreListData == nil || recentlyAddedStores == nil {
             return 1
         }else if Section == 0{
             return SectionAboveHeader.allCases.count
@@ -149,9 +153,12 @@ class HomeTabViewModel{
         HomeScreenServices().getHomeScreenMainDetailWithBannerImagesOffers(parameters: parameter) { responce in
             switch responce{
             case .success(let data):
-                self.horizontalStores = data.horizontal_stores
-                self.horizontalStores2 = data.horizontal_stores_2
-                self.store_offers = data.store_offers
+                self.recentlyAddedTitle = data.horizontal_store_title
+                self.mostPopularTitle = data.ads_title
+                self.nearbyResturentTitle = data.store_listing_title
+                self.recentlyAddedStores = data.horizontal_stores
+                self.mostPopularStore = data.horizontal_stores_2
+                self.nearbyResturentStore = data.store_offers
                 self.brands = data.brands
                 self.tags = data.tags
                 self.banner = data.banner

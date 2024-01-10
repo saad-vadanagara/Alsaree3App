@@ -43,16 +43,17 @@ extension UIView{
         button.setAttributedTitle(attributedText, for: .normal)
     }
     
-    func setLabelText(lblrefrence: UILabel, lbltext: String, fontSize: Int, font_Family: String = FontConstant.regular.rawValue, isBold: Bool = false, color: UIColor = UIColor.black, alignmentLeft: Bool = false, lineHeightMultiple: CGFloat = 1) {
+    func setLabelText(lblrefrence: UILabel, lbltext: String, fontSize: Int, font_Family: String = FontConstant.regular.rawValue, isBold: Bool = false, color: UIColor = UIColor.black, alignmentLeft: Bool = false, lineHeightMultiple: CGFloat? = nil) {
         lblrefrence.text = lbltext
         
         if let font = isBold ? UIFont.boldSystemFont(ofSize: CGFloat(fontSize)) : UIFont(name: font_Family, size: CGFloat(fontSize)) {
             let attributedString = NSMutableAttributedString(string: lbltext)
             
-            let paragraphStyle = NSMutableParagraphStyle()
-            paragraphStyle.lineHeightMultiple = lineHeightMultiple
-            
-            attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attributedString.length))
+            if let lineHeightMultiple = lineHeightMultiple {
+                let paragraphStyle = NSMutableParagraphStyle()
+                paragraphStyle.lineHeightMultiple = lineHeightMultiple
+                attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attributedString.length))
+            }
             
             lblrefrence.attributedText = attributedString
             lblrefrence.font = font
@@ -66,8 +67,7 @@ extension UIView{
             lblrefrence.textAlignment = .center
         }
     }
-    
-    
+
     
     func setButtonTextWithImage(button: UIButton, image: String, text: String, textColor: UIColor = UIColor.black, fontSize: CGFloat, imageSize: CGSize){
         
