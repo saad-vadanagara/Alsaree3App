@@ -89,6 +89,13 @@ class HomeTabViewModel{
         }
     }
 
+    func reloadOnPull(){
+        dispatchGroup.enter()
+        callHomeScreenMainDetailWithBannerImagesOffersApi()
+        dispatchGroup.enter()
+    }
+    
+    
     func callApi(){
         let parameters = AppSettingParams(device_type: "ios", type: "7", device_token:"", device_unique_id:UIDevice.current.identifierForVendor?.uuidString ?? "" )
         HomeScreenServices().getAppSettings(parameters: parameters) { responce  in

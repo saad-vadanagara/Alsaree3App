@@ -181,7 +181,7 @@ extension HomeTabViewController:UITableViewDataSource{
                 return cell
             case 1:
                 let cell = tableView.getCell(identifier: CellConstant.foodCatrgoryCell.rawValue) as! FoodCatrgoryCell
-                
+                cell.foodCategoryData = viewModel.tags
                 cell.selectionStyle = .none
                 return cell
             case 2:
@@ -313,6 +313,11 @@ extension HomeTabViewController : UIScrollViewDelegate{
         }
         
     }
+    
+}
+
+//MARK: implimentation of pull to reload
+extension HomeTabViewController{
     
 }
 

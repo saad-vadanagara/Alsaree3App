@@ -46,7 +46,7 @@ class TagFlowLayout: UICollectionViewFlowLayout {
         }
         
         rows.forEach {
-            $0.tagLayout(collectionViewWidth: ((collectionView?.frame.width ?? 0) - 20))
+            $0.tagLayout(collectionViewWidth: ((collectionView?.frame.width ?? 0) - 60))
         }
         return rows.flatMap { $0.attributes }
     }

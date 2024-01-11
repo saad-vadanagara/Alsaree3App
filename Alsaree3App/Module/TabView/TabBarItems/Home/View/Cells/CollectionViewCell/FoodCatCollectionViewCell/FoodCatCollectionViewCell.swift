@@ -12,7 +12,7 @@ class FoodCatCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var foodImage: UIImageView!
     @IBOutlet weak var categoryTitle: UILabel!
     
-    var indexpath = Int()
+    var singleFoodCategoryData : Tags?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,11 +20,9 @@ class FoodCatCollectionViewCell: UICollectionViewCell {
     }
     
     func setupUI(){
-        setLabelText(lblrefrence: categoryTitle, lbltext: foodCategoryList(rawValue: indexpath)?.title ?? TextConstant.empty.rawValue , fontSize: 12)
-        
-        foodImage.image = UIImage(named: foodCategoryList(rawValue: indexpath)?.images ?? TextConstant.empty.rawValue )
-
-        foodImage.layer.cornerRadius = ((self.bounds.width)/2)
+        setLabelText(lblrefrence: categoryTitle, lbltext: singleFoodCategoryData?.name ?? "Brand", fontSize: 12)
+        SDWebImageManager.shared.loadImage(with: singleFoodCategoryData?.image_url ?? "", into: foodImage)
+        foodImage.layer.cornerRadius = ((self.bounds.width-5)/2)
         foodImage.clipsToBounds = true
         foodImage.layer.borderWidth = 0
         

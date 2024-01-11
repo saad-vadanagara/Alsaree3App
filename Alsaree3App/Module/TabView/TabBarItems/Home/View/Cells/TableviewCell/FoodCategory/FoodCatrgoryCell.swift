@@ -11,8 +11,9 @@ class FoodCatrgoryCell: UITableViewCell {
 
     @IBOutlet weak var foodCategoryCollectionView: UICollectionView!
     
-    
+    var foodCategoryData : [Tags]?
     var isHeigthChnaged = false
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setupDelegate()
@@ -63,12 +64,12 @@ class FoodCatrgoryCell: UITableViewCell {
 extension FoodCatrgoryCell : UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        foodCategoryList.allCases.count
+        foodCategoryData?.count ?? 5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.getCell(indexPath: indexPath) as FoodCatCollectionViewCell
-        cell.indexpath = indexPath.row
+        cell.singleFoodCategoryData = foodCategoryData?[indexPath.row]
         cell.setupUI()
         return cell
     }
