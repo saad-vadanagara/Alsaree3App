@@ -39,7 +39,7 @@ class HomeTabViewModel{
     var tags : [Tags]?
     var banner : [Banner]?
     
-    var homeScreenStoreListData : StoreListModel?
+    var homeScreenStoreListData : [Stores]?
     var pushZoneData : PushZoneModel?
     var homeTabDeligate : HomeTabViewController?
     
@@ -55,7 +55,7 @@ class HomeTabViewModel{
         }else if Section == 0{
             return SectionAboveHeader.allCases.count
         }else if Section == 1{
-            return (SectionBelowScrollingHeader.allCases.count + (homeScreenStoreListData?.stores?.count ?? 0))
+            return (SectionBelowScrollingHeader.allCases.count + ((homeScreenStoreListData?.count ?? 0)-1))
         }
         else{
             return 1
@@ -175,7 +175,7 @@ class HomeTabViewModel{
             switch responce{
             case .success(let data):
                 print(data)
-                self.homeScreenStoreListData = data
+                self.homeScreenStoreListData = data.stores
                 self.dispatchGroup.leave()
             case .failure(let error):
                 print(error.localizedDescription)

@@ -8,7 +8,6 @@
 import UIKit
 
 class ResturentDetailsTableViewCell: UITableViewCell {
-
     
     @IBOutlet weak var resturentDetailsView: UIView!
     @IBOutlet weak var selectedItemView: UIView!
@@ -18,6 +17,9 @@ class ResturentDetailsTableViewCell: UITableViewCell {
     @IBOutlet weak var resturentTitle: UILabel!
     @IBOutlet weak var resturentImage: UIImageView!
     @IBOutlet weak var resturentFutrCollectionView: UICollectionView!
+    
+    var resturentDetailsTableViewCellData : Stores?
+    var resturentFeatureDate : [featureDetails]?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,14 +37,25 @@ class ResturentDetailsTableViewCell: UITableViewCell {
         resturentDetailsView.layer.cornerRadius = 15
     }
     
+    func reloadCellData(){
+        SDWebImageManager.shared.loadImage(with: resturentDetailsTableViewCellData?.image_url ?? "", into: resturentImage)
+        setLabelText(lblrefrence: resturentTitle, lbltext: resturentDetailsTableViewCellData?.name ?? "", fontSize: 20,alignmentLeft:true)
+        if resturentDetailsTableViewCellData?.offer == "" {
+            setLabelText(lblrefrence: selectedItemOffLbl, lbltext: "Get off on selected items", fontSize: 12,alignmentLeft:true)
+        }else{
+            setLabelText(lblrefrence: selectedItemOffLbl, lbltext: resturentDetailsTableViewCellData?.offer ?? "Get off on selected items", fontSize: 12,alignmentLeft:true)
+        }
+        setupFeatureDetails()
+//        resturentFutrCollectionView.reloadData()
+    }
+    
     func setDeligate(){
         resturentFutrCollectionView.delegate = self
         resturentFutrCollectionView.dataSource = self
     }
     
     func setupUI(){
-        let imageSize = CGSize(width: 10, height: 10)
-        
+       
         resturentImage.image = UIImage(named: "resturentImage")
         setLabelText(lblrefrence: resturentTitle, lbltext: "Ultimate Chicken - Wraps, Plates",fontSize: 20)
         
@@ -59,6 +72,23 @@ class ResturentDetailsTableViewCell: UITableViewCell {
         
         resturentFutrCollectionView.showsHorizontalScrollIndicator = false
         
+        resturentImage.layer.cornerRadius = 15
+        resturentImage.layer.maskedCorners = [.layerMaxXMinYCorner,.layerMinXMinYCorner]
+        resturentImage.layer.borderColor = ColorConstant.borderColorGray.cgColor
+        resturentImage.layer.borderWidth = 0.2
+        resturentImage.clipsToBounds = true
+        
+    }
+    
+    func setupFeatureDetails(){
+        resturentFeatureDate = [
+            featureDetails(featureValue: "500+", image: "Heart",istinted: false),
+            featureDetails(featureValue: (String(format: "%.2f", resturentDetailsTableViewCellData?.distance ?? 0.0)+" KM Away"), image: nil, istinted: true),
+            featureDetails(featureValue: "\(resturentDetailsTableViewCellData?.delivery_time ?? 0) - \(resturentDetailsTableViewCellData?.delivery_time_max ?? 0) Mins", image:"Location", istinted: true),
+            featureDetails(featureValue: " IQD \(resturentDetailsTableViewCellData?.delivery_price_after_discount ?? 0) ", image: "MotorCycle", istinted: true),
+            featureDetails(featureValue: "\(String(format: "%.2f", resturentDetailsTableViewCellData?.user_rate ?? 0.0)) Excellent", image: "Star",istinted: true)
+            
+        ]
     }
     
     
@@ -70,24 +100,15 @@ class ResturentDetailsTableViewCell: UITableViewCell {
     
 }
 
-let userPreferences1 = [
-    featureDetails(featureValue: "500+", image: "Heart",istinted: false),
-    featureDetails(featureValue: "2.5 KM Away", image: nil,istinted: true),
-    featureDetails(featureValue: "25 - 45 Mins" , image: "Location",istinted: true),
-    featureDetails(featureValue: "IQD 1000", image: "MotorCycle",istinted: true),
-    featureDetails(featureValue: "3.4 Excellent", image: "Star",istinted: true)
-]
-
-
 extension ResturentDetailsTableViewCell : UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        userPreferences1.count
+        resturentFeatureDate?.count ?? 5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FeatureCell", for: indexPath) as! FeatureCell
-        cell.feature = userPreferences1[indexPath.row]
+        cell.feature = resturentFeatureDate?[indexPath.row]
         cell.fillDetails()
         cell.featurelbl.preferredMaxLayoutWidth = collectionView.frame.width - 16
         

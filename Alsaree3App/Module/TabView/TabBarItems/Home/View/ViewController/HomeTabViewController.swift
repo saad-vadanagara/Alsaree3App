@@ -181,32 +181,32 @@ extension HomeTabViewController:UITableViewDataSource{
                 return cell
             case 1:
                 let cell = tableView.getCell(identifier: CellConstant.foodCatrgoryCell.rawValue) as! FoodCatrgoryCell
+                
                 cell.selectionStyle = .none
                 return cell
             case 2:
                 let cell = tableView.getCell(identifier: CellConstant.resturentTableViewCell.rawValue) as! ResturentTableViewCell
                 cell.hometabDelegate = self
                 cell.resturentTableViewCellData = viewModel.recentlyAddedStores
-                cell.storeTitile = viewModel.recentlyAddedTitle
-                cell.reloadCollViewData()
+                cell.setText(StoreTitile: viewModel.recentlyAddedTitle ?? "Resturent")
                 cell.selectionStyle = .none
                 return cell
             case 3:
                 let cell = tableView.getCell(identifier: CellConstant.resturentTableViewCell.rawValue) as! ResturentTableViewCell
                 cell.resturentTableViewCellData = viewModel.nearbyResturentStore
-                cell.storeTitile = viewModel.nearbyResturentTitle
-                cell.reloadCollViewData()
+                cell.setText(StoreTitile: viewModel.nearbyResturentTitle ?? "Resturent")
                 cell.selectionStyle = .none
                 return cell
             case 4:
                 let cell = tableView.getCell(identifier: CellConstant.resturentTableViewCell.rawValue) as! ResturentTableViewCell
                 cell.resturentTableViewCellData = viewModel.mostPopularStore
-                cell.storeTitile = viewModel.mostPopularTitle
-                cell.reloadCollViewData()
+                cell.setText(StoreTitile: viewModel.mostPopularTitle ?? "Resturent")
                 cell.selectionStyle = .none
                 return cell
             default:
                 let cell = tableView.getCell(identifier: CellConstant.resturentDetailsTableViewCell.rawValue) as! ResturentDetailsTableViewCell
+                cell.resturentDetailsTableViewCellData = viewModel.homeScreenStoreListData?[indexPath.row - 5]
+                cell.reloadCellData()
                 cell.selectionStyle = .none
                 return cell
             }

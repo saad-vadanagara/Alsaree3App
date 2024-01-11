@@ -157,6 +157,7 @@ extension UIView{
         attributedString.addAttribute(.foregroundColor, value: color, range: range)
         return attributedString
     }
+  
     
 }
 

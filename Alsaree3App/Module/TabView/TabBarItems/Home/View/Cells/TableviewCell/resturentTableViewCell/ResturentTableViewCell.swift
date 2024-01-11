@@ -22,13 +22,13 @@ class ResturentTableViewCell: UITableViewCell {
         configureCollectionViewLayout()
         resturentCollectionView.decelerationRate = .fast
     }
-    func reloadCollViewData(){
-        setLabelText(lblrefrence: collectionViewTitile, lbltext: storeTitile ?? "hello", fontSize: 18,isBold : true)
-        resturentCollectionView.reloadData()
+    func setText(StoreTitile : String){
+        setLabelText(lblrefrence: collectionViewTitile, lbltext: StoreTitile, fontSize: 18,isBold : true)
     }
     
     func setupUI(){
         setButtonText(button: seemoreBtn, label: ButtonTextConstant.seeMore.rawValue,color: ColorConstant.borderColorYellow, size: 14,isUnderline: true)
+        self.backgroundColor = UIColor.clear
     }
     
     

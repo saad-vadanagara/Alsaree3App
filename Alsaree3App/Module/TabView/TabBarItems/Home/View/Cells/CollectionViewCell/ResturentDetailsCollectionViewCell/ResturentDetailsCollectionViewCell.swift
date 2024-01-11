@@ -35,7 +35,6 @@ class ResturentDetailsCollectionViewCell: UICollectionViewCell {
     func reloadCollectionView(){
         setupReloadedData()
         setupFeatureDetails()
-        self.resturentFeatureCollectionView.reloadData()
     }
     
     func setupFeatureDetails(){
@@ -60,8 +59,6 @@ class ResturentDetailsCollectionViewCell: UICollectionViewCell {
             isHeigthChnaged = true
             return self.resturentFeatureCollectionView.contentSize
         }
-        
-//        return self.resturentFeatureCollectionView.contentSize
     }
     
     func setupCollectionView(){
@@ -120,9 +117,20 @@ class ResturentDetailsCollectionViewCell: UICollectionViewCell {
         triangleLayer.zPosition = -1
         self.layer.addSublayer(triangleLayer)
     }
+    
+    func hidelowDeleveryView(){
+        lowdeleveryView.isHidden = true
+        lowDeleveryfeelbl.isHidden = true
+    }
     func setupReloadedData(){
         SDWebImageManager.shared.loadImage(with: resturentDetailsData?.image_url ?? "", into: resturentImage)
         setLabelText(lblrefrence: resturentTitle, lbltext: resturentDetailsData?.name ?? "", fontSize: 20,alignmentLeft:true)
+        if resturentDetailsData?.offer == "" {
+            setLabelText(lblrefrence: selectedItemOffLbl, lbltext: "Get off on selected items", fontSize: 12,alignmentLeft:true)
+        }else{
+            setLabelText(lblrefrence: selectedItemOffLbl, lbltext: resturentDetailsData?.offer ?? "Get off on selected items", fontSize: 12,alignmentLeft:true)
+        }
+        
     }
 
     func setupUI(){
@@ -131,11 +139,11 @@ class ResturentDetailsCollectionViewCell: UICollectionViewCell {
         lowdeleveryView.backgroundColor = UIColor.white
         lowdeleveryView.layer.borderColor = ColorConstant.borderColorGray.cgColor
         lowdeleveryView.layer.borderWidth = 0.5
-        setLabelText(lblrefrence: lowDeleveryfeelbl, lbltext: "Low delivery fee", fontSize: 12)
+        setLabelText(lblrefrence: lowDeleveryfeelbl, lbltext: "Low delivery fee", fontSize: 12,alignmentLeft:true)
         applyCornerRadius(to: lowdeleveryView, radius: 5)
         
         // setup offer stricker
-        setLabelText(lblrefrence: selectedItemOffLbl, lbltext: "Get 20% off selected items", fontSize: 12,color: ColorConstant.whitecolor)
+
         selectedItemView.backgroundColor = ColorConstant.primaryYellowColor
         applyCornerRadius(to: selectedItemView, radius: 5)
         
@@ -157,8 +165,6 @@ class ResturentDetailsCollectionViewCell: UICollectionViewCell {
         resturentImage.clipsToBounds = true
         
         // adding the shadow
-        parentCellView.layer.shadowRadius = 1
-        parentCellView.layer.shadowColor = UIColor.black.cgColor
         
     }
     

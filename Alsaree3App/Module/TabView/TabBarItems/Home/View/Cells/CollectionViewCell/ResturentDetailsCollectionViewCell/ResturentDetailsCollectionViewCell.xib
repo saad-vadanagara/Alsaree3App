@@ -70,10 +70,10 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tbm-sm-zRa">
-                        <rect key="frame" x="0.0" y="19.999999999999996" width="209.33333333333334" height="42.666666666666657"/>
+                        <rect key="frame" x="0.0" y="20" width="174.66666666666666" height="39"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdg-JF-9cw">
-                                <rect key="frame" x="10" y="0.0" width="199.33333333333334" height="42.666666666666664"/>
+                                <rect key="frame" x="10" y="0.0" width="164.66666666666666" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -88,10 +88,10 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j3y-1L-VjN">
-                        <rect key="frame" x="0.0" y="71.666666666666671" width="139.66666666666666" height="39.333333333333329"/>
+                        <rect key="frame" x="0.0" y="68" width="139.66666666666666" height="39"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WU1-4i-T7B">
-                                <rect key="frame" x="10" y="0.0" width="129.66666666666666" height="39.333333333333336"/>
+                                <rect key="frame" x="10" y="0.0" width="129.66666666666666" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -112,12 +112,12 @@
                 <constraint firstItem="OWo-Dc-3O7" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="7Zh-L4-ZfO"/>
                 <constraint firstItem="tbm-sm-zRa" firstAttribute="top" secondItem="p5r-JH-6q6" secondAttribute="top" constant="20" id="CKp-dg-cI5"/>
                 <constraint firstItem="j3y-1L-VjN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="DI6-fS-VDg"/>
-                <constraint firstItem="tbm-sm-zRa" firstAttribute="height" secondItem="p5r-JH-6q6" secondAttribute="height" multiplier="0.17" id="DTJ-h8-Y1S"/>
+                <constraint firstItem="tbm-sm-zRa" firstAttribute="height" secondItem="p5r-JH-6q6" secondAttribute="height" multiplier="0.155" id="DTJ-h8-Y1S"/>
                 <constraint firstItem="OWo-Dc-3O7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="FsM-er-lox"/>
                 <constraint firstAttribute="bottom" secondItem="OWo-Dc-3O7" secondAttribute="bottom" id="MGG-mZ-zog"/>
                 <constraint firstItem="j3y-1L-VjN" firstAttribute="top" secondItem="tbm-sm-zRa" secondAttribute="bottom" constant="9" id="UH7-6L-h1L"/>
                 <constraint firstItem="p5r-JH-6q6" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="5" id="eyS-Ju-aqV"/>
-                <constraint firstItem="tbm-sm-zRa" firstAttribute="width" secondItem="p5r-JH-6q6" secondAttribute="width" multiplier="0.6" id="f3I-qo-k6d"/>
+                <constraint firstItem="tbm-sm-zRa" firstAttribute="width" secondItem="p5r-JH-6q6" secondAttribute="width" multiplier="0.5" id="f3I-qo-k6d"/>
                 <constraint firstItem="tbm-sm-zRa" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="l1f-jA-SlG"/>
                 <constraint firstItem="j3y-1L-VjN" firstAttribute="height" secondItem="p5r-JH-6q6" secondAttribute="height" multiplier="0.155" id="nAA-LY-cGz"/>
                 <constraint firstAttribute="trailing" secondItem="OWo-Dc-3O7" secondAttribute="trailing" id="oAw-JL-WsM"/>

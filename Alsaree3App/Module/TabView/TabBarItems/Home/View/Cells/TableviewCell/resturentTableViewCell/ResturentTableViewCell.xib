@@ -55,6 +55,7 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="k0I-IC-H8r" secondAttribute="trailing" id="0ew-O8-NbR"/>
                     <constraint firstItem="k0I-IC-H8r" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="5fR-7D-bIb"/>
@@ -66,6 +67,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="collectionViewTitile" destination="SVq-gH-1H9" id="Uku-Mb-P6I"/>
                 <outlet property="parentView" destination="H2p-sc-9uM" id="Q6k-cf-jaV"/>
