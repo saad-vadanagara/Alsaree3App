@@ -22,6 +22,7 @@ class HomeTabViewController: UIViewController {
     var circularProgressView: CircularProgressView!
     let viewModel = HomeTabViewModel()
     var headerView : HomeTabCategoryHeader?
+    var refreshControl = UIRefreshControl()
     
     // For Tabbar visible/ hide
     private var previousScrollOffset: CGFloat = 0
@@ -42,6 +43,8 @@ class HomeTabViewController: UIViewController {
         setupHeaderView()
         hideProgressView()
         setUpCircularprogress(currentProgress: 0.2)
+        refreshControl.addTarget(self, action: #selector(refreshData(_:)), for: .valueChanged)
+        hometabTableView.addSubview(refreshControl)
     }
     
     func setupTableview(){
@@ -318,7 +321,10 @@ extension HomeTabViewController : UIScrollViewDelegate{
 
 //MARK: implimentation of pull to reload
 extension HomeTabViewController{
-    
+    @objc func refreshData(_ sender: Any) {
+        refreshControl.endRefreshing()
+        viewModel.reloadOnPull()
+    }
 }
 
 extension HomeTabViewController:NavigateFormHomeTab{

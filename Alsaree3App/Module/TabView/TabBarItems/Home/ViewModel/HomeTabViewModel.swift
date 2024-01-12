@@ -93,6 +93,10 @@ class HomeTabViewModel{
         dispatchGroup.enter()
         callHomeScreenMainDetailWithBannerImagesOffersApi()
         dispatchGroup.enter()
+        callHomeScreenStoreListApi()
+        dispatchGroup.notify(queue: .main) {
+            self.homeTabDeligate?.hometabTableView.reloadData()
+        }
     }
     
     
