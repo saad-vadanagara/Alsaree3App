@@ -6,6 +6,13 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     
     private var locationManager: CLLocationManager
     var currentLocation: CLLocationCoordinate2D?
+    var isLocationAccess = false
+    
+#if targetEnvironment(simulator)
+    private let isSimulator = true
+#else
+    private let isSimulator = false
+#endif
     
     private override init() {
         locationManager = CLLocationManager()
@@ -25,7 +32,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         case .authorizedWhenInUse, .authorizedAlways:
             completion(true)
         case .denied, .restricted:
-            showLocationAccessAlert()
+//            showLocationAccessAlert()
             completion(false)
         case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
@@ -47,12 +54,25 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     
     func getCurrentLocation(completion: @escaping (CLLocationCoordinate2D?) -> Void) {
         requestLocationPermission { granted in
+            //            if granted {
+            //                self.startMonitoringSignificantLocationChanges()
+            //                completion(self.currentLocation)
+            //            } else {
+            //                completion(nil)
+            //            }
+            
             if granted {
-                self.startMonitoringSignificantLocationChanges()
-                completion(self.currentLocation)
+                if self.isSimulator {
+                    completion(self.currentLocation)
+                } else {
+                    self.currentLocation?.longitude = 44.416270
+                    self.currentLocation?.latitude = 33.341658
+                    completion(self.currentLocation)
+                }
             } else {
                 completion(nil)
             }
+            
         }
     }
     
@@ -86,9 +106,11 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {
         case .authorizedWhenInUse, .authorizedAlways:
+            isLocationAccess = true
             startMonitoringSignificantLocationChanges()
         case .denied, .restricted:
-            showLocationAccessAlert()
+            isLocationAccess = false
+//            showLocationAccessAlert()
         case .notDetermined:
             break
         @unknown default:
@@ -98,7 +120,13 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let newLocation = locations.last?.coordinate else { return }
-        currentLocation = newLocation
+//        currentLocation = newLocation
+        
+        if self.isSimulator {
+            currentLocation = newLocation
+        } else {
+            currentLocation = CLLocationCoordinate2D(latitude: 33.341658, longitude: 44.416270)
+        }
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {

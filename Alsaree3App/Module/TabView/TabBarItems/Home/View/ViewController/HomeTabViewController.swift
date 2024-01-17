@@ -23,6 +23,7 @@ class HomeTabViewController: UIViewController {
     let viewModel = HomeTabViewModel()
     var headerView : HomeTabCategoryHeader?
     var refreshControl = UIRefreshControl()
+    var isLoadingState = false
     
     // For Tabbar visible/ hide
     private var previousScrollOffset: CGFloat = 0
@@ -30,12 +31,12 @@ class HomeTabViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         viewModel.homeTabDeligate = self
+        viewModel.checkLocationAccess()
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.callHomeScreenApis()
+        viewModel.homeTabDeligate = self
         settingDelegate()
         setupTableview()
         registerTableViewCell()
@@ -127,13 +128,17 @@ class HomeTabViewController: UIViewController {
         progressLbl.isHidden = false
     }
     
+    func callHomeScreenApi(){
+        self.hometabTableView.reloadData()
+    }
+    
 }
 
 
 extension HomeTabViewController:UITableViewDataSource{
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return viewModel.getTableViewCount() == 1 ? 1 : 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -147,7 +152,14 @@ extension HomeTabViewController:UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if viewModel.getTableViewCount() == 1 {
             let loadingCell = tableView.dequeueReusableCell(withIdentifier: "LoadingTableViewCell", for: indexPath) as! LoadingTableViewCell
-            loadingCell.selectionStyle = .none
+            loadingCell.homeTabdeilgate = self
+            
+            if isLoadingState{
+                loadingCell.showLoading()
+            }else{
+                loadingCell.showRetryButton()
+            }
+            
             return loadingCell
         }
         
@@ -248,6 +260,9 @@ extension HomeTabViewController : UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if viewModel.getTableViewCount() == 1{
+            return 0
+        }
         if section == 0{
             return 0
         }else{
@@ -265,6 +280,9 @@ extension HomeTabViewController : UIScrollViewDelegate{
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         //MARK:  for sticky header
+        if viewModel.getTableViewCount()==1{
+            return
+        }
         let headerRect = hometabTableView.rect(forSection: 1)
         if headerRect.origin.y <= scrollView.contentOffset.y && scrollView.contentOffset.y <= headerRect.origin.y + headerRect.size.height {
             headerView?.hideImages()
@@ -333,8 +351,17 @@ extension HomeTabViewController:NavigateFormHomeTab{
         // extra function
         viewModel.activeOrder = true
         newViewController.hidesBottomBarWhenPushed = true
-        navigationController?.pushViewController(newViewController, animated: true)
+        //        navigationController?.pushViewController(newViewController, animated: true)
+        showLocationAccessScreen()
     }
+    
+    func showLocationAccessScreen() {
+        let storyboard = UIStoryboard(name: "CommonScreens", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier:"LocationAccessViewController") as! LocationAccessViewController
+        self.present(viewController, animated: true, completion: nil)
+    }
+    
+    
 }
 
 

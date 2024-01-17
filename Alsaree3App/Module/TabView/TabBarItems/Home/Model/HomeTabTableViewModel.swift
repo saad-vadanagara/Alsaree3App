@@ -9,23 +9,22 @@
 
 import Foundation
 
+
+struct featureDetails{
+    var featureValue : String
+    var image : String?
+    var istinted : Bool
+}
+
 enum ScrollDirection {
     case up
     case down
     case none
 }
-
-
-struct resturentCollectionViewDetails{
-    var name : String
-    var details : [OrderAgain]
-}
-
 enum SectionAboveHeader:Int,CaseIterable{
     case orderStatus = 0
     case bannerAdv
 }
-
 
 enum SectionBelowScrollingHeader:Int,CaseIterable{
     case dealsCollection

@@ -10,7 +10,6 @@ class ResturentTableViewCell: UITableViewCell {
     var resturentTableViewCellData : [Stores]?
     var storeTitile : String?
     var hometabDelegate : HomeTabViewController?
-    var featuredData : resturentCollectionViewDetails?
     var isvalueChaged = false
     var centeredCollectionViewFlowLayout: CenteredCollectionViewFlowLayout!
     
@@ -87,7 +86,7 @@ class ResturentTableViewCell: UITableViewCell {
 
 extension ResturentTableViewCell: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return resturentTableViewCellData?.count ?? (featuredData?.details.count)!
+        return resturentTableViewCellData?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

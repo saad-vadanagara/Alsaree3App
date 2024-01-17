@@ -121,9 +121,9 @@ extension APIServices {
         do {
             switch self{
             case .AppSettings:
-                auth_key = try EncriptionManager().aesEncrypt(value: KeyConstant.authKey, key: KeyConstant.key, iv: KeyConstant.iv16)
+                auth_key = try EncriptionManager().aesEncrypt(value: KeyConstant.authKey.rawValue, key: KeyConstant.key.rawValue, iv: KeyConstant.iv16.rawValue)
             case.CheckFeedBack,.LoyalityDetails,.CartWithCampaignDiscount,.DeliveryListForNearestCity,.HomeScreenMainDetailWithBannerImagesOffers,.HomeScreenStoreList,.Push_Zone:
-                auth_key = try EncriptionManager().aesEncrypt(value: authKey, key: KeyConstant.key2, iv: KeyConstant.iv162)
+                auth_key = try EncriptionManager().aesEncrypt(value: authKey, key: KeyConstant.key2.rawValue, iv: KeyConstant.iv162.rawValue)
                 //dummy
             case .get : break
                 

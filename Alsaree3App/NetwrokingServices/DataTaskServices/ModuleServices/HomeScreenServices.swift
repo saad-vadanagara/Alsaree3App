@@ -95,7 +95,6 @@ class HomeScreenServices{
         APIManager.sharedInstance.performRequest(serviceType: .DeliveryListForNearestCity(parameters: param)) { response in
             switch response{
             case .success(let responseData):
-
                 if let decodedResponseData = try? JSONDecoder().decode(DeliveryListForNearestCityModel.self, from: responseData){
                     completion(.success((decodedResponseData)))
                 } else if let apiError = try? JSONDecoder().decode(ApiErrorModel.self, from: responseData) {

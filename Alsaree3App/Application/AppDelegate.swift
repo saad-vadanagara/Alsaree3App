@@ -7,12 +7,12 @@
 
 import UIKit
 import CoreData
+import CoreLocation
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var locationManager: LocationManager?
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         locationManager = LocationManager.shared
@@ -27,12 +27,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     }
                 }
             } else {
-                // Handle the case where location permission is not granted
                 print("Location permission not granted")
             }
         }
-        
-        
         return true
     }
     

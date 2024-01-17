@@ -17,33 +17,46 @@
                 <rect key="frame" x="0.0" y="0.0" width="340" height="288"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f1K-ta-miq">
-                        <rect key="frame" x="145" y="119" width="50" height="50"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="50" id="2Dy-aT-nnb"/>
-                            <constraint firstAttribute="width" constant="50" id="EmO-zZ-vfj"/>
-                        </constraints>
-                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try searching with food emojis today" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NfB-38-1yX">
-                        <rect key="frame" x="50" y="68.333333333333329" width="240" height="40.666666666666671"/>
+                        <rect key="frame" x="50" y="34" width="240" height="40.666666666666657"/>
                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="Xty-fN-uxg">
+                        <rect key="frame" x="132.66666666666666" y="84.666666666666686" width="75" height="119"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f1K-ta-miq">
+                                <rect key="frame" x="12.333333333333343" y="0.0" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2Dy-aT-nnb"/>
+                                    <constraint firstAttribute="width" constant="50" id="EmO-zZ-vfj"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDf-Gw-HrO">
+                                <rect key="frame" x="0.0" y="68.999999999999986" width="75" height="50"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Button"/>
+                                <connections>
+                                    <action selector="onRetryClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Ty9-Qc-PFA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="f1K-ta-miq" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="6i2-QH-Iql"/>
-                    <constraint firstItem="NfB-38-1yX" firstAttribute="centerX" secondItem="f1K-ta-miq" secondAttribute="centerX" id="MPM-Pf-JhI"/>
+                    <constraint firstItem="Xty-fN-uxg" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="CJg-by-Cu0"/>
                     <constraint firstAttribute="trailingMargin" secondItem="NfB-38-1yX" secondAttribute="trailing" constant="30" id="Mae-Ce-PRu"/>
+                    <constraint firstItem="Xty-fN-uxg" firstAttribute="top" secondItem="NfB-38-1yX" secondAttribute="bottom" constant="10" id="eZS-PG-9eF"/>
+                    <constraint firstItem="Xty-fN-uxg" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="gds-r5-r7d"/>
                     <constraint firstItem="NfB-38-1yX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="30" id="hOu-8v-dwX"/>
-                    <constraint firstItem="f1K-ta-miq" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="v2v-G7-rFs"/>
-                    <constraint firstItem="f1K-ta-miq" firstAttribute="top" secondItem="NfB-38-1yX" secondAttribute="bottom" constant="10" id="xgj-uy-PG9"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="loadingTitle" destination="NfB-38-1yX" id="PsQ-vc-SYx"/>
                 <outlet property="loadingView" destination="f1K-ta-miq" id="mMO-3X-w9l"/>
+                <outlet property="retryButton" destination="JDf-Gw-HrO" id="f3t-aW-Wca"/>
             </connections>
             <point key="canvasLocation" x="70.229007633587784" y="104.92957746478874"/>
         </tableViewCell>

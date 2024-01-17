@@ -2,58 +2,60 @@
 //  ConstantData.swift
 //  Alsaree3App
 //
-//  Created by Neosoft on 18/12/23.
+//  Created by Neosoft on 16/01/24.
 //
 
 import Foundation
 
-struct OrderAgain{
-    var image : String
-    var title : String
-    var likes : String
-    var distance : String
-    var reachTime : String
-    var iqd : String
-    var rating : String
-    var offer : String
-    var lowDelevery : Bool
+enum TabBar : String{
+    case Home
+    case Search
+    case Profile
+    case Basket
+    
+    var imageName:String{
+        switch self{
+        case .Home:
+            return "Home"
+        case .Search:
+            return "Search"
+        case .Profile:
+            return "user"
+        case .Basket:
+            return "bag"
+        }
+    }
 }
-struct featureDetails{
-    var featureValue : String
-    var image : String?
-    var istinted : Bool
+
+enum HomeCategoryCellList : Int , CaseIterable{
+    case food = 0
+    case alsaree3Market
+    case parcel
+    case more
+    
+    var imageName: String {
+            switch self {
+            case .food:
+                return "foodDish"
+            case .alsaree3Market:
+                return "market"
+            case .parcel:
+                return "parcelImage"
+            case .more:
+                return "hamburgur"
+            }
+        }
+    
+    var title : String{
+        switch self {
+        case .food:
+            return "Food"
+        case .alsaree3Market:
+            return "Alsaree3 Market"
+        case .parcel:
+            return "Parcel"
+        case .more:
+            return "More"
+        }
+    }
 }
-
-var orderAgainData = [
-    OrderAgain(image: "resturentImage", title: "Ultimate Chicken - Wraps, Pl", likes: "500+", distance: "2.5 KM Away", reachTime: "25 - 45 Mins", iqd: "IQD 1000", rating: "3.4 Excellent", offer: "30% off entire menu", lowDelevery: true),
-    OrderAgain(image: "resturentImage", title: "Ultimate Chicken - Wraps, Pl", likes: "500+", distance: "2.5 KM Away", reachTime: "25 - 45 Mins", iqd: "IQD 1000", rating: "3.4 Excellent", offer: "30% off entire menu", lowDelevery: true),
-    OrderAgain(image: "resturentImage", title: "Ultimate Chicken - Wraps, Pl", likes: "500+", distance: "2.5 KM Away", reachTime: "25 - 45 Mins", iqd: "IQD 1000", rating: "3.4 Excellent", offer: "30% off entire menu", lowDelevery: true),
-    OrderAgain(image: "resturentImage", title: "Ultimate Chicken - Wraps, Pl", likes: "500+", distance: "2.5 KM Away", reachTime: "25 - 45 Mins", iqd: "IQD 1000", rating: "3.4 Excellent", offer: "30% off entire menu", lowDelevery: true),
-    OrderAgain(image: "resturentImage", title: "Ultimate Chicken - Wraps, Pl", likes: "500+", distance: "2.5 KM Away", reachTime: "25 - 45 Mins", iqd: "IQD 1000", rating: "3.4 Excellent", offer: "30% off entire menu", lowDelevery: true),
-    OrderAgain(image: "resturentImage", title: "Ultimate Chicken - Wraps, Pl", likes: "500+", distance: "2.5 KM Away", reachTime: "25 - 45 Mins", iqd: "IQD 1000", rating: "3.4 Excellent", offer: "30% off entire menu", lowDelevery: true),
-    OrderAgain(image: "resturentImage", title: "Ultimate Chicken - Wraps, Pl", likes: "500+", distance: "2.5 KM Away", reachTime: "25 - 45 Mins", iqd: "IQD 1000", rating: "3.4 Excellent", offer: "30% off entire menu", lowDelevery: true),
-    OrderAgain(image: "resturentImage", title: "Ultimate Chicken - Wraps, Pl", likes: "500+", distance: "2.5 KM Away", reachTime: "25 - 45 Mins", iqd: "IQD 1000", rating: "3.4 Excellent", offer: "30% off entire menu", lowDelevery: true)
-
-]
-
-var featuredData = [
-    OrderAgain(image: "resturentImage", title: "Ultimate Chicken - Wraps, Pl", likes: "500+", distance: "2.5 KM Away", reachTime: "25 - 45 Mins", iqd: "IQD 1000", rating: "3.4 Excellent", offer: "30% off entire menu", lowDelevery: true),
-    OrderAgain(image: "resturentImage", title: "Ultimate Chicken - Wraps, Pl", likes: "500+", distance: "2.5 KM Away", reachTime: "25 - 45 Mins", iqd: "IQD 1000", rating: "3.4 Excellent", offer: "30% off entire menu", lowDelevery: true),
-    OrderAgain(image: "resturentImage", title: "Ultimate Chicken - Wraps, Pl", likes: "500+", distance: "2.5 KM Away", reachTime: "25 - 45 Mins", iqd: "IQD 1000", rating: "3.4 Excellent", offer: "30% off entire menu", lowDelevery: true),
-    OrderAgain(image: "resturentImage", title: "Ultimate Chicken - Wraps, Pl", likes: "500+", distance: "2.5 KM Away", reachTime: "25 - 45 Mins", iqd: "IQD 1000", rating: "3.4 Excellent", offer: "30% off entire menu", lowDelevery: true)
-
-]
-
-var offerNearby = [
-    OrderAgain(image: "resturentImage", title: "Ultimate Chicken - Wraps, Pl", likes: "500+", distance: "2.5 KM Away", reachTime: "25 - 45 Mins", iqd: "IQD 1000", rating: "3.4 Excellent", offer: "30% off entire menu", lowDelevery: true),
-    OrderAgain(image: "resturentImage", title: "Ultimate Chicken - Wraps, Pl", likes: "500+", distance: "2.5 KM Away", reachTime: "25 - 45 Mins", iqd: "IQD 1000", rating: "3.4 Excellent", offer: "30% off entire menu", lowDelevery: true),
-    OrderAgain(image: "resturentImage", title: "Ultimate Chicken - Wraps, Pl", likes: "500+", distance: "2.5 KM Away", reachTime: "25 - 45 Mins", iqd: "IQD 1000", rating: "3.4 Excellent", offer: "30% off entire menu", lowDelevery: true),
-    OrderAgain(image: "resturentImage", title: "Ultimate Chicken - Wraps, Pl", likes: "500+", distance: "2.5 KM Away", reachTime: "25 - 45 Mins", iqd: "IQD 1000", rating: "3.4 Excellent", offer: "30% off entire menu", lowDelevery: true)
-]
-
-
-var otherResturent = [
-    OrderAgain(image: "resturentImage", title: "Ultimate Chicken - Wraps, Pl", likes: "500+", distance: "2.5 KM Away", reachTime: "25 - 45 Mins", iqd: "IQD 1000", rating: "3.4 Excellent", offer: "30% off entire menu", lowDelevery: true),
-    OrderAgain(image: "resturentImage", title: "Ultimate Chicken - Wraps, Pl", likes: "500+", distance: "2.5 KM Away", reachTime: "25 - 45 Mins", iqd: "IQD 1000", rating: "3.4 Excellent", offer: "30% off entire menu", lowDelevery: true),
-    OrderAgain(image: "resturentImage", title: "Ultimate Chicken - Wraps, Pl", likes: "500+", distance: "2.5 KM Away", reachTime: "25 - 45 Mins", iqd: "IQD 1000", rating: "3.4 Excellent", offer: "30% off entire menu", lowDelevery: true)
-]
