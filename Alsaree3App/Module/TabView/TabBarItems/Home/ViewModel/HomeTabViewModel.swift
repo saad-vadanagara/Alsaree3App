@@ -18,10 +18,12 @@ protocol NavigateFormHomeTab{
 class HomeTabViewModel{
     
     var activeOrder = false
-    var bannerdaat = true
-    var scrollingCollectionview = true
-    let dispatchGroup = DispatchGroup()
+    var isAppsettingApiFailed = true
+    var isHomeScreenStoreListDataFailed = true
+    var isDeliveryListForNearestCityApiFailed = true
+    var isHomeScreenStoreListApiFailed = true
     
+    let dispatchGroup = DispatchGroup()
     // All APi Data
     var appSettingData : AppSettingModel?
     var checkFeedBackData : CheckFeedBackModel?
@@ -103,5 +105,6 @@ class HomeTabViewModel{
             homeTabDeligate?.showLocationAccessScreen()
         }
     }
+    
     
 }

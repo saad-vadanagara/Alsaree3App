@@ -27,7 +27,6 @@ class LoadingTableViewCell: UITableViewCell {
     
     @IBAction func onRetryClick(_ sender: UIButton) {
         homeTabdeilgate?.isLoadingState = true
-//        homeTabdeilgate?.hometabTableView.reloadData()
         homeTabdeilgate?.viewModel.checkLocationAccess()
     }
     

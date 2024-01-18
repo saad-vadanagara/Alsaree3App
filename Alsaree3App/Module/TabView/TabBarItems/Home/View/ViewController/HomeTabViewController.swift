@@ -170,6 +170,7 @@ extension HomeTabViewController:UITableViewDataSource{
                 if true{
                     let cell = tableView.getCell(identifier: CellConstant.activeOrderHomeTabCell.rawValue) as! ActiveOrderHomeTabCell
                     cell.selectionStyle = .none
+                
                     return cell
                 }else{
                     let cell = tableView.getCell(identifier: CellConstant.goldCategoryCardCellTableViewCell.rawValue) as! GoldCategoryCardCellTableViewCell
@@ -178,7 +179,7 @@ extension HomeTabViewController:UITableViewDataSource{
                 }
             case 1:
                 let cell = tableView.getCell(identifier: CellConstant.bannerHomeTabCell.rawValue) as! BannerHomeTabCell
-                cell.bannerData = viewModel.loyaltyDetail
+//                cell.bannerData = viewModel.loyaltyDetail
                 cell.selectionStyle = .none
                 cell.setupUi()
                 return cell

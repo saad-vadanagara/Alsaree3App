@@ -8,7 +8,7 @@
 import UIKit
 
 class BannerHomeTabCell: UITableViewCell {
-
+    
     @IBOutlet weak var bannerImageView: UIImageView!
     var bannerData : LoyaltyDetailsModel?
     
@@ -17,11 +17,26 @@ class BannerHomeTabCell: UITableViewCell {
         self.backgroundColor = UIColor.clear
     }
     
+    
     func setupUi(){
-//        bannerImageView.image = UIImage(named: ImageConstant.bannerAdvertisement.rawValue)
-        SDWebImageManager.shared.loadImage(with:  bannerData?.zero_point_image_url ?? "", into: bannerImageView, isbaseUrlRequired: false)
+        if bannerData == nil {
+            showErrorMessage(nameNib: "CellErrorHandlingView", uiView:bannerImageView)
+            SDWebImageManager.shared.loadImage(with:bannerData?.zero_point_image_url ?? "", into: bannerImageView, isbaseUrlRequired: false)
+            bannerImageView.contentMode = .scaleAspectFill
+            bannerImageView.layer.cornerRadius = 11
+            
+        } else {
+            loadBannerImage()
+        }
+        
+    }
+    
+    private func loadBannerImage() {
+        SDWebImageManager.shared.loadImage(with: bannerData?.zero_point_image_url ?? "", into: bannerImageView, isbaseUrlRequired: false)
         bannerImageView.contentMode = .scaleAspectFill
         bannerImageView.layer.cornerRadius = 11
     }
+    
+
     
 }

@@ -11,13 +11,11 @@ class LocationAccessViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     @IBAction func onGrantPermissionClick(_ sender: UIButton) {
         openAppSettings()
     }
-    
     
     func openAppSettings() {
         guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else {
