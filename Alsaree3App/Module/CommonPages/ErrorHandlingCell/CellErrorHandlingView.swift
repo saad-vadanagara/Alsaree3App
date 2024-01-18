@@ -10,4 +10,8 @@ import UIKit
 class CellErrorHandlingView: UIView {
     @IBOutlet weak var customView: UIView!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
 }

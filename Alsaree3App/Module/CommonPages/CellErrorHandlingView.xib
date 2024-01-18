@@ -14,17 +14,28 @@
             <rect key="frame" x="0.0" y="0.0" width="386" height="303"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="497-Mh-UNF">
-                    <rect key="frame" x="160.66666666666666" y="134" width="64.666666666666657" height="35"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Retry"/>
-                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3wT-5m-ya2">
+                    <rect key="frame" x="101" y="117.33333333333331" width="184" height="68.666666666666686"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SomeThing Went Wrong" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FzH-S1-yvf">
+                            <rect key="frame" x="0.0" y="0.0" width="184" height="34.333333333333336"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="497-Mh-UNF">
+                            <rect key="frame" x="0.0" y="34.333333333333329" width="184" height="34.333333333333329"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Retry Again!"/>
+                        </button>
+                    </subviews>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="rdm-IZ-X3z"/>
-            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.26054786530551532" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="497-Mh-UNF" firstAttribute="centerX" secondItem="EHW-2e-dgr" secondAttribute="centerX" id="69E-9M-Zyi"/>
-                <constraint firstItem="497-Mh-UNF" firstAttribute="centerY" secondItem="EHW-2e-dgr" secondAttribute="centerY" id="go7-nA-99z"/>
+                <constraint firstItem="3wT-5m-ya2" firstAttribute="centerY" secondItem="EHW-2e-dgr" secondAttribute="centerY" id="Cww-M9-M7R"/>
+                <constraint firstItem="3wT-5m-ya2" firstAttribute="centerX" secondItem="EHW-2e-dgr" secondAttribute="centerX" id="lo2-R9-80l"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-158.77862595419847" y="-109.50704225352113"/>
